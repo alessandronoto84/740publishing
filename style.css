@@ -201,3 +201,4 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 @media (max-width:640px){.wall{inset:-20% -60%;gap:12px}.wall .col{flex-basis:110px;gap:12px}.wall img{width:110px;height:165px}.hero{min-height:88vh}}
 @media (prefers-reduced-motion:reduce){.wall,.wall .col,.logobox .logo,.shine,.hero h1 span,.hero .wrap>p,.hero .cta,.hero .facts{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.wall{transform:rotate(-9deg) scale(1.05)!important}.shine{display:none}}
 .hero h1 span:nth-child(5){animation-delay:2.5s}
+.hero h1 span:nth-child(6){animation-delay:2.7s}
