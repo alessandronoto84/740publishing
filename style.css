@@ -76,3 +76,21 @@ a{color:inherit}
 .todo{background:#fff3c4;color:#5a4300;padding:1px 6px;border-radius:3px}
 @media (prefers-reduced-motion:no-preference){.buy,.chip{transition:filter .15s,background .15s}}
 .book[hidden]{display:none}
+
+/* Katalog */
+.sech{font-family:var(--f-display);font-size:1.4rem;margin:8px 0 16px;display:flex;align-items:baseline;gap:10px}
+.sech span,.cath span{font-family:var(--f-body);font-size:.85rem;font-weight:400;color:var(--muted)}
+.catalog{border-top:1px solid var(--line);padding-block:32px 48px}
+.cath{font-family:var(--f-display);font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 12px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.catsec{padding-bottom:28px}
+.catsec[hidden]{display:none}
+.minigrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.mini{display:grid;grid-template-columns:96px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;align-items:start}
+.mini .cover{width:96px;height:144px}
+.mini h3{margin:0;font-family:var(--f-display);font-size:1.02rem;line-height:1.25;text-wrap:balance}
+.mini .author{margin:2px 0 8px;font-size:.82rem;color:var(--muted)}
+.cover.blank{display:flex;align-items:center;justify-content:center;padding:8px;background:var(--cloth);color:var(--cloth-ink);font-family:var(--f-display);font-size:.78rem;text-align:center;line-height:1.2;box-shadow:none}
+.buy.sm{min-width:0;padding:5px 10px}
+.buy.sm .fmt{font-size:.8rem}
+.buy.sm .shop{font-size:.66rem}
+@media (max-width:420px){.minigrid{grid-template-columns:1fr}.mini{grid-template-columns:84px 1fr}.mini .cover{width:84px;height:126px}}
