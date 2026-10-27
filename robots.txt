@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alessandronoto84.github.io/740publishing/sitemap.xml
