@@ -123,3 +123,24 @@ a{color:inherit}
 .legal p{margin:0 0 10px;color:#d9d2c3}
 .legal a{color:var(--gold2)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.buy,.mini{transition:none}}
+
+/* Trailer */
+.covbtn{position:relative;padding:0;border:0;background:none;cursor:pointer;display:block;border-radius:2px;line-height:0}
+.covbtn .playic{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(11,10,8,.72);border:1px solid var(--gold);box-shadow:0 4px 18px rgba(0,0,0,.5);transition:transform .15s,background .15s}
+.covbtn .playic::after{content:"";position:absolute;left:23px;top:18px;border-style:solid;border-width:11px 0 11px 17px;border-color:transparent transparent transparent var(--gold2)}
+.mini .covbtn .playic{width:42px;height:42px;margin:-21px 0 0 -21px}
+.mini .covbtn .playic::after{left:16px;top:12px;border-width:9px 0 9px 13px}
+.covbtn .playlbl{position:absolute;left:0;right:0;bottom:0;padding:6px 0;background:linear-gradient(0deg,rgba(11,10,8,.9),transparent);color:var(--gold2);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;line-height:1.2;text-align:center}
+.covbtn:hover .playic{transform:scale(1.08);background:rgba(201,164,92,.25)}
+.covbtn:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+button.buy{font:inherit;cursor:pointer;background:transparent}
+.buys .buy.trl{background:transparent;color:var(--gold2);border-color:var(--line2)}
+.buys .buy.trl+.buy{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#17130b;border-color:transparent}
+.buys .buy.trl:hover{background:var(--gold);color:#17130b}
+.soon .buy.trl{margin-left:auto}
+.player{padding:0;border:1px solid var(--line2);border-radius:6px;background:#000;color:var(--ink);width:min(420px,92vw);max-height:94vh;overflow:hidden}
+.player::backdrop{background:rgba(0,0,0,.82)}
+.pl-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+.pl-title{font-family:var(--f-display);font-size:1.15rem;font-weight:600;color:var(--gold2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pl-close{font:inherit;font-size:1.1rem;line-height:1;background:transparent;border:1px solid var(--line2);color:var(--gold2);border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none}
+.player video{display:block;width:100%;max-height:calc(94vh - 56px);aspect-ratio:9/16;background:#000}
