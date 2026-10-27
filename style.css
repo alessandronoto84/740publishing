@@ -195,8 +195,9 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 .hero h1 span{display:inline-block;opacity:0;transform:translateY(14px);filter:blur(6px);animation:word .9s cubic-bezier(.2,.7,.2,1) forwards}
 .hero h1 span:nth-child(1){animation-delay:1.7s}.hero h1 span:nth-child(2){animation-delay:1.9s}.hero h1 span:nth-child(3){animation-delay:2.1s}.hero h1 span:nth-child(4){animation-delay:2.3s}
 @keyframes word{to{opacity:1;transform:none;filter:none}}
-.hero .wrap>p,.hero .cta,.hero .facts{opacity:0;transform:translateY(10px);animation:word .9s 2.7s cubic-bezier(.2,.7,.2,1) forwards}
-.hero .cta{animation-delay:2.95s}.hero .facts{animation-delay:3.2s}
+.hero .wrap>p,.hero .cta,.hero .facts{opacity:0;transform:translateY(10px);animation:word .9s 2.9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .cta{animation-delay:3.15s}.hero .facts{animation-delay:3.4s}
 .hero .wrap>p{color:#cfc6b4}
 @media (max-width:640px){.wall{inset:-20% -60%;gap:12px}.wall .col{flex-basis:110px;gap:12px}.wall img{width:110px;height:165px}.hero{min-height:88vh}}
 @media (prefers-reduced-motion:reduce){.wall,.wall .col,.logobox .logo,.shine,.hero h1 span,.hero .wrap>p,.hero .cta,.hero .facts{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.wall{transform:rotate(-9deg) scale(1.05)!important}.shine{display:none}}
+.hero h1 span:nth-child(5){animation-delay:2.5s}
