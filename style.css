@@ -94,3 +94,4 @@ a{color:inherit}
 .buy.sm .fmt{font-size:.8rem}
 .buy.sm .shop{font-size:.66rem}
 @media (max-width:420px){.minigrid{grid-template-columns:1fr}.mini{grid-template-columns:84px 1fr}.mini .cover{width:84px;height:126px}}
+.mini .mblurb{margin:0 0 10px;font-size:.84rem;line-height:1.45}
