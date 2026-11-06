@@ -31,7 +31,7 @@ CAT=[
  ('toleranz','Im Namen der Toleranz','Theodor Brenner',S,'9783565465415','9783565465521','Taschenbuch','toleranz'),
  ('uebermensch','Projekt Übermensch','Victor Cross',S,'9783565473410','9783565476770','Taschenbuch','uebermensch'),
  ('powerfrau','Projekt Powerfrau','Victor Cross',S,'9783565472833','9783565476794','Taschenbuch','powerfrau'),
- ('optimierte','Der optimierte Mensch','Victor Cross',S,'9783565470846',None,None,'optimierte'),
+ ('optimierte','Der optimierte Mensch','Viktor Cross',S,'9783565470846',None,None,'optimierte'),
  ('psychologie','Psychologie im Alltag','Friedhelm Westerkamp',S,'9783565473014','9783565473236','Taschenbuch','psychologie'),
  ('schamanismus','Schamanismus','Vivian Dahl',S,None,'9783565830510','Taschenbuch','schamanismus'),
  ('bier','Bier','Sandro Noto',S,None,'9783565830497','Taschenbuch','bier'),
