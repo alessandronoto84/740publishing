@@ -1,0 +1,18 @@
+U={
+'emilia':'Forensikerin Dr. Emilia von Hardenberg soll einen früheren Heimleiter begutachten, und stößt auf Falkenrode: ein Internat, das es offiziell nicht mehr gibt. Sie war selbst dort, als Kind. Ein psychologischer Thriller über Erinnerung, Identität und das, was wir überleben mussten.',
+'sizilien':'Yoshi hat alles, Jamie trägt Dinge mit sich herum, über die er mit niemandem spricht. Aus einem Streit auf dem Basketballplatz wird Freundschaft, und eine Reise nach Sizilien: ohne Eltern, ohne Plan, mit viel zu wenig Geld. Ein berührender Coming-of-Age-Roman.',
+'erwachsen':'Du bist nicht zu empfindlich, du reagierst nur so, wie du es gelernt hast. Wie das innere Kind Beziehungen, Entscheidungen und Selbstbild prägt, und wie du bewusster handelst, ohne das Kind in dir zu verlieren.',
+'liebe':'Zweifel, Verunsicherung, ständig schlechtes Gewissen? Dieses Buch hilft, die eigene Beziehung ehrlich zu betrachten: normale Krise, veränderbare Muster oder toxisches Verhalten. Mit Fallgeschichten und praktischen Tools, Schritt für Schritt zu mehr Klarheit.',
+'schamanismus':'Eine Reise zu den Wurzeln des Schamanismus: Geschichte, Kulturen, Rituale, Krafttiere und die schamanische Reise, mit praktischen Übungen für den Alltag. Ein Weg zu mehr Achtsamkeit und innerer Stärke, ganz ohne Vorkenntnisse.',
+'k-astrologie':'Die 12 Sternzeichen, Planeten, Häuser und Aspekte, dein Geburtshoroskop Schritt für Schritt, Liebe und Synastrie, Beruf und Transite. Fundiertes Wissen ohne esoterischen Ballast, für Einsteiger und Fortgeschrittene.',
+'k-freizeitpark':'Frank will nur einen entspannten Familientag. Doch im Fabeland fallen Attraktionen aus, das Maskottchen Fabo benimmt sich seltsam, und unter dem Park erwacht etwas. Ein atmosphärischer Roman über Familie, Angst und einen Ausflug, der zum Albtraum wird.',
+'k-kifft':'Fünfzig Jahre Verbot, zwei Jahre Legalisierung und ein Land, das sich bis heute nicht einig ist. Fünf Jahrzehnte deutsche Drogenpolitik, die Menschen hinter der Szene und die Frage: Wer hat wirklich profitiert?',
+'k-kaffee':'Von den tanzenden Ziegen im äthiopischen Hochland über die Sufi-Mönche des Jemen und die Kaffeehäuser der Revolutionen bis zu den Kaffeebörsen von heute. Eine packende Geschichte über Genuss, Macht und die Menschen hinter der Bohne.',
+'peru':'Peru ist mehr als Machu Picchu: 30 außergewöhnliche Orte, von Andendörfern und Nebelwäldern bis zum Amazonas. Mit GPS-Daten, Reiserouten für zwei Wochen bis länger und praktischen Tipps zu Klima, Budget und Sicherheit.',
+'ecuador':'30 ausgewählte Orte abseits der Touristenrouten: Andendörfer, Nebelwälder, heiße Quellen, Galápagos und Amazonas. Mit Insiderwissen, GPS-Daten, Reiserouten und Tipps für längere Aufenthalte.',
+'kolumbien':'30 außergewöhnliche Orte: verschlafene Kolonialstädte, heilige Berge, stille Strände, versteckte Wasserfälle und der Amazonas. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+'mexiko':'Versteckte Schluchten, geheime Strände, vergessene Kolonialstädte und echte Begegnungen, die in klassischen Reiseführern fehlen. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+'china':'30 besondere Ziele von Yunnan und Sichuan bis Guangxi, Fujian und Shanxi: Bergdörfer, alte Handelswege, Wasserstädte. Mit praktischem Reisewissen zu Bezahlen, Apps und Verkehr, auch für längere Aufenthalte.',
+'japan':'Von abgelegenen Bergdörfern Hokkaidos über stille Onsen-Dörfer Tohokus bis zu geheimen Küstenwegen im Süden. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+'vietnam':'Von Bergdörfern im Norden über die Höhlensysteme Zentralvietnams bis zu den Wasserwegen des Mekong-Deltas. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+}
