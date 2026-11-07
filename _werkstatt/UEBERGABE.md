@@ -46,7 +46,7 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
   - Liest `posts/data.json` mit Feldern `k, title, author, hook, text, formats, line` und das Cover `posts/cover_<k>.png`.
   - Aufruf: `cd asr && node posts2.cjs $S`. Playwright und Chromium sind vorinstalliert.
 - `covers_hd/`: hochauflösende Frontcover als JPG. Für `posts2.cjs` vorher nach `posts/cover_<k>.png` konvertieren.
-- `gen/chatbot_kb.py`: baut die Wissensbasis des **Chat-Assistenten** (`chatbot-wissen.js`) aus den fertigen Seiten (Buchseiten, Startseite, English Editions, Impressum). Aufruf **nach** build/pages/english: `python3 gen/chatbot_kb.py $S`. Der Assistent selbst: `chatbot.js` + `chatbot.css` im Repo-Root (rein im Browser, keine Cookies, kein Server); eingebunden in `index_tpl.html`, `pages.py` (FOOT), `impressum.html`, `datenschutz.html`. Nicht auf `en/` (antwortet auf Deutsch).
+- `gen/chatbot_kb.py`: baut die Wissensbasis des **Chat-Assistenten** (`chatbot-wissen.js`) aus den fertigen Seiten (Buchseiten, Startseite, English Editions, Impressum). Aufruf **nach** build/pages/english: `python3 gen/chatbot_kb.py $S`. Der Assistent selbst: `chatbot.js` + `chatbot.css` im Repo-Root (rein im Browser, keine Cookies, kein Server); eingebunden in `index_tpl.html`, `pages.py` (FOOT), `impressum.html`, `datenschutz.html`. Auch auf `en/` (eingebunden in `english.py`): die Wissensbasis enthält Deutsch und Englisch (`sprachen.de/en`), der Bot wählt nach `<html lang>`. Script-Version `?v=` bei Änderungen am Bot in Vorlage, `pages.py`, `english.py`, Impressum und Datenschutz hochzählen.
 - `epubli_list.txt`: komplette Liste aller epubli-Veröffentlichungen mit ISBNs (Stand 06.11.).
 
 **Ordnerstruktur für die Skripte:**

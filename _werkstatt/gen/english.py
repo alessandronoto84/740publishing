@@ -76,6 +76,7 @@ page=f'''<!doctype html>
 {secs.replace('<section class="catsec"><h2 class="sech">Novels','<section class="catsec" id="novels"><h2 class="sech">Novels').replace('<section class="catsec"><h2 class="sech">Nonfiction','<section class="catsec" id="nonfiction"><h2 class="sech">Nonfiction')}  </div></div>
 </main>
 <footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems) · Germany<br>740publishingverlag@gmail.com</address><nav><a href="../impressum.html" hreflang="de">Legal notice</a><a href="../datenschutz.html" hreflang="de">Privacy</a></nav></div></footer>
+<script src="../chatbot.js?v=2" defer></script>
 </body>
 </html>
 '''

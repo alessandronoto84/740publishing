@@ -184,8 +184,79 @@ kb = {
     'faq': faq,
     'buecher': books,
 }
+# ---------- Englische Wissensbasis (aus en/index.html) ----------
+en_books = []
+for sec_id, sec_name, body in re.findall(r'<section class="catsec" id="(\w+)"><h2 class="sech">(.*?) <span>.*?</h2>(.*?)</section>', en_main, re.S):
+    for aid, art in re.findall(r'<article class="mini enbook" id="([\w-]+)">(.*?)</article>', body, re.S):
+        gp = re.search(r'href="(https://play\.google\.com/[^"]+)"', art)
+        en_books.append({
+            't': one(r'<h3>(.*?)</h3>', art), 'sub': one(r'<p class="ensub">(.*?)</p>', art), 'a': one(r'<p class="author">(.*?)</p>', art),
+            'g': txt(sec_name), 'c': txt(sec_name), 'd': one(r'<p class="mblurb">(.*?)</p>', art),
+            'f': ['E-book' + ('' if gp else ' (coming soon on Google Play Books)')], 'u': f'en/#{aid}',
+        })
+en_lead = one(r'<p class="enlead">(.*?)</p>', en_main)
+en_cats = []
+for b in en_books:
+    if b['c'] not in en_cats:
+        en_cats.append(b['c'])
+en_count_c = {c: sum(1 for b in en_books if b['c'] == c) for c in en_cats}
+en_addr = one(r'<address>(.*?)<br>', en).replace('740 Publishing · ', '')
+en_authors = []
+for b in en_books:
+    if b['a'] not in en_authors:
+        en_authors.append(b['a'])
+EN_KAT = {'Novels': ['novel', 'novels', 'fiction', 'story', 'stories', 'romance'], 'Nonfiction': ['nonfiction', 'non fiction', 'self help', 'guide', 'guides', 'nonfiction books']}
+en_contact = [{'t': 'Send email', 'h': f'mailto:{mail}'}, {'t': 'Legal notice (German)', 'h': 'impressum.html'}]
+en_faq = []
+def E(id, q, a, k, links=None, nxt=None, b=None):
+    e = {'id': id, 'q': q, 'a': a, 'k': k}
+    if links: e['links'] = links
+    if nxt: e['next'] = nxt
+    if b: e['b'] = b
+    en_faq.append(e)
+E('books', 'Which books are available in English?',
+  f'There are {len(en_books)} English editions:\n' + '\n'.join(f'- {c}: {en_count_c[c]}' for c in en_cats) + '\nAsk me about a title, an author or a topic, e.g. “artificial intelligence” or “Konstanze Frey”.',
+  ['books', 'book', 'english books', 'titles', 'catalogue', 'catalog', 'list', 'all books', 'english editions', 'editions', 'available', 'program'],
+  [{'t': 'English Editions', 'h': 'en/'}], en_cats + ['Where can I buy them?'])
+E('buy', 'Where can I buy them?',
+  en_lead + ('\nAs soon as a title is live, a buy button appears on the English Editions page.' if soon else ''),
+  ['buy', 'purchase', 'order', 'where', 'google play', 'play books', 'available', 'when', 'release', 'coming soon', 'store', 'shop', 'amazon', 'kindle', 'price', 'cost'],
+  [{'t': 'English Editions', 'h': 'en/'}], ['Which books are available in English?', 'Is there a print edition?'])
+E('formats', 'Is there a print edition?',
+  'The English editions are e-books. ' + ('They have been submitted to Google Play Books and will be available there soon. ' if soon else '') + 'The German originals are published as e-book and in print and are available via epubli, Amazon and the book trade (see the German website).',
+  ['print', 'paperback', 'hardcover', 'printed', 'ebook', 'e book', 'e-book', 'format', 'formats', 'german', 'original', 'deutsch'],
+  [{'t': 'German website', 'h': 'index.html'}], ['Where can I buy them?', 'Contact'])
+E('authors', 'Which authors are there?',
+  'English editions are available by: ' + ', '.join(en_authors) + '. According to the legal notice, some books are published under pen names.\nName an author and I will show you the books.',
+  ['author', 'authors', 'writer', 'writers', 'pen name', 'pseudonym', 'who wrote'], None, en_authors[:4])
+E('contact', 'Contact', f'740 Publishing\n{en_addr}\nEmail: {mail}' + ('\nSocial media: ' + ', '.join(x["t"] for x in social) + '.' if social else ''),
+  ['contact', 'email', 'e mail', 'mail', 'address', 'reach', 'write', 'message', 'phone', 'instagram', 'tiktok', 'linktree', 'social media', 'question'],
+  en_contact + social, ['Review copies', 'Which books are available in English?'])
+E('press', 'Review copies', f'Do you write about books, run a book blog or a Bookstagram or BookTok channel? 740 Publishing offers review copies as e-book or print. Just email {mail}.',
+  ['review', 'review copy', 'review copies', 'press', 'blogger', 'blog', 'bookstagram', 'booktok', 'influencer', 'arc'],
+  [{'t': 'Request a copy', 'h': f'mailto:{mail}?subject=Review%20copy'}], ['Contact'])
+E('publisher', 'Who is 740 Publishing?', f'740 Publishing is an independent publisher from Lingen (Ems), Germany. ' + (en_lead.split('.')[0] + '.' if en_lead else ''),
+  ['publisher', 'who are you', 'about', 'company', 'lingen', 'germany', 'independent', '740'], [{'t': 'German website', 'h': 'index.html'}], ['Which books are available in English?', 'Contact'])
+E('legal', 'Legal notice and privacy', 'The legal notice (Impressum) and the privacy policy are available in German.',
+  ['legal', 'legal notice', 'imprint', 'impressum', 'privacy', 'gdpr', 'owner'], [{'t': 'Legal notice', 'h': 'impressum.html'}, {'t': 'Privacy', 'h': 'datenschutz.html'}], ['Contact'])
+E('bot', 'Who are you?', 'I am an automated assistant. I run only in your browser, use no cookies and do not store or send what you type. I only answer with information from this website and I am not a consultant.',
+  ['who are you', 'bot', 'chatbot', 'assistant', 'ai', 'human', 'stored', 'cookies'], None, ['Which books are available in English?', 'Contact'])
+E('thanks', 'Thanks', 'You are welcome! Feel free to ask more.', ['thanks', 'thank', 'great', 'perfect', 'bye'])
+kb_en = {
+    'titel': '740 Publishing · Assistant',
+    'begruessung': 'Hi! I am the automated assistant of 740 Publishing. Ask me about our English editions, authors, where to buy them, or how to contact us.',
+    'vorschlaege': ['Which books are available in English?', 'Where can I buy them?', 'Contact'],
+    'nachBuch': ['Where can I buy them?', 'Which books are available in English?', 'Contact'],
+    'fallback': {'a': f'Sorry, I could not find that on this website. Try a book title, an author or a topic, or email the publisher: {mail}', 'links': en_contact, 'next': ['Which books are available in English?', 'Where can I buy them?', 'Contact']},
+    'katalog': {'t': 'All English Editions', 'h': 'en/'},
+    'kategorien': {c: {'c': c, 'k': EN_KAT.get(c, [c.lower()])} for c in en_cats},
+    'faq': en_faq,
+    'buecher': en_books,
+}
+kb = {'sprachen': {'de': kb, 'en': kb_en}}
+
 out = f'{SITE}/chatbot-wissen.js'
 with open(out, 'w', encoding='utf-8') as fh:
     fh.write('/* Automatisch erzeugt von _werkstatt/gen/chatbot_kb.py aus den Seiteninhalten. Nicht von Hand ändern. */\n')
     fh.write('window.ChatbotWissen=' + json.dumps(kb, ensure_ascii=False, separators=(',', ':')) + ';\n')
-print('chatbot', len(books), 'Bücher,', len(faq), 'FAQ,', en_count, 'EN', os.path.getsize(out), 'Bytes')
+print('chatbot', len(books), 'Bücher,', len(faq), 'FAQ,', len(en_books), 'EN-Titel,', len(en_faq), 'EN-FAQ,', os.path.getsize(out), 'Bytes')

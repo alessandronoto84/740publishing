@@ -16,12 +16,21 @@
   function rel(p) { return BASE + p + (VER ? '?v=' + VER : ''); }
   var KB_URL = (me && me.getAttribute('data-kb')) || rel('chatbot-wissen.js');
   var CSS_URL = (me && me.getAttribute('data-css')) || rel('chatbot.css');
-  var LABEL = (me && me.getAttribute('data-label')) || 'Fragen?';
+  var LABEL_ATTR = me && me.getAttribute('data-label');
+
+  /* Oberflächentexte je Sprache (Sprache aus <html lang>) */
+  var UI = {
+    de: { launch: 'Fragen?', open: 'Fragen an den Assistenten stellen', title: 'Assistent', note: 'Automatischer Assistent, keine Beratung. Eingaben werden nicht gespeichert.', close: 'Assistent schließen', log: 'Unterhaltung', sugs: 'Vorschläge', label: 'Deine Frage', ph: 'Frage eingeben …', send: 'Frage senden', you: 'Du: ', bot: 'Assistent: ', down: 'Der Assistent ist gerade nicht verfügbar. Bitte nutze die Kontaktangaben auf dieser Seite.', fmt: 'Formate: ', inKat: 'Das habe ich in „%s“ gefunden:', katN: '„%s“: %n Titel', katMore: ', hier eine Auswahl. Alle siehst du im Gesamtkatalog.', one: 'Dazu habe ich dieses Buch gefunden:', many: 'Dazu habe ich diese Bücher gefunden:', loose: 'Vielleicht passt eines davon:' },
+    es: { launch: '¿Preguntas?', open: 'Hacer una pregunta al asistente', title: 'Asistente', note: 'Asistente automático, sin asesoramiento. No se guarda nada de lo que escribes.', close: 'Cerrar asistente', log: 'Conversación', sugs: 'Sugerencias', label: 'Tu pregunta', ph: 'Escribe una pregunta …', send: 'Enviar pregunta', you: 'Tú: ', bot: 'Asistente: ', down: 'El asistente no está disponible ahora. Usa los datos de contacto de esta página.', fmt: 'Formatos: ', inKat: 'Esto he encontrado en «%s»:', katN: '«%s»: %n títulos', katMore: ', aquí una selección.', one: 'He encontrado este libro:', many: 'He encontrado estos libros:', loose: 'Quizá te sirva uno de estos:' },
+    en: { launch: 'Questions?', open: 'Ask the assistant a question', title: 'Assistant', note: 'Automated assistant, not advice. Nothing you type is stored.', close: 'Close assistant', log: 'Conversation', sugs: 'Suggestions', label: 'Your question', ph: 'Type a question …', send: 'Send question', you: 'You: ', bot: 'Assistant: ', down: 'The assistant is not available right now. Please use the contact details on this page.', fmt: 'Formats: ', inKat: 'Here is what I found in “%s”:', katN: '“%s”: %n titles', katMore: ', here is a selection. The full list is on the page.', one: 'I found this book:', many: 'I found these books:', loose: 'Maybe one of these fits:' }
+  };
+  function curLang() { return (document.documentElement.getAttribute('lang') || 'de').slice(0, 2).toLowerCase(); }
+  var LANG = curLang(), L = UI[LANG] || UI.de;
 
   var KB = null, root, panel, log, input, launch, sugBox, loading = false;
 
   /* ---------- Text-Normalisierung und Abgleich ---------- */
-  var STOP = ('a ab aber alle allem allen aller alles als also am an ans auch auf aus bei beim bin bis bist da dadurch daher damit dann das dass dein deine dem den der des dessen di die dies diese diesem diesen dieser dieses dir doch dort du durch ein eine einem einen einer eines er es etwa euch euer eure fuer gibt gib gab hab habe haben hat hatte hier ich ihr ihre im in ins ist ja jetzt kann kannst koennen koennte man mehr mein meine mich mir mit muss nach nicht noch nun nur ob oder ohne sein seine sich sie sind so soll sollte sowie ueber um und uns unser unsere vom von vor war was welche welchem welchen welcher welches wenn wer werde werden wie wieviel wir wird wo womit wo zu zum zur bitte gerne gern mal denn eigentlich hallo hi hey moin danke infos info sagen erzaehl erzaehle zeig zeige zeigen suche suchen ich moechte moechten will wollen wuerde wuerden brauche es gibt').split(' ');
+  var STOP = ('a ab aber alle allem allen aller alles als also am an ans auch auf aus bei beim bin bis bist da dadurch daher damit dann das dass dein deine dem den der des dessen di die dies diese diesem diesen dieser dieses dir doch dort du durch ein eine einem einen einer eines er es etwa euch euer eure fuer gibt gib gab hab habe haben hat hatte hier ich ihr ihre im in ins ist ja jetzt kann kannst koennen koennte man mehr mein meine mich mir mit muss nach nicht noch nun nur ob oder ohne sein seine sich sie sind so soll sollte sowie ueber um und uns unser unsere vom von vor war was welche welchem welchen welcher welches wenn wer werde werden wie wieviel wir wird wo womit wo zu zum zur bitte gerne gern mal denn eigentlich hallo hi hey moin danke infos info sagen erzaehl erzaehle zeig zeige zeigen suche suchen ich moechte moechten will wollen wuerde wuerden brauche es gibt the an of to in on for is are was be do does did can could would should will what which who whom how where when why there here this that these those it its you your yours me my i we our us they them their he she his her have has had any some please hello hi hey thanks thank tell show about with from at by as or and if not no yes get got want need like el la los las un una unos unas del al y o en que son por para con sin como cual cuales hay mi te tu su sus se lo le les yo puedo puede hola gracias quiero necesito ser estar esta este esto eso muy mas').split(' ');
   var STOPSET = {};
   STOP.forEach(function (w) { STOPSET[w] = 1; });
 
@@ -107,7 +116,7 @@
     return res;
   }
 
-  var GENERIC = { buch: 1, buecher: 1, buches: 1, titel: 1, autor: 1, autorin: 1, autoren: 1, verlag: 1, lesen: 1, empfehlung: 1, empfehlen: 1, empfiehlst: 1, thema: 1, themen: 1, ueber: 1 };
+  var GENERIC = { book: 1, books: 1, title: 1, titles: 1, author: 1, authors: 1, read: 1, recommend: 1, topic: 1, libro: 1, libros: 1, buch: 1, buecher: 1, buches: 1, titel: 1, autor: 1, autorin: 1, autoren: 1, verlag: 1, lesen: 1, empfehlung: 1, empfehlen: 1, empfiehlst: 1, thema: 1, themen: 1, ueber: 1 };
   function scoreBooks(qt, qn) {
     var words = qt.filter(function (t) { return !GENERIC[t]; });
     var res = [];
@@ -118,7 +127,7 @@
       if (b._an && (' ' + qn + ' ').indexOf(' ' + b._an + ' ') > -1) { s += 6; strong = true; }
       words.forEach(function (t) {
         var a = bestSim(t, b._t) * 4, c = bestSim(t, b._a) * 4, g = bestSim(t, b._g) * 3;
-        var sb = bestSim(t, b._s) * 2.5, d = (b._d.indexOf(t) > -1 ? 1.2 : 0);
+        var sb = bestSim(t, b._s) * 2.5, d = (t.length >= 4 && bestSim(t, b._d) >= 0.8 ? 1.2 : 0);
         var m = Math.max(a, c, g, sb, d);
         if (a >= 2.8 || c >= 2.8) strong = true;
         s += m;
@@ -138,6 +147,7 @@
   }
   function href(h) {
     if (/^(https?:|mailto:|tel:|#|\/)/.test(h)) return h;
+    if (KB && KB.relativZu === 'seite') return h; /* relativ zur aktuellen Seite */
     return BASE + h;
   }
   function linkEl(l, cls) {
@@ -164,14 +174,14 @@
 
   function addUser(text) {
     var m = el('div', 'cb-msg cb-user');
-    m.appendChild(el('span', 'cb-sr', 'Du: '));
+    m.appendChild(el('span', 'cb-sr', L.you));
     m.appendChild(document.createTextNode(text));
     log.appendChild(m);
     scrollEnd();
   }
   function botBox() {
     var m = el('div', 'cb-msg cb-bot');
-    m.appendChild(el('span', 'cb-sr', 'Assistent: '));
+    m.appendChild(el('span', 'cb-sr', L.bot));
     log.appendChild(m);
     return m;
   }
@@ -198,7 +208,7 @@
     c.appendChild(h);
     c.appendChild(el('p', 'cb-book-m', [b.a, b.g || b.c].filter(Boolean).join(' · ')));
     if (b.d) c.appendChild(el('p', 'cb-book-d', b.d.length > 150 ? b.d.slice(0, 147).replace(/\s+\S*$/, '') + ' …' : b.d));
-    if (b.f && b.f.length) c.appendChild(el('p', 'cb-book-f', 'Formate: ' + b.f.join(', ')));
+    if (b.f && b.f.length) c.appendChild(el('p', 'cb-book-f', L.fmt + b.f.join(', ')));
     return c;
   }
   function addBooks(list, intro) {
@@ -243,9 +253,9 @@
           var titleHit = books.length && books[0].strong && books[0].b.c !== kat.c;
           if (inKat.length && !titleHit) {
             var narrowed = books.filter(function (r) { return r.b.c === kat.c && r.strong; }).map(function (r) { return r.b; });
-            if (narrowed.length) return addBooks(narrowed.slice(0, 6), 'Das habe ich in „' + kat.c + '“ gefunden:');
+            if (narrowed.length) return addBooks(narrowed.slice(0, 6), L.inKat.replace('%s', kat.c));
             var show = inKat.slice(0, 6);
-            return addBooks(show, '„' + kat.c + '“: ' + inKat.length + ' ' + (inKat.length === 1 ? 'Titel' : 'Titel') + (inKat.length > show.length ? ', hier eine Auswahl. Alle siehst du im Gesamtkatalog.' : '.'));
+            return addBooks(show, L.katN.replace('%s', kat.c).replace('%n', inKat.length) + (inKat.length > show.length ? L.katMore : '.'));
           }
         }
       }
@@ -253,12 +263,12 @@
 
     if (books.length && books[0].strong && bTop >= Math.max(3, fTop * 0.9)) {
       var top = books.filter(function (r) { return r.strong && r.s >= bTop * 0.6; }).slice(0, 6).map(function (r) { return r.b; });
-      return addBooks(top, top.length === 1 ? 'Dazu habe ich dieses Buch gefunden:' : 'Dazu habe ich diese Bücher gefunden:');
+      return addBooks(top, top.length === 1 ? L.one : L.many);
     }
     if (fTop >= 2.4) return addAnswer(faqs[0].f);
     if (books.length && bTop >= 2.4) {
       var loose = books.filter(function (r) { return r.s >= bTop * 0.7; }).slice(0, 5).map(function (r) { return r.b; });
-      return addBooks(loose, 'Vielleicht passt eines davon:');
+      return addBooks(loose, L.loose);
     }
     addAnswer(KB.fallback);
   }
@@ -285,9 +295,8 @@
     launch.type = 'button';
     launch.setAttribute('aria-expanded', 'false');
     launch.setAttribute('aria-controls', 'cb-panel');
-    launch.setAttribute('aria-label', 'Fragen an den Assistenten stellen');
+
     launch.innerHTML = '<svg class="cb-ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.5h7M8.5 11.5h4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="cb-launch-t"></span>';
-    launch.querySelector('.cb-launch-t').textContent = LABEL;
 
     panel = el('div', 'cb-panel');
     panel.id = 'cb-panel';
@@ -298,16 +307,15 @@
 
     var head = el('div', 'cb-head');
     var ht = el('div', 'cb-head-t');
-    var h = el('h2', 'cb-title', 'Assistent');
+    var h = el('h2', 'cb-title');
     h.id = 'cb-title';
     ht.appendChild(h);
-    var note = el('p', 'cb-note', 'Automatischer Assistent, keine Beratung. Eingaben werden nicht gespeichert.');
+    var note = el('p', 'cb-note');
     note.id = 'cb-note';
     ht.appendChild(note);
     head.appendChild(ht);
     var close = el('button', 'cb-close');
     close.type = 'button';
-    close.setAttribute('aria-label', 'Assistent schließen');
     close.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
     head.appendChild(close);
     panel.appendChild(head);
@@ -315,30 +323,26 @@
     log = el('div', 'cb-log');
     log.setAttribute('role', 'log');
     log.setAttribute('aria-live', 'polite');
-    log.setAttribute('aria-label', 'Unterhaltung');
     log.tabIndex = 0;
     panel.appendChild(log);
 
     sugBox = el('div', 'cb-sugs');
-    sugBox.setAttribute('aria-label', 'Vorschläge');
     sugBox.setAttribute('role', 'group');
     panel.appendChild(sugBox);
 
     var form = el('form', 'cb-form');
     form.setAttribute('autocomplete', 'off');
-    var lab = el('label', 'cb-sr', 'Deine Frage');
+    var lab = el('label', 'cb-sr');
     lab.htmlFor = 'cb-input';
     input = el('input', 'cb-input');
     input.id = 'cb-input';
     input.type = 'text';
     input.maxLength = 300;
-    input.placeholder = 'Frage eingeben …';
     input.setAttribute('aria-describedby', 'cb-note');
     input.setAttribute('autocomplete', 'off');
     input.setAttribute('enterkeyhint', 'send');
     var send = el('button', 'cb-send');
     send.type = 'submit';
-    send.setAttribute('aria-label', 'Frage senden');
     send.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     form.appendChild(lab);
     form.appendChild(input);
@@ -348,6 +352,7 @@
     root.appendChild(panel);
     root.appendChild(launch);
     document.body.appendChild(root);
+    applyUI();
 
     launch.addEventListener('click', function () { panel.hidden ? open() : shut(); });
     close.addEventListener('click', function () { shut(); });
@@ -362,9 +367,32 @@
     });
   }
 
+  function applyUI() {
+    LANG = curLang();
+    L = UI[LANG] || UI.de;
+    root.setAttribute('lang', UI[LANG] ? LANG : 'de');
+    root.setAttribute('dir', 'ltr');
+    launch.setAttribute('aria-label', L.open);
+    launch.querySelector('.cb-launch-t').textContent = (LANG === 'de' && LABEL_ATTR) || L.launch;
+    panel.querySelector('.cb-title').textContent = L.title;
+    panel.querySelector('.cb-note').textContent = L.note;
+    panel.querySelector('.cb-close').setAttribute('aria-label', L.close);
+    log.setAttribute('aria-label', L.log);
+    sugBox.setAttribute('aria-label', L.sugs);
+    panel.querySelector('label.cb-sr').textContent = L.label;
+    input.placeholder = L.ph;
+    panel.querySelector('.cb-send').setAttribute('aria-label', L.send);
+  }
+  /* Wissen wählen: {sprachen:{de:…,en:…}} oder ein einzelnes Wissen */
+  function pickKB() {
+    var W = window.ChatbotWissen;
+    if (!W) return null;
+    var k = W.sprachen ? (W.sprachen[LANG] || W.sprachen.de || W.sprachen[Object.keys(W.sprachen)[0]]) : W;
+    if (k && !k._prep) { KB = k; prep(); k._prep = true; }
+    return k;
+  }
   function loadKB(cb) {
-    if (KB) return cb();
-    if (window.ChatbotWissen) { KB = window.ChatbotWissen; prep(); return cb(); }
+    if (window.ChatbotWissen) { KB = pickKB(); return cb(); }
     if (loading) return;
     loading = true;
     var s = document.createElement('script');
@@ -372,7 +400,7 @@
     s.async = true;
     s.onload = function () {
       loading = false;
-      if (window.ChatbotWissen) { KB = window.ChatbotWissen; prep(); }
+      if (window.ChatbotWissen) KB = pickKB();
       cb();
     };
     s.onerror = function () { loading = false; cb(); };
@@ -383,14 +411,15 @@
     if (log.childNodes.length) return;
     if (!KB) {
       var m = botBox();
-      paras(m, 'Der Assistent ist gerade nicht verfügbar. Bitte nutze die Kontaktangaben auf dieser Seite.');
+      paras(m, L.down);
       return;
     }
-    document.getElementById('cb-title').textContent = KB.titel || 'Assistent';
+    document.getElementById('cb-title').textContent = KB.titel || L.title;
     addAnswer({ a: KB.begruessung, next: KB.vorschlaege });
   }
 
   function open() {
+    if (curLang() !== LANG) { applyUI(); log.textContent = ''; sugBox.textContent = ''; KB = null; }
     panel.hidden = false;
     root.classList.add('cb-open');
     launch.setAttribute('aria-expanded', 'true');
