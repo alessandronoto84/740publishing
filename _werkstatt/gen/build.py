@@ -53,7 +53,7 @@ print('ok',len(out))
 # ---- Gesamtkatalog ----
 sys.path.insert(0,f'{S}/gen')
 from catalog import CAT, EXTRA, SLUG, BLURB, new_links
-TRAILER={'bier':'bier','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
+TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
 def slug(t):
     t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')
     import re; return re.sub(r'[^a-z0-9]+','-',t).strip('-')

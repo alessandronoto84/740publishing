@@ -3,7 +3,7 @@ S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
 from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_isbns, SERIES_OF
 from seo import SEO
 BASE='https://alessandronoto84.github.io/740publishing/'
-TRAILER={'bier':'bier','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
+TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
 EXTRA_LINKS={'k-kifft':[('Hardcover','Amazon','https://www.amazon.de/dp/3565740426')],'k-astrologie':[('Hardcover','Amazon','https://www.amazon.de/dp/3565752289')],'k-kaffee':[('Hardcover','Amazon','https://www.amazon.de/dp/3565737905')],'k-drogen':[('Hardcover','Amazon','https://www.amazon.de/dp/3565526637')]}
 GENRE={'Romane':'Roman','Sachbuch & Ratgeber':'Sachbuch','Reiseführer':'Reiseführer'}
 def slug(t):

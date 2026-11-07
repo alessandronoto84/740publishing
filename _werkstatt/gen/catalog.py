@@ -62,7 +62,11 @@ CAT += [
  ('k-schoenheit','Warum Schönheit Macht ist','Katharina Bruns',S,'9783565501397','9783565501366','Taschenbuch','../cov_schoenheit'),
  ('k-astrologie','Astrologie','Vivian Dahl',S,'9783565752201','9783565752270','Taschenbuch','../cov_astrologie'),
  ('k-thailand','Die verborgene Seite von Thailand','Mika Solberg',T,'9783565585663','9783565585656','Taschenbuch','../cov_thailand'),
+ # Fußball: bei Amazon live (Taschenbuch, Erscheinungstermin 05.11.2026, geprüft 07.11.2026); epubli-Shopseiten (E-Book 9783565850679,
+ # Softcover 9783565850662) am 07.11. noch 404 -> E-Book-ISBN erst eintragen und EXTRA['fussball'] entfernen, wenn epubli live ist.
+ ('fussball','Die dunkle Seite des Fußballs','Jan Völker',S,None,'9783565850662','Taschenbuch','../cov_fussball'),
 ]
+EXTRA['fussball']=[('Taschenbuch','Amazon','https://www.amazon.de/dp/3565850663')]
 SLUG={'fitness':'das-grosse-fitnessbuch','k-drogen':'drogen-das-umfassende-standardwerk'}
 SOLB='30 Orte abseits der Touristenpfade: Geheimtipps und Routen für respektvolles Reisen. Aus der Reihe „Die verborgene Seite der Welt“.'
 BLURB={
@@ -131,19 +135,28 @@ BLURB={
 # key -> {Format: (ISBN, epubli-Shop-URL)}. Solange URL leer ist, erscheint auf der Webseite NICHTS
 # (kein Button, keine ISBN). Nach Veröffentlichung nur ISBN und geprüften Link eintragen, dann neu bauen.
 NEW_ED={
- 'bier':{'Hardcover':('','')},
- 'k-rap':{'Hardcover':('','')},
- 'china':{'Hardcover':('','')},
- 'japan':{'Hardcover':('','')},
- 'mexiko':{'Hardcover':('','')},
- 'vietnam':{'Hardcover':('','')},
+ # Stand 07.11.2026: Hardcover bei epubli veröffentlicht (ISBN laut neue_ausgaben_angelegt.txt), Shopseiten aber noch 404 -> Link leer lassen
+ 'bier':{'Hardcover':('9783565855452','')},
+ 'k-rap':{'Hardcover':('9783565855476','')},
+ 'china':{'Hardcover':('9783565855513','')},
+ 'japan':{'Hardcover':('9783565855544','')},
+ 'mexiko':{'Hardcover':('9783565855575','')},
+ 'vietnam':{'Hardcover':('9783565855612','')},
+ # Hardcover vom Verleger selbst veröffentlicht, im epubli-Shop am 07.11.2026 noch nicht auffindbar
  'emilia':{'Hardcover':('','')},
  'underground':{'Hardcover':('','')},
  'liebe':{'Hardcover':('','')},
  'schamanismus':{'Hardcover':('','')},
  'k-freizeitpark':{'Hardcover':('','')},
  'erwachsen':{'Hardcover':('','')},
- 'koerperkult':{'Taschenbuch':('','')},
+ 'spiel':{'Hardcover':('','')},
+ 'auswandern':{'Hardcover':('','')},
+ 'koerperkult':{'Taschenbuch':('',''),'E-Book':('','')},
+ # Hardcover, die im epubli-Shop live sind (geprüft 07.11.2026: Seite zeigt „Buch (Hardcover)“)
+ 'k-kaffee':{'Hardcover':('9783565737901','https://www.epubli.com/shop/kaffee-9783565737901')},
+ 'k-drogen':{'Hardcover':('9783565526635','https://www.epubli.com/shop/drogen-das-umfassende-standardwerk-9783565526635')},
+ 'k-kifft':{'Hardcover':('9783565740420','https://www.epubli.com/shop/deutschland-kifft-9783565740420')},
+ 'k-astrologie':{'Hardcover':('9783565752287','https://www.epubli.com/shop/astrologie-9783565752287')},
 }
 def new_links(k):
     return [(f,'epubli',u) for f,(i,u) in NEW_ED.get(k,{}).items() if u]
@@ -155,6 +168,7 @@ SERIES_OF={
  'china':('Die verborgene Seite der Welt',4),'mexiko':('Die verborgene Seite der Welt',5),'kolumbien':('Die verborgene Seite der Welt',6),
  'ecuador':('Die verborgene Seite der Welt',7),'peru':('Die verborgene Seite der Welt',8),
  'k-kaffee':('Die verborgene Seite der Kulinarik',1),'bier':('Die verborgene Seite der Kulinarik',2),
+ 'fussball':('Die dunkle Seite des Sports',1),
  'karma':('KARMA · GLÜCK · ORDNUNG · PECH',1),'glueck':('KARMA · GLÜCK · ORDNUNG · PECH',2),
  'ordnung':('KARMA · GLÜCK · ORDNUNG · PECH',3),'pech':('KARMA · GLÜCK · ORDNUNG · PECH',4),
 }
