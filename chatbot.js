@@ -55,6 +55,7 @@
     if (q === w) return 1;
     var lq = q.length, lw = w.length;
     if (lq >= 4 && lw >= 4 && (w.indexOf(q) === 0 || q.indexOf(w) === 0)) return 0.8;
+    if (lq >= 5 && lw > lq && w.indexOf(q) > 0) return 0.6;
     if (lq >= 5 && lw >= 5) {
       var max = Math.min(lq, lw) >= 8 ? 2 : 1;
       if (lev(q, w, max) <= max) return 0.7;
@@ -229,6 +230,9 @@
     var faqs = scoreFaq(qt, qn), books = KB.buecher ? scoreBooks(qt, qn) : [];
     var fTop = faqs[0] ? faqs[0].s : 0, bTop = books[0] ? books[0].s : 0;
 
+    // Vorrang-Einträge (z. B. Hinweis bei Gesundheitsfragen) gehen allem anderen vor
+    for (var p = 0; p < faqs.length; p++) if (faqs[p].f.prio && faqs[p].s >= 2.4) return addAnswer(faqs[p].f);
+
     // Kategorie-Wunsch (z. B. "Welche Reiseführer gibt es?")
     if (KB.kategorien) {
       for (var key in KB.kategorien) {
@@ -285,7 +289,7 @@
     launch.innerHTML = '<svg class="cb-ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.5h7M8.5 11.5h4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="cb-launch-t"></span>';
     launch.querySelector('.cb-launch-t').textContent = LABEL;
 
-    panel = el('section', 'cb-panel');
+    panel = el('div', 'cb-panel');
     panel.id = 'cb-panel';
     panel.hidden = true;
     panel.setAttribute('role', 'dialog');
