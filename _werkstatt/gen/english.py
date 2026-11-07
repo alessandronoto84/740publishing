@@ -4,7 +4,7 @@
 import html, json, sys, os
 S=sys.argv[1]
 BASE='https://alessandronoto84.github.io/740publishing/'
-CSSV='1793200000'
+CSSV='1793300000'
 e=html.escape
 N='Novels'; F='Nonfiction'
 # (key, Titel, Untertitel, Autor, Bereich, Kurzbeschreibung)

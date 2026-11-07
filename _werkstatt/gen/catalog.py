@@ -131,27 +131,31 @@ BLURB={
  
 }
 
-# ---- Neue Ausgaben, bei epubli angelegt, aber noch NICHT veröffentlicht (Stand 06.11.2026) ----
-# key -> {Format: (ISBN, epubli-Shop-URL)}. Solange URL leer ist, erscheint auf der Webseite NICHTS
-# (kein Button, keine ISBN). Nach Veröffentlichung nur ISBN und geprüften Link eintragen, dann neu bauen.
+# ---- Neue Ausgaben (zusätzliche Formate je Buch) ----
+# key -> {Format: (ISBN, epubli-Shop-URL)}. Mit URL: Kaufbutton. Ohne URL, aber mit ISBN: Format wird mit ISBN und
+# „erscheint in Kürze im Handel“ angezeigt (kein toter Link). Sobald die Shopseite live ist, geprüften Link eintragen.
 NEW_ED={
- # Stand 07.11.2026: Hardcover bei epubli veröffentlicht (ISBN laut neue_ausgaben_angelegt.txt), Shopseiten aber noch 404 -> Link leer lassen
- 'bier':{'Hardcover':('9783565855452','')},
+ # Stand 07.11.2026 (zweite Prüfung, epubli-Shop per Browser): alle unten mit leerem Link sind bei epubli veröffentlicht
+ # (ISBN laut preise_verkaeufe.csv), die Shopseite war aber noch 404. Leerer Link -> Webseite zeigt Format + ISBN
+ # mit „erscheint in Kürze im Handel“, ohne Kaufbutton. Sobald live: Link eintragen und neu bauen.
+ 'bier':{'Hardcover':('9783565855452',''),'E-Book':('9783565850624','')},
  'k-rap':{'Hardcover':('9783565855476','')},
  'china':{'Hardcover':('9783565855513','')},
  'japan':{'Hardcover':('9783565855544','')},
  'mexiko':{'Hardcover':('9783565855575','')},
  'vietnam':{'Hardcover':('9783565855612','')},
- # Hardcover vom Verleger selbst veröffentlicht, im epubli-Shop am 07.11.2026 noch nicht auffindbar
- 'emilia':{'Hardcover':('','')},
- 'underground':{'Hardcover':('','')},
- 'liebe':{'Hardcover':('','')},
- 'schamanismus':{'Hardcover':('','')},
- 'k-freizeitpark':{'Hardcover':('','')},
- 'erwachsen':{'Hardcover':('','')},
- 'spiel':{'Hardcover':('','')},
- 'auswandern':{'Hardcover':('','')},
- 'koerperkult':{'Taschenbuch':('',''),'E-Book':('','')},
+ 'emilia':{'Hardcover':('9783565855506','')},
+ 'underground':{'Hardcover':('9783565855490','')},
+ 'liebe':{'Hardcover':('9783565855537','')},
+ 'schamanismus':{'Hardcover':('9783565855469',''),'E-Book':('9783565850631','')},
+ 'k-freizeitpark':{'Hardcover':('9783565855636','')},
+ 'erwachsen':{'Hardcover':('9783565855568','')},
+ 'spiel':{'Hardcover':('9783565855414','')},
+ 'auswandern':{'Hardcover':('9783565855438','')},
+ 'koerperkult':{'Taschenbuch':('9783565855605',''),'E-Book':('9783565855650','')},
+ 'sucht':{'E-Book':('9783565850587','')},
+ 'koenige':{'E-Book':('9783565850648','')},
+ 'fussball':{'E-Book':('9783565850679','')},
  # Hardcover, die im epubli-Shop live sind (geprüft 07.11.2026: Seite zeigt „Buch (Hardcover)“)
  'k-kaffee':{'Hardcover':('9783565737901','https://www.epubli.com/shop/kaffee-9783565737901')},
  'k-drogen':{'Hardcover':('9783565526635','https://www.epubli.com/shop/drogen-das-umfassende-standardwerk-9783565526635')},
@@ -161,7 +165,10 @@ NEW_ED={
 def new_links(k):
     return [(f,'epubli',u) for f,(i,u) in NEW_ED.get(k,{}).items() if u]
 def new_isbns(k):
-    return [(i,f) for f,(i,u) in NEW_ED.get(k,{}).items() if u and i]
+    return [(i,f) for f,(i,u) in NEW_ED.get(k,{}).items() if i]
+def new_pending(k):
+    """Formate mit ISBN, aber noch ohne live Shopseite: [(Format, ISBN)]"""
+    return [(f,i) for f,(i,u) in NEW_ED.get(k,{}).items() if i and not u]
 # ---- Reihen laut epubli-Metadaten (06.11.2026) ----
 SERIES_OF={
  'k-thailand':('Die verborgene Seite der Welt',1),'vietnam':('Die verborgene Seite der Welt',2),'japan':('Die verborgene Seite der Welt',3),

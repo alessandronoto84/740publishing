@@ -23,13 +23,15 @@ genres=[]
 for b in books:
     if b[4] not in genres: genres.append(b[4])
 sys.path.insert(0,f'{S}/gen')
-from catalog import new_links, SERIES_OF
+from catalog import new_links, new_pending, SERIES_OF
 NKEY={'freizeitpark':'k-freizeitpark','thailand':'k-thailand','kaffee':'k-kaffee','rap':'k-rap','schoenheit':'k-schoenheit','kifft':'k-kifft','drogen':'k-drogen','astrologie':'k-astrologie'}
 cards=[];ld=[]
 for k,t,sub,a,g,series,blurb,links,isbn in books:
     links=links+new_links(NKEY.get(k,k))
     if NKEY.get(k,k) in SERIES_OF: series=f'{SERIES_OF[NKEY.get(k,k)][0]} · Band {SERIES_OF[NKEY.get(k,k)][1]}'
-    btns=f'<button class="buy trl" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{html.escape(t)}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>'+''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">{s}</span></a>' for f,s,u in links)
+    _fm=[f for f,_,_ in links]
+    pend=''.join(f'<span class="buy pend" title="ISBN {isbnfmt(i)}"><span class="fmt">{f}</span><span class="shop">erscheint in Kürze</span></span>' for f,i in new_pending(NKEY.get(k,k)) if f not in _fm)
+    btns=f'<button class="buy trl" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{html.escape(t)}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>'+''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">{s}</span></a>' for f,s,u in links)+pend
     ser=f'<p class="series">Reihe: {html.escape(series)}</p>' if series else ''
     cards.append(f'''      <article class="book" id="{k}" data-genre="{g}">
         <button class="covbtn" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{html.escape(t)}" aria-label="Trailer zu „{html.escape(t)}“ abspielen"><img class="cover" src="covers/cov_{k}.jpg" alt="Cover von „{html.escape(t)}“" width="150" height="225" loading="lazy"><span class="playic" aria-hidden="true"></span><span class="playlbl">Trailer</span></button>
@@ -52,7 +54,7 @@ print('ok',len(out))
 
 # ---- Gesamtkatalog ----
 sys.path.insert(0,f'{S}/gen')
-from catalog import CAT, EXTRA, SLUG, BLURB, new_links
+from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_pending
 TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
 def slug(t):
     t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')
@@ -74,6 +76,8 @@ for cat in order:
             if pr and not eb: links.append((pt,'epubli',f'https://www.epubli.com/shop/{slug(t)}-{pr}'))
         links=links+new_links(k)
         btns=''.join(f'<a class="buy sm" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">{s}</span></a>' for f,s,u in links)
+        _fm=[f for f,_,_ in links]
+        btns+=''.join(f'<span class="buy sm pend" title="ISBN {isbnfmt(i)} · erscheint in Kürze im Handel"><span class="fmt">{f}</span><span class="shop">in Kürze</span></span>' for f,i in new_pending(k) if f not in _fm)
         img=(f'<button class="covbtn" type="button" data-video="trailer/{TRAILER[k]}.mp4" data-poster="trailer/{TRAILER[k]}.jpg" data-title="{html.escape(t)}" aria-label="Trailer zu „{html.escape(t)}“ abspielen"><img class="cover" src="covers/cat/{cov}.jpg" alt="Cover von „{html.escape(t)}“" width="100" height="150" loading="lazy"><span class="playic" aria-hidden="true"></span></button>' if k in TRAILER else f'<img class="cover" src="covers/cat/{cov}.jpg" alt="Cover von „{html.escape(t)}“" width="100" height="150" loading="lazy">') if cov else f'<div class="cover blank" aria-hidden="true"><span>{html.escape(t)}</span></div>'
         items.append(f'<article class="mini" id="{k}">{img}<div class="info"><h3><a href="buch/{slug(t)}.html">{html.escape(t)}</a></h3><p class="author">{html.escape(a)}</p>{("<p class=\"mblurb\">"+html.escape(BLURB[k])+"</p>") if k in BLURB else ""}<p class="more"><a href="buch/{slug(t)}.html">Mehr zum Buch →</a></p><div class="buys">{btns}</div></div></article>')
     secs.append(f'<section class="catsec" data-cat="{cat}"><h2 class="sech">{cat} <span>{len(items)}</span></h2><div class="minigrid">{"".join(items)}</div></section>')

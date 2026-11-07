@@ -1,6 +1,6 @@
 import html, json, sys, os, re, datetime
 S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
-from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_isbns, SERIES_OF
+from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_isbns, new_pending, SERIES_OF
 from seo import SEO
 BASE='https://alessandronoto84.github.io/740publishing/'
 TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
@@ -41,7 +41,7 @@ HEAD='''<!doctype html>
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../logo-small.png">
-<link rel="stylesheet" href="../style.css?v=1793200000">
+<link rel="stylesheet" href="../style.css?v=1793300000">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -71,6 +71,9 @@ for b in books:
     ld["@graph"][0]={k:v for k,v in ld["@graph"][0].items() if v is not None}
     btns=''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">bei {s} kaufen</span></a>' for f,s,u in b['links'])
     tr=TRAILER.get(b['k'])
+    pend=[(f,i) for f,i in new_pending(b['k']) if f not in fmts]
+    btns+=''.join(f'<span class="buy pend" title="ISBN {isbnfmt(i)}"><span class="fmt">{f}</span><span class="shop">erscheint in Kürze</span></span>' for f,i in pend)
+    pendtxt=(' · '+e(fjoin([f for f,_ in pend]))+' (ISBN '+', '.join(isbnfmt(i) for _,i in pend)+(') erscheinen' if len(pend)>1 else ') erscheint')+' in Kürze im Handel') if pend else ''
     trbtn=f'<button class="buy trl" type="button" data-video="../trailer/{tr}.mp4" data-poster="../trailer/{tr}.jpg" data-title="{e(b["t"])}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>' if tr else ''
     isbns=' · '.join(f'{lab}: ISBN {isbnfmt(i)}' for i,lab in ((b['eb'],'E-Book'),(b['pr'],b['pt']),*new_isbns(b['k'])) if i)
     ser=SERIES_OF.get(b['k'])
@@ -90,7 +93,7 @@ for b in books:
     {f'<p class="bp-series">Reihe: {e(ser[0])} · Band {ser[1]}</p>' if ser else ''}
     <hr class="rule">
     {f'<p class="bp-blurb">{e(b["b"])}</p>' if b['b'] else ''}
-    <p class="bp-avail">Jetzt erhältlich als {e(fjoin(fmts))}</p>
+    <p class="bp-avail">Jetzt erhältlich als {e(fjoin(fmts))}{pendtxt}</p>
     <div class="buys">{trbtn}{btns}</div>
     <p class="isbn">{isbns}</p>
   </div>

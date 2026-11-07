@@ -249,3 +249,6 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 @media (max-width:400px){.enlist .minigrid{grid-template-columns:1fr}.enlist .mini{grid-template-columns:84px 1fr;gap:12px}.enlist .mini .cover{width:84px;height:126px}}
 .top nav a{white-space:nowrap}
 .bp-series{margin:.6em 0 0;font-size:.84rem;color:var(--gold);letter-spacing:.03em}
+/* Formate mit ISBN, deren Shopseite noch nicht live ist (kein Link) */
+.buy.pend{cursor:default;border-style:dashed;color:var(--gold2);opacity:.75;background:transparent}
+.buy.pend:hover{background:transparent;color:var(--gold2)}
