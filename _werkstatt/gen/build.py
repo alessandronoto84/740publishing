@@ -94,7 +94,7 @@ WALL=''.join(_cols)
 SERIES=[('Die verborgene Seite der Welt','Reiseführer von Mika Solberg: 30 Orte abseits der Touristenpfade pro Land.',['k-thailand','vietnam','japan','china','mexiko','kolumbien','ecuador','peru']),
  ('Die verborgene Seite der Kulinarik','Die Kulturgeschichte dessen, was wir täglich genießen.',['k-kaffee','bier']),
  ('KARMA · GLÜCK · ORDNUNG · PECH','Die Romanreihe von Konstanze Frey: warmherzige, humorvolle Kleinstadtromane.',['karma','glueck','ordnung','pech']),
- ('Projekt-Reihe von Viktor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
+ ('Projekt-Reihe von Victor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
  ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus und spirituelle Traditionen.',['k-astrologie','schamanismus'])]
 _C={x[0]:x for x in CAT}
 def _cv(cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
