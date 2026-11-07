@@ -47,6 +47,10 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
   - Aufruf: `cd asr && node posts2.cjs $S`. Playwright und Chromium sind vorinstalliert.
 - `covers_hd/`: hochauflösende Frontcover als JPG. Für `posts2.cjs` vorher nach `posts/cover_<k>.png` konvertieren.
 - `gen/chatbot_kb.py`: baut die Wissensbasis des **Chat-Assistenten** (`chatbot-wissen.js`) aus den fertigen Seiten (Buchseiten, Startseite, English Editions, Impressum). Aufruf **nach** build/pages/english: `python3 gen/chatbot_kb.py $S`. Der Assistent selbst: `chatbot.js` + `chatbot.css` im Repo-Root (rein im Browser, keine Cookies, kein Server); eingebunden in `index_tpl.html`, `pages.py` (FOOT), `impressum.html`, `datenschutz.html`. Auch auf `en/` (eingebunden in `english.py`): die Wissensbasis enthält Deutsch und Englisch (`sprachen.de/en`), der Bot wählt nach `<html lang>`. Script-Version `?v=` bei Änderungen am Bot in Vorlage, `pages.py`, `english.py`, Impressum und Datenschutz hochzählen.
+- **Startseiten-Module oben (seit 07.11.2026)**, gebaut von `gen/picks.py`, Browser-Logik in `entdecken.js` (Repo-Root, keine Cookies):
+  - **Laufband „Beliebt bei unseren Lesern“**: Liste `BELIEBT` in `catalog.py` (Schlüssel aus `CAT`, Reihenfolge = Anzeige). Es gibt keine Verkaufszahlen im Repo, deshalb kein „Bestseller“ und keine Zahlen. Startauswahl = die 10 Titel mit Trailer. Auf `en/` heißt es „Featured English Editions“ (Liste `EN_FEATURED` in `english.py`), weil die englischen Ausgaben noch nicht im Handel sind.
+  - **„Unser Tipp des Tages“**: feste gemischte Reihenfolge (Seed 740), Tagesindex nach Datum Europe/Berlin → für alle Besucher am selben Tag gleich, jedes Buch einmal pro Durchlauf.
+  - **„Zufällig entdeckt“**: bei jedem Aufruf ein zufälliges Buch (nie gleich dem Tipp), Button „Noch ein Buch“.
 - `epubli_list.txt`: komplette Liste aller epubli-Veröffentlichungen mit ISBNs (Stand 06.11.).
 
 **Ordnerstruktur für die Skripte:**

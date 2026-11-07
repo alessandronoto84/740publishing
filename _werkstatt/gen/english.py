@@ -4,7 +4,7 @@
 import html, json, sys, os
 S=sys.argv[1]
 BASE='https://alessandronoto84.github.io/740publishing/'
-CSSV='1793300000'
+CSSV='1793400000'
 e=html.escape
 N='Novels'; F='Nonfiction'
 # (key, Titel, Untertitel, Autor, Bereich, Kurzbeschreibung)
@@ -27,7 +27,10 @@ EN=[
  ('ai','Artificial Intelligence','Understand It. Use It. Shape It.','Friedhelm Westerkamp',F,'A clear, practical guide for beginners, professionals and businesses: what AI assistants actually do, how to write prompts that get results, and where AI saves real time and where it doesn’t. Revised and updated English edition.'),
  ('digital-exhaustion','Digital Exhaustion','How Constant Digital Stimulation Drains and Empties Us—and What We Can Really Do About It','Friedhelm Westerkamp',F,'Why do you feel exhausted after a day in which you did almost nothing? Friedhelm Westerkamp shows how the attention economy works, what it does to concentration, sleep and relationships, and how to win back attention and rest. Revised and updated English edition.'),
 ]
-GPLAY={k:'' for k,*_ in EN}  # z. B. GPLAY['karma']='https://play.google.com/store/books/details?id=...'
+GPLAY={k:'' for k,*_ in EN}
+# Laufband oben auf en/: Die englischen Ausgaben sind noch nicht im Handel, daher KEIN „Bestseller“/„popular“,
+# sondern „Featured English Editions“. Sandro pflegt die Liste selbst (Schlüssel aus EN, gewünschte Reihenfolge).
+EN_FEATURED=['karma','astrology','drugs','manuscript','black-water','psych','beauty','luck','game','spirit','body-cult','ai','digital-exhaustion','order','bad-luck']  # z. B. GPLAY['karma']='https://play.google.com/store/books/details?id=...'
 
 def card(k,t,sub,a,sec,d):
     u=GPLAY.get(k)
@@ -42,6 +45,11 @@ for sec in (N,F):
     items=[card(*b) for b in EN if b[4]==sec]
     secs+=f'<section class="catsec"><h2 class="sech">{sec} <span>{len(items)}</span></h2><div class="minigrid">{"".join(items)}</div></section>\n'
 ld={"@context":"https://schema.org","@graph":[{"@type":"Book","name":t,**({"alternativeHeadline":sub} if sub else {}),"author":{"@type":"Person","name":a},"inLanguage":"en","bookFormat":"https://schema.org/EBook","image":BASE+f"covers/en/{k}.jpg","publisher":{"@type":"Organization","name":"740 Publishing"}} for k,t,sub,a,sec,d in EN]}
+import picks as _pk
+_PB=[{'k':k,'t':t,'a':a,'g':sec,'cov':f'../covers/en/{k}.jpg','href':f'#{k}','d':d} for k,t,sub,a,sec,d in EN]
+_PBK={b['k']:b for b in _PB}
+TICKER=_pk.ticker([_PBK[k] for k in EN_FEATURED if k in _PBK],'Featured','English Editions','Featured English Editions')
+PICKS=_pk.picks(_PB,{'lang':'en','aria':'Book recommendations','day':'Our pick of the day','rnd':'Discover a random book','again':'↻ Another one','more':'View this book →'})
 page=f'''<!doctype html>
 <html lang="en">
 <head>
@@ -66,16 +74,19 @@ page=f'''<!doctype html>
 <body>
 <header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="#novels">Novels</a><a href="#nonfiction">Nonfiction</a><a href="../" hreflang="de" lang="de" title="Deutsche Startseite">DE</a></nav></div></header>
 <main>
+  {TICKER}
   <section class="sec wrap enintro">
     <p class="eyebrow">740 Publishing</p>
     <h1 class="sech">English Editions</h1>
     <hr class="rule">
     <p class="enlead">Selected titles from our German program, now translated into English. All {len(EN)} e-books have been submitted to Google Play Books and will be available there soon.</p>
   </section>
+  {PICKS}
   <div class="catalog enlist"><div class="sec wrap">
 {secs.replace('<section class="catsec"><h2 class="sech">Novels','<section class="catsec" id="novels"><h2 class="sech">Novels').replace('<section class="catsec"><h2 class="sech">Nonfiction','<section class="catsec" id="nonfiction"><h2 class="sech">Nonfiction')}  </div></div>
 </main>
 <footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems) · Germany<br>740publishingverlag@gmail.com</address><nav><a href="../impressum.html" hreflang="de">Legal notice</a><a href="../datenschutz.html" hreflang="de">Privacy</a></nav></div></footer>
+<script src="../entdecken.js?v=1" defer></script>
 <script src="../chatbot.js?v=2" defer></script>
 </body>
 </html>

@@ -179,3 +179,8 @@ SERIES_OF={
  'karma':('KARMA · GLÜCK · ORDNUNG · PECH',1),'glueck':('KARMA · GLÜCK · ORDNUNG · PECH',2),
  'ordnung':('KARMA · GLÜCK · ORDNUNG · PECH',3),'pech':('KARMA · GLÜCK · ORDNUNG · PECH',4),
 }
+# ---- Laufband „Beliebt bei unseren Lesern“ (Startseite oben) ----
+# Es gibt im Repo KEINE Verkaufszahlen. Deshalb heißt das Band nicht „Bestseller“, sondern „Beliebt bei unseren Lesern“,
+# und es werden keine Zahlen angezeigt. Sandro pflegt diese Liste selbst: Schlüssel aus CAT (erste Spalte), in der
+# gewünschten Reihenfolge. Startauswahl (07.11.2026): die Titel mit Buchtrailer/Reel aus der Social-Media-Kampagne.
+BELIEBT=['k-astrologie','k-drogen','k-kifft','k-rap','k-kaffee','k-thailand','k-schoenheit','k-freizeitpark','bier','fussball']

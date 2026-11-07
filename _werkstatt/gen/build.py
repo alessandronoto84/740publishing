@@ -102,6 +102,13 @@ _ser=[]
 for _n,_d,_ks in SERIES:
     _it=''.join(f'<a class="sbk" href="buch/{slug(_C[k][1])}.html"><img src="{_cv(_C[k][7])}" alt="Cover von „{html.escape(_C[k][1])}“" width="120" height="180" loading="lazy"><span>{html.escape(_C[k][1].replace("Die verborgene Seite von ",""))}</span></a>' for k in _ks)
     _ser.append(f'<div class="series"><div class="shead"><h3>{html.escape(_n)}</h3><p>{html.escape(_d)} <b>{len(_ks)} Bände</b></p></div><div class="srow">{_it}</div></div>')
-out=open(f'{S}/site/index.html').read().replace('{{SERIES}}','\n'.join(_ser)).replace('{{WALL}}',WALL).replace('{{CATALOG}}','\n'.join(secs)).replace('{{CATCHIPS}}',catchips).replace('{{COUNT}}',str(len(CAT)))
+# ---- Laufband + Tipp des Tages + Zufallsbuch (gen/picks.py, Browser-Logik in entdecken.js) ----
+from catalog import BELIEBT
+import picks as _pk
+_PB=[{'k':k,'t':t,'a':a,'g':c,'cov':_cv(cov),'href':f'buch/{slug(t)}.html','d':BLURB.get(k,'')} for k,t,a,c,eb,pr,pt,cov in CAT if cov]
+_PBK={b['k']:b for b in _PB}
+TICKER=_pk.ticker([_PBK[k] for k in BELIEBT if k in _PBK],'Beliebt','bei unseren Lesern','Beliebt bei unseren Lesern')
+PICKS=_pk.picks(_PB,{'lang':'de','aria':'Buchtipps','day':'Unser Tipp des Tages','rnd':'Zufällig entdeckt','again':'↻ Noch ein Buch','more':'Mehr zum Buch →'})
+out=open(f'{S}/site/index.html').read().replace('{{TICKER}}',TICKER).replace('{{PICKS}}',PICKS).replace('{{SERIES}}','\n'.join(_ser)).replace('{{WALL}}',WALL).replace('{{CATALOG}}','\n'.join(secs)).replace('{{CATCHIPS}}',catchips).replace('{{COUNT}}',str(len(CAT)))
 open(f'{S}/site/index.html','w').write(out)
 print('catalog',len(CAT))

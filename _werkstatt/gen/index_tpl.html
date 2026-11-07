@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://alessandronoto84.github.io/740publishing/logo.png">
 <link rel="icon" href="logo-small.png">
-<link rel="stylesheet" href="style.css?v=1793300000">
+<link rel="stylesheet" href="style.css?v=1793400000">
 <script type="application/ld+json">{{LD}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"740 Publishing","url":"https://alessandronoto84.github.io/740publishing/","logo":"https://alessandronoto84.github.io/740publishing/logo.png","email":"740publishingverlag@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Burgstraße 12","postalCode":"49808","addressLocality":"Lingen (Ems)","addressCountry":"DE"}}</script>
 </head>
@@ -29,6 +29,7 @@
 </header>
 
 <main>
+  {{TICKER}}
   <section class="hero">
     <div class="wall" aria-hidden="true">{{WALL}}</div>
     <div class="veil" aria-hidden="true"></div>
@@ -40,6 +41,8 @@
       <div class="facts"><span><b>{{COUNT}}</b> Titel</span><span>Roman · Sachbuch · Reiseführer</span><span>E-Book &amp; Print</span></div>
     </div>
   </section>
+
+  {{PICKS}}
 
   <section class="sec wrap" id="neu">
     <p class="eyebrow">Im Rampenlicht</p>
@@ -132,6 +135,7 @@
   dlg.addEventListener('cancel',function(e){ e.preventDefault(); close(); });
 })();
 </script>
+<script src="entdecken.js?v=1" defer></script>
 <script src="chatbot.js?v=2" defer></script>
 </body>
 </html>
