@@ -39,6 +39,8 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
 - `gen/build.py`: baut `index.html`. Aufruf `python3 gen/build.py $S`.
 - `gen/pages.py`: baut die Buchseiten, `sitemap.xml` und `robots.txt`. Aufruf `python3 gen/pages.py $S`.
 - `gen/index_tpl.html`: Vorlage der Startseite.
+- `gen/english.py`: baut `en/index.html` („English Editions“, 15 englische E-Books). Aufruf `python3 gen/english.py $S`. Cover 600 px unter `covers/en/<key>.{jpg,webp}`. Sobald ein Buch bei Google Play live ist, geprüften Link in `GPLAY['<key>']` eintragen, dann erscheint ein Kaufbutton statt „Coming soon on Google Play Books“.
+- `catalog.py` → `NEW_ED`: neue Ausgaben (12 Hardcover + Körperkult-Softcover), bei epubli angelegt, aber noch nicht veröffentlicht. Leere Einträge werden nicht angezeigt; nach Veröffentlichung ISBN und geprüften epubli-Link eintragen und neu bauen. `SERIES_OF`: Reihe und Band je Buch (laut epubli-Metadaten 06.11.).
 - `gen/wall.txt`: welche Cover in der animierten Wand laufen. Die Thumbnails liegen unter `covers/wall/`, 200×300.
 - `posts/tpl.html`, `asr/posts2.cjs`: rendern die Instagram-Karussells (je 3 Bilder, 1080×1350) nach `site/posts/<k>_{1,2,3}.jpg`.
   - Liest `posts/data.json` mit Feldern `k, title, author, hook, text, formats, line` und das Cover `posts/cover_<k>.png`.

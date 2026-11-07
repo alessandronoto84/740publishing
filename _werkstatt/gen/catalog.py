@@ -64,7 +64,7 @@ CAT += [
  ('k-thailand','Die verborgene Seite von Thailand','Mika Solberg',T,'9783565585663','9783565585656','Taschenbuch','../cov_thailand'),
 ]
 SLUG={'fitness':'das-grosse-fitnessbuch','k-drogen':'drogen-das-umfassende-standardwerk'}
-SOLB='30 Orte abseits der Touristenpfade: Geheimtipps, echte Begegnungen und Insiderwissen für respektvolles Reisen. Aus der Reihe „Die verborgene Seite der Welt“.'
+SOLB='30 Orte abseits der Touristenpfade: Geheimtipps und Routen für respektvolles Reisen. Aus der Reihe „Die verborgene Seite der Welt“.'
 BLURB={
  'sucht':'Marcel bricht in fremde Häuser ein, um seine Sucht zu bezahlen. Dann sieht ihn eine Frau auf ihrer Treppe an und ruft nicht die Polizei. Zwischen einem letzten großen Auftrag, einem alten Freund und einer neuen Chance merkt er zum ersten Mal seit Jahren, dass er etwas zu verlieren hat. Ein ehrlicher, psychologischer Roman über Entzug, Rückfall und den mühsamen Weg zurück.',
  'koenige':'Milan Bakker wächst im Kohlenhafen von Novahaven auf, wo das Geld nie reicht. Mit sechzehn liefert er seinen ersten Rucksack aus, mit zwanzig trifft er Viktor Verhaegen, der ihm Anerkennung und Zugang verschafft. Vom Pfandsammler zum Geldwäscher: ein düsterer Kriminalroman über Macht, Geld und Verrat.',
@@ -82,7 +82,7 @@ BLURB={
  'selbstversorger':'Vom Samen zur Ernte, auch mit wenig Zeit: Boden, Aussaat, Pflege, über 100 Gemüse, Obst und Kräuter, Mischkultur, natürliche Schädlingsbekämpfung und Kompost. Mit Jahreskalender, Checklisten und Planungsvorlagen.',
  'mensch':'Bewusstsein, freier Wille, Moral, Evolution, der Tod: Dieses Buch prüft Materialismus, Dualismus und Idealismus an denselben Kriterien, mit Erkenntnissen aus Neurowissenschaft, Philosophie, Kosmologie und Nahtodforschung. Kein Angriff auf die Wissenschaft, kein Aufruf zum Glauben, sondern eine Einladung, das eigene Weltbild zu überprüfen.',
  'algorithmus':'Sie glauben, Sie entscheiden selbst, was Sie sehen? Wie TikTok, Instagram und YouTube unsere Aufmerksamkeit, Meinungen und Beziehungen steuern, wo Personalisierung endet und Manipulation beginnt, und warum Medienkompetenz zur wichtigsten Fähigkeit des 21. Jahrhunderts geworden ist.',
- 'k-thailand':'Von der Geschichte Ayutthayas bis zu den stillen Buchten von Koh Mak: Thailand jenseits der Touristenrouten. Mit Insiderwissen, GPS-Daten, Reiserouten sowie Budget-Tipps und Sparstrategien.',
+ 'k-thailand':'Von der Geschichte Ayutthayas bis zu den stillen Buchten von Koh Mak: Thailand jenseits der Touristenrouten. Mit Reiserouten sowie Budget-Tipps und Sparstrategien.',
  'aurora':'Neuropsychologin Hannah Kordt leitet eine Studie über kognitive Verzerrungen, bis ihr Ungereimtheiten auffallen: ein falsches Datum, vertrauliche Akten, Menschen, die Dinge über ihr Leben wissen, die sie nie erzählt hat. Ein Psychothriller über Erinnerung, Identität und Kontrolle.',
  'auswandern':'Portugal, Thailand, Kanada oder doch Georgien? 15 Länder im ehrlichen Vergleich: Lebensqualität, Kosten, Steuern, Sicherheit, Visa und Alltag. Mit Auswanderungs-Kompass, Reality Scores, Checklisten und 12-Monats-Fahrplan.',
  'krone':'Robert wächst im Hochhausblock in Hannover auf und will Rapper werden. Aus dem Jungen aus Krähenfeld wird Rodeo: Millionen Klicks, ausverkaufte Hallen, Geld und Ruhm. Er trägt eine Krone, doch sie ist aus Beton. Ein Roman über den Weg nach oben und den schwereren zurück zu sich selbst.',
@@ -108,13 +108,13 @@ BLURB={
  'k-freizeitpark':'Frank will nur einen entspannten Familientag. Doch im Fabeland fallen Attraktionen aus, das Maskottchen Fabo benimmt sich seltsam, und unter dem Park erwacht etwas. Ein atmosphärischer Roman über Familie, Angst und einen Ausflug, der zum Albtraum wird.',
  'k-kifft':'Fünfzig Jahre Verbot, zwei Jahre Legalisierung und ein Land, das sich bis heute nicht einig ist. Fünf Jahrzehnte deutsche Drogenpolitik, die Menschen hinter der Szene und die Frage: Wer hat wirklich profitiert?',
  'k-kaffee':'Von den tanzenden Ziegen im äthiopischen Hochland über die Sufi-Mönche des Jemen und die Kaffeehäuser der Revolutionen bis zu den Kaffeebörsen von heute. Eine packende Geschichte über Genuss, Macht und die Menschen hinter der Bohne.',
- 'peru':'Peru ist mehr als Machu Picchu: 30 außergewöhnliche Orte, von Andendörfern und Nebelwäldern bis zum Amazonas. Mit GPS-Daten, Reiserouten für zwei Wochen bis länger und praktischen Tipps zu Klima, Budget und Sicherheit.',
- 'ecuador':'30 ausgewählte Orte abseits der Touristenrouten: Andendörfer, Nebelwälder, heiße Quellen, Galápagos und Amazonas. Mit Insiderwissen, GPS-Daten, Reiserouten und Tipps für längere Aufenthalte.',
- 'kolumbien':'30 außergewöhnliche Orte: verschlafene Kolonialstädte, heilige Berge, stille Strände, versteckte Wasserfälle und der Amazonas. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
- 'mexiko':'Versteckte Schluchten, geheime Strände, vergessene Kolonialstädte und echte Begegnungen, die in klassischen Reiseführern fehlen. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+ 'peru':'Peru ist mehr als Machu Picchu: 30 außergewöhnliche Orte, von Andendörfern und Nebelwäldern bis zum Amazonas. Mit Reiserouten für zwei Wochen bis länger und praktischen Tipps zu Klima, Budget und Sicherheit.',
+ 'ecuador':'30 ausgewählte Orte abseits der Touristenrouten: Andendörfer, Nebelwälder, heiße Quellen, Galápagos und Amazonas. Mit Reiserouten und Tipps für längere Aufenthalte.',
+ 'kolumbien':'30 außergewöhnliche Orte: verschlafene Kolonialstädte, heilige Berge, stille Strände, versteckte Wasserfälle und der Amazonas. Mit Reiserouten und praktischen Reisetipps.',
+ 'mexiko':'Versteckte Schluchten, geheime Strände und vergessene Kolonialstädte, die in klassischen Reiseführern fehlen. Mit Reiserouten und praktischen Reisetipps.',
  'china':'30 besondere Ziele von Yunnan und Sichuan bis Guangxi, Fujian und Shanxi: Bergdörfer, alte Handelswege, Wasserstädte. Mit praktischem Reisewissen zu Bezahlen, Apps und Verkehr, auch für längere Aufenthalte.',
- 'japan':'Von abgelegenen Bergdörfern Hokkaidos über stille Onsen-Dörfer Tohokus bis zu geheimen Küstenwegen im Süden. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
- 'vietnam':'Von Bergdörfern im Norden über die Höhlensysteme Zentralvietnams bis zu den Wasserwegen des Mekong-Deltas. Mit Insiderwissen, GPS-Daten, Reiserouten und praktischen Reisetipps.',
+ 'japan':'Von abgelegenen Bergdörfern Hokkaidos über stille Onsen-Dörfer Tohokus bis zu geheimen Küstenwegen im Süden. Mit Reiserouten und praktischen Reisetipps.',
+ 'vietnam':'Von Bergdörfern im Norden über die Höhlensysteme Zentralvietnams bis zu den Wasserwegen des Mekong-Deltas. Mit Reiserouten und praktischen Reisetipps zu Anreise, Kosten und Sicherheit.',
  'jabari':'Jabari Diallo wächst in Kibera auf, wo Armut zum Alltag gehört. Doch er hat einen außergewöhnlichen Verstand: Er repariert kaputte Radios, Fernseher und Handys und entdeckt die Macht von Wissen, Disziplin und Hoffnung. Ein emotionaler Roman über Bildung, Ehrgeiz und den Mut, an eine größere Zukunft zu glauben.',
  'koerperkult':'Lange bevor Menschen schrieben, begannen sie, ihre Haut zu verändern. Samuel Dorn reist durch mehr als 100.000 Jahre Menschheitsgeschichte: von steinzeitlicher Körperbemalung über Ötzis Tätowierungen und die Muster Polynesiens bis zur modernen Tattoo-Kultur. Eine Kulturgeschichte des menschlichen Körpers über Identität, Glauben, Macht und Schmerz.',
  'delegations':'Mental Load endlich loslassen: Ein praktischer Guide für erschöpfte Mütter mit Checklisten, Vorlagen und Gesprächsleitfaden. Das Buch erklärt, was Mental Load wirklich ist, zeigt die fünf Fallen, in die fast jede Mutter tappt, und führt mit einem 4-Schritte-Plan und dem Familien-Board zu mehr Entlastung, auch wenn die Familie nicht gleich mitmacht.',
@@ -125,4 +125,36 @@ BLURB={
  'fitness':'Die meisten Fitnessratgeber zeigen nur ein Puzzleteil. Dieses Buch vereint Training und Ernährung zu einem Gesamtplan, egal ob Muskelaufbau, Abnehmen oder Definition: Krafttraining, HIIT und Mobility, Lean Bulk oder Defizit und die Wahrheit über Supplemente, was wirkt und was Geldverschwendung ist.',
  'piercing':'Dein Weg zum Bodypiercer: Dieses Buch zeigt alle wichtigen Grundlagen aus der Welt des Bodypiercings. Hygienestandards und Grundlagen für zeitgemäßes Piercen werden leicht verständlich erläutert. Der Ratgeber vermittelt die notwendigen Kompetenzen und erklärt, wie man das Piercen erfolgreich lernt und dabei alle Standards einhält.',
  
+}
+
+# ---- Neue Ausgaben, bei epubli angelegt, aber noch NICHT veröffentlicht (Stand 06.11.2026) ----
+# key -> {Format: (ISBN, epubli-Shop-URL)}. Solange URL leer ist, erscheint auf der Webseite NICHTS
+# (kein Button, keine ISBN). Nach Veröffentlichung nur ISBN und geprüften Link eintragen, dann neu bauen.
+NEW_ED={
+ 'bier':{'Hardcover':('','')},
+ 'k-rap':{'Hardcover':('','')},
+ 'china':{'Hardcover':('','')},
+ 'japan':{'Hardcover':('','')},
+ 'mexiko':{'Hardcover':('','')},
+ 'vietnam':{'Hardcover':('','')},
+ 'emilia':{'Hardcover':('','')},
+ 'underground':{'Hardcover':('','')},
+ 'liebe':{'Hardcover':('','')},
+ 'schamanismus':{'Hardcover':('','')},
+ 'k-freizeitpark':{'Hardcover':('','')},
+ 'erwachsen':{'Hardcover':('','')},
+ 'koerperkult':{'Taschenbuch':('','')},
+}
+def new_links(k):
+    return [(f,'epubli',u) for f,(i,u) in NEW_ED.get(k,{}).items() if u]
+def new_isbns(k):
+    return [(i,f) for f,(i,u) in NEW_ED.get(k,{}).items() if u and i]
+# ---- Reihen laut epubli-Metadaten (06.11.2026) ----
+SERIES_OF={
+ 'k-thailand':('Die verborgene Seite der Welt',1),'vietnam':('Die verborgene Seite der Welt',2),'japan':('Die verborgene Seite der Welt',3),
+ 'china':('Die verborgene Seite der Welt',4),'mexiko':('Die verborgene Seite der Welt',5),'kolumbien':('Die verborgene Seite der Welt',6),
+ 'ecuador':('Die verborgene Seite der Welt',7),'peru':('Die verborgene Seite der Welt',8),
+ 'k-kaffee':('Die verborgene Seite der Kulinarik',1),'bier':('Die verborgene Seite der Kulinarik',2),
+ 'karma':('KARMA · GLÜCK · ORDNUNG · PECH',1),'glueck':('KARMA · GLÜCK · ORDNUNG · PECH',2),
+ 'ordnung':('KARMA · GLÜCK · ORDNUNG · PECH',3),'pech':('KARMA · GLÜCK · ORDNUNG · PECH',4),
 }

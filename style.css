@@ -30,7 +30,7 @@ a{color:inherit}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand img{height:40px;width:auto}
-.brand span{font-family:var(--f-display);font-size:1.25rem;font-weight:600;letter-spacing:.04em;color:var(--gold2)}
+.brand span{font-family:var(--f-display);font-size:1.25rem;font-weight:600;letter-spacing:.04em;color:var(--gold2);white-space:nowrap}
 .top nav{display:flex;gap:22px;font-size:.88rem;letter-spacing:.06em}
 .top nav a{text-decoration:none;color:var(--muted)}
 .top nav a:hover{color:var(--gold2)}
@@ -237,3 +237,15 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 .bp-more ul{margin:0;padding:0;list-style:none}.bp-more li{position:relative;padding-left:22px;margin:0 0 9px;line-height:1.5}
 .bp-more li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
 @media (max-width:720px){.bp-more{grid-template-columns:1fr;padding:22px}}
+
+/* English Editions (en/) */
+.enintro{padding-bottom:8px}
+.enintro h1.sech{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--gold2)}
+.enlead{max-width:62ch;color:var(--muted);font-size:1.05rem;margin:0}
+.enlist{margin-top:28px}
+.ensub{margin:2px 0 0;font-size:.84rem;font-style:italic;color:#cfc6b4;line-height:1.35}
+.ensoon{display:inline-block;margin:2px 0 0;padding:5px 11px;border:1px dashed var(--line2);border-radius:2px;font-size:.76rem;letter-spacing:.04em;color:var(--gold2);white-space:nowrap}
+.enbook picture{display:block}
+@media (max-width:400px){.enlist .minigrid{grid-template-columns:1fr}.enlist .mini{grid-template-columns:84px 1fr;gap:12px}.enlist .mini .cover{width:84px;height:126px}}
+.top nav a{white-space:nowrap}
+.bp-series{margin:.6em 0 0;font-size:.84rem;color:var(--gold);letter-spacing:.03em}

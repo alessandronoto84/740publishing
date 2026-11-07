@@ -1,6 +1,6 @@
 import html, json, sys, os, re, datetime
 S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
-from catalog import CAT, EXTRA, SLUG, BLURB
+from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_isbns, SERIES_OF
 from seo import SEO
 BASE='https://alessandronoto84.github.io/740publishing/'
 TRAILER={'bier':'bier','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
@@ -12,12 +12,12 @@ def isbn10(s):
     c=s[3:12]; r=(11-sum((10-i)*int(d) for i,d in enumerate(c))%11)%11; return c+('X' if r==10 else str(r))
 def isbnfmt(i): return f'{i[:3]}-{i[3]}-{i[4:10]}-{i[10:12]}-{i[12]}'
 def links_of(k,t,eb,pr,pt):
-    if k in EXTRA: return EXTRA[k]
+    if k in EXTRA: return EXTRA[k]+new_links(k)
     L=[]
     if eb: L.append(('E-Book','epubli',f'https://www.epubli.com/shop/{SLUG.get(k,slug(t))}-{eb}'))
     if pr: L.append((pt,'Amazon',f'https://www.amazon.de/dp/{isbn10(pr)}'))
     if pr and not eb: L.append((pt,'epubli',f'https://www.epubli.com/shop/{slug(t)}-{pr}'))
-    return L+EXTRA_LINKS.get(k,[])
+    return L+EXTRA_LINKS.get(k,[])+new_links(k)
 def cover_of(k,cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
 e=html.escape
 books=[]
@@ -41,11 +41,11 @@ HEAD='''<!doctype html>
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../logo-small.png">
-<link rel="stylesheet" href="../style.css?v=1793100220">
+<link rel="stylesheet" href="../style.css?v=1793200000">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="../#neu">Neu</a><a href="../#reihen">Reihen</a><a href="../#katalog">Alle Bücher</a><a href="../#verlag">Verlag</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="../#neu">Neu</a><a href="../#reihen">Reihen</a><a href="../#katalog">Alle Bücher</a><a href="../#verlag">Verlag</a><a href="../en/" hreflang="en" lang="en" title="English Editions">EN</a></nav></div></header>
 '''
 FOOT='''<footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems)<br>740publishingverlag@gmail.com</address><nav><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></nav></div></footer>
 '''
@@ -64,14 +64,16 @@ for b in books:
     isbn=b['pr'] or b['eb']
     ld={"@context":"https://schema.org","@graph":[
       {"@type":"Book","@id":url+"#book","name":b['t'],"url":url,"image":img,"description":b['b'] or None,"author":{"@type":"Person","name":b['a']},"publisher":{"@type":"Organization","name":"740 Publishing","url":BASE},"inLanguage":"de","genre":g,
-       "workExample":[{"@type":"Book","isbn":i,"bookFormat":"https://schema.org/"+("EBook" if fm=='E-Book' else "Hardcover" if fm=='Hardcover' else "Paperback")} for i,fm in ((b['eb'],'E-Book'),(b['pr'],b['pt'])) if i],
+       "workExample":[{"@type":"Book","isbn":i,"bookFormat":"https://schema.org/"+("EBook" if fm=='E-Book' else "Hardcover" if fm=='Hardcover' else "Paperback")} for i,fm in ((b['eb'],'E-Book'),(b['pr'],b['pt']),*new_isbns(b['k'])) if i],
+       **({"isPartOf":{"@type":"BookSeries","name":SERIES_OF[b['k']][0]},"position":SERIES_OF[b['k']][1]} if b['k'] in SERIES_OF else {}),
        "offers":[{"@type":"Offer","url":u,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":s}} for f,s,u in b['links']]},
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"740 Publishing","item":BASE},{"@type":"ListItem","position":2,"name":b['c'],"item":BASE+"#katalog"},{"@type":"ListItem","position":3,"name":b['t'],"item":url}]}]}
     ld["@graph"][0]={k:v for k,v in ld["@graph"][0].items() if v is not None}
     btns=''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">bei {s} kaufen</span></a>' for f,s,u in b['links'])
     tr=TRAILER.get(b['k'])
     trbtn=f'<button class="buy trl" type="button" data-video="../trailer/{tr}.mp4" data-poster="../trailer/{tr}.jpg" data-title="{e(b["t"])}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>' if tr else ''
-    isbns=' · '.join(f'{lab}: ISBN {isbnfmt(i)}' for i,lab in ((b['eb'],'E-Book'),(b['pr'],b['pt'])) if i)
+    isbns=' · '.join(f'{lab}: ISBN {isbnfmt(i)}' for i,lab in ((b['eb'],'E-Book'),(b['pr'],b['pt']),*new_isbns(b['k'])) if i)
+    ser=SERIES_OF.get(b['k'])
     same=[x for x in books if x is not b and x['a']==b['a'] and x['t']!=b['t']]
     more=same[:4] if same else []
     more+= [x for x in books if x is not b and x['c']==b['c'] and x not in more and x['t']!=b['t']][:4-len(more)]
@@ -85,6 +87,7 @@ for b in books:
     <h1>{e(b["t"])}</h1>
     {f'<p class="bp-kw">{e(kw)}</p>' if kw else ''}
     <p class="bp-author">von {e(b["a"])}</p>
+    {f'<p class="bp-series">Reihe: {e(ser[0])} · Band {ser[1]}</p>' if ser else ''}
     <hr class="rule">
     {f'<p class="bp-blurb">{e(b["b"])}</p>' if b['b'] else ''}
     <p class="bp-avail">Jetzt erhältlich als {e(fjoin(fmts))}</p>
@@ -100,7 +103,7 @@ for b in books:
     page=HEAD.format(title=e(title),desc=e(desc),url=url,ogt=e(f'{b["t"]} – {b["a"]}'),img=img,ld=json.dumps(ld,ensure_ascii=False).replace('</','<\\/'))+body+(PLAYER if tr else '')+FOOT+'</body>\n</html>\n'
     open(f'{S}/site/buch/{b["s"]}.html','w').write(page)
 today=datetime.date.today().isoformat()
-urls=[BASE]+[f'{BASE}buch/{b["s"]}.html' for b in books]
+urls=[BASE,BASE+'en/']+[f'{BASE}buch/{b["s"]}.html' for b in books]
 open(f'{S}/site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls)+'</urlset>\n')
 open(f'{S}/site/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n')
 print(len(books),'Seiten')
