@@ -1502,6 +1502,13 @@
   "checked": "2026-11-08",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden"
  },
+ "https://www.epubli.com/shop/wer-nichts-sieht-9783565858453": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-08",
+  "note": "Hardcover gerade veröffentlicht, Shopseite noch nicht online (nicht einzeln geprüft)"
+ },
  "https://www.epubli.com/shop/wie-ich-zurueck-ins-leben-gefunden-habe-9783565473328": {
   "ok": true,
   "code": 200,

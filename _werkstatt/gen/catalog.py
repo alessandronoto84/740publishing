@@ -193,7 +193,7 @@ NEW_ED.setdefault('spiritualitaet',{})['Hardcover']=('9783565858378','')
 NEW_ED.setdefault('koerperkult',{})['Hardcover']=('9783565858385','')
 NEW_ED.setdefault('piercing',{})['E-Book']=('9783565858422','')
 NEW_ED.setdefault('ecuador',{})['Hardcover']=('','')        # ISBN noch nicht bekannt -> eintragen, sobald bekannt
-NEW_ED.setdefault('wns',{})['Hardcover']=('','')            # Hardcover erscheint 08.11.2026, ISBN folgt
+NEW_ED.setdefault('wns',{})['Hardcover']=('9783565858453','')   # Hardcover veröffentlicht 08.11.2026 (Werkstatt-Job web-740, Notiz)
 
 # ---- Preise (Euro, gebundener Ladenpreis je Ausgabe) ----
 # Nur belegte Preise: aus dem epubli-Shop (linkcheck) oder aus den Werkstatt-Jobs. Schlüssel = ISBN-13.
@@ -204,6 +204,7 @@ PRICE={
  '9783565858422':'19,99',   # Piercing Akademie E-Book (Job piercing-ebook)
  '9783565858439':'21,99',   # Wer nichts sieht … Taschenbuch
  '9783565858446':'4,99',    # Wer nichts sieht … E-Book
+ '9783565858453':'31,99',   # Wer nichts sieht … Hardcover
  # Roman-E-Books nach Preissenkung (Job romane-preise, 07.11.2026; Jenseits: Job jenseits-preis)
  '9783565538997':'4,99','9783565560974':'6,99','9783565564859':'6,99','9783565568963':'6,99','9783565463954':'6,99',
  '9783565575763':'6,99','9783565478262':'5,99','9783565599707':'5,99','9783565668472':'5,99','9783565850648':'5,99',
@@ -226,7 +227,7 @@ for _u,_v in _LS.items():
 RELEASES=[
  ('2026-11-08','wns','Taschenbuch','9783565858439'),
  ('2026-11-08','wns','E-Book','9783565858446'),
- ('2026-11-08','wns','Hardcover',''),
+ ('2026-11-08','wns','Hardcover','9783565858453'),
  ('2026-11-08','spiritualitaet','Hardcover','9783565858378'),
  ('2026-11-08','koerperkult','Hardcover','9783565858385'),
  ('2026-11-08','ecuador','Hardcover',''),
