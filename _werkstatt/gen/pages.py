@@ -1,28 +1,21 @@
 import html, json, sys, os, re, datetime
 S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
-from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_isbns, new_pending, SERIES_OF
+from catalog import CAT, EXTRA, SLUG, BLURB, SERIES_OF, editions
+from render import badges, buttons, live_formats, soon_formats
 from seo import SEO
 BASE='https://alessandronoto84.github.io/740publishing/'
 TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
-EXTRA_LINKS={'k-kifft':[('Hardcover','Amazon','https://www.amazon.de/dp/3565740426')],'k-astrologie':[('Hardcover','Amazon','https://www.amazon.de/dp/3565752289')],'k-kaffee':[('Hardcover','Amazon','https://www.amazon.de/dp/3565737905')],'k-drogen':[('Hardcover','Amazon','https://www.amazon.de/dp/3565526637')]}
 GENRE={'Romane':'Roman','Sachbuch & Ratgeber':'Sachbuch','Reiseführer':'Reiseführer'}
 def slug(t):
     t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss'); return re.sub(r'[^a-z0-9]+','-',t).strip('-')
 def isbn10(s):
     c=s[3:12]; r=(11-sum((10-i)*int(d) for i,d in enumerate(c))%11)%11; return c+('X' if r==10 else str(r))
 def isbnfmt(i): return f'{i[:3]}-{i[3]}-{i[4:10]}-{i[10:12]}-{i[12]}'
-def links_of(k,t,eb,pr,pt):
-    if k in EXTRA: return EXTRA[k]+new_links(k)
-    L=[]
-    if eb: L.append(('E-Book','epubli',f'https://www.epubli.com/shop/{SLUG.get(k,slug(t))}-{eb}'))
-    if pr: L.append((pt,'Amazon',f'https://www.amazon.de/dp/{isbn10(pr)}'))
-    if pr and not eb: L.append((pt,'epubli',f'https://www.epubli.com/shop/{slug(t)}-{pr}'))
-    return L+EXTRA_LINKS.get(k,[])+new_links(k)
 def cover_of(k,cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
 e=html.escape
 books=[]
 for k,t,a,c,eb,pr,pt,cov in CAT:
-    books.append(dict(k=k,t=t,a=a,c=c,eb=eb,pr=pr,pt=pt,img=cover_of(k,cov),s=slug(t),links=links_of(k,t,eb,pr,pt),b=BLURB.get(k,'')))
+    books.append(dict(k=k,t=t,a=a,c=c,eb=eb,pr=pr,pt=pt,img=cover_of(k,cov),s=slug(t),eds=editions(k),b=BLURB.get(k,'')))
 os.makedirs(f'{S}/site/buch',exist_ok=True)
 HEAD='''<!doctype html>
 <html lang="de">
@@ -41,7 +34,7 @@ HEAD='''<!doctype html>
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../logo-small.png">
-<link rel="stylesheet" href="../style.css?v=1793300000">
+<link rel="stylesheet" href="../style.css?v=1794200000">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -58,25 +51,25 @@ def trunc(s,n=155):
     return s if len(s)<=n else s[:n-1].rsplit(' ',1)[0].rstrip(',:;')+'…'
 for b in books:
     url=f'{BASE}buch/{b["s"]}.html'; img=BASE+b['img']; g=GENRE[b['c']]
-    fmts=[]; [fmts.append(f) for f,_,_ in b['links'] if f not in fmts]
+    fmts=live_formats(b['k']); allf=[x['f'] for x in b['eds']]
     kw,fw,inh=SEO.get(b['k'],(None,None,None))
-    desc=trunc(f'„{b["t"]}“ von {b["a"]}{" – "+kw if kw else ""}. {b["b"]}' if b['b'] else f'„{b["t"]}“ von {b["a"]} bei 740 Publishing. Jetzt als {fjoin(fmts)} kaufen.')
+    desc=trunc(f'„{b["t"]}“ von {b["a"]}{" – "+kw if kw else ""}. {b["b"]}' if b['b'] else f'„{b["t"]}“ von {b["a"]} bei 740 Publishing. Als {fjoin(allf)}.')
     title=f'{b["t"]}: {kw} – {b["a"]} | 740 Publishing' if kw else f'{b["t"]} – {b["a"]} | {g} kaufen | 740 Publishing'
     isbn=b['pr'] or b['eb']
     ld={"@context":"https://schema.org","@graph":[
       {"@type":"Book","@id":url+"#book","name":b['t'],"url":url,"image":img,"description":b['b'] or None,"author":{"@type":"Person","name":b['a']},"publisher":{"@type":"Organization","name":"740 Publishing","url":BASE},"inLanguage":"de","genre":g,
-       "workExample":[{"@type":"Book","isbn":i,"bookFormat":"https://schema.org/"+("EBook" if fm=='E-Book' else "Hardcover" if fm=='Hardcover' else "Paperback")} for i,fm in ((b['eb'],'E-Book'),(b['pr'],b['pt']),*new_isbns(b['k'])) if i],
+       "workExample":[{"@type":"Book","isbn":x['isbn'],"bookFormat":"https://schema.org/"+("EBook" if x['f']=='E-Book' else "Hardcover" if x['f']=='Hardcover' else "Paperback"),**({"offers":{"@type":"Offer","price":x['price'].replace(',','.'),"priceCurrency":"EUR"}} if x['price'] else {})} for x in b['eds'] if x['isbn']],
        **({"isPartOf":{"@type":"BookSeries","name":SERIES_OF[b['k']][0]},"position":SERIES_OF[b['k']][1]} if b['k'] in SERIES_OF else {}),
-       "offers":[{"@type":"Offer","url":u,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":s}} for f,s,u in b['links']]},
+       "offers":[{"@type":"Offer","url":u,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":s},**({"price":x['price'].replace(',','.'),"priceCurrency":"EUR"} if x['price'] else {})} for x in b['eds'] for s,u in x['links']]},
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"740 Publishing","item":BASE},{"@type":"ListItem","position":2,"name":b['c'],"item":BASE+"#katalog"},{"@type":"ListItem","position":3,"name":b['t'],"item":url}]}]}
     ld["@graph"][0]={k:v for k,v in ld["@graph"][0].items() if v is not None}
-    btns=''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">bei {s} kaufen</span></a>' for f,s,u in b['links'])
+    btns=buttons(b['k'],verb=True)
     tr=TRAILER.get(b['k'])
-    pend=[(f,i) for f,i in new_pending(b['k']) if f not in fmts]
-    btns+=''.join(f'<span class="buy pend" title="ISBN {isbnfmt(i)}"><span class="fmt">{f}</span><span class="shop">erscheint in Kürze</span></span>' for f,i in pend)
-    pendtxt=(' · '+e(fjoin([f for f,_ in pend]))+' (ISBN '+', '.join(isbnfmt(i) for _,i in pend)+(') erscheinen' if len(pend)>1 else ') erscheint')+' in Kürze im Handel') if pend else ''
+    pend=[x['f']+(' (neue Ausgabe)' if x['f'] in fmts else '') for x in soon_formats(b['k'])]
+    parts=([f'Erhältlich als {fjoin(fmts)}'] if fmts else [])+([f'{fjoin(pend)}: bald verfügbar'] if pend else [])
+    avail=e(' · '.join(parts))
     trbtn=f'<button class="buy trl" type="button" data-video="../trailer/{tr}.mp4" data-poster="../trailer/{tr}.jpg" data-title="{e(b["t"])}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>' if tr else ''
-    isbns=' · '.join(f'{lab}: ISBN {isbnfmt(i)}' for i,lab in ((b['eb'],'E-Book'),(b['pr'],b['pt']),*new_isbns(b['k'])) if i)
+    isbns=' · '.join(f'{x["f"]}: ISBN {isbnfmt(x["isbn"])}' for x in b['eds'] if x['isbn'])
     ser=SERIES_OF.get(b['k'])
     same=[x for x in books if x is not b and x['a']==b['a'] and x['t']!=b['t']]
     more=same[:4] if same else []
@@ -94,7 +87,8 @@ for b in books:
     {f'<p class="bp-series">Reihe: {e(ser[0])} · Band {ser[1]}</p>' if ser else ''}
     <hr class="rule">
     {f'<p class="bp-blurb">{e(b["b"])}</p>' if b['b'] else ''}
-    <p class="bp-avail">Jetzt erhältlich als {e(fjoin(fmts))}{pendtxt}</p>
+    {badges(b['k'])}
+    <p class="bp-avail">{avail}</p>
     <div class="buys">{trbtn}{btns}</div>
     <p class="isbn">{isbns}</p>
   </div>

@@ -6,32 +6,7 @@ S=sys.argv[1]
 BASE='https://alessandronoto84.github.io/740publishing/'
 CSSV='1793400000'
 e=html.escape
-N='Novels'; F='Nonfiction'
-# (key, Titel, Untertitel, Autor, Bereich, Kurzbeschreibung)
-# Quellen: Beschreibung.txt / EPUB-Metadaten in outputs/en/<KUERZEL>/; bei KARMA, LUCK, ORDER, BAD LUCK und
-# The Game Never Stops gibt es keine Beschreibung.txt -> Übersetzung des deutschen Webseitentexts (catalog.BLURB).
-EN=[
- ('karma','KARMA','A Novel','Konstanze Frey',N,'Primary school teacher Maggie Hollweg wants to make the world a little better, but her good deeds keep ending in chaos. Her suspicion: her karma works in reverse. A humorous small-town novel full of comedy and heart.'),
- ('luck','LUCK','A Novel','Konstanze Frey',N,'Manni Ackermann works at the lost-and-found office of a small town. As inexplicable coincidences pile up, everyone starts calling him the “Lucky Man”. A warm-hearted novel with gentle humor about kindness and the small encounters that change a life.'),
- ('order','ORDER','A Novel','Konstanze Frey',N,'Since the death of his wife, order has been Gerd Bollmann’s only reliable companion. But suddenly things and people stop keeping to what was agreed. A wise, warm-hearted novel about control, loss and letting go.'),
- ('bad-luck','BAD LUCK','A Novel','Konstanze Frey',N,'Rosi Diekmann has a plan for everything: spare keys, an emergency kit, smoke detectors. Until someone enters her life who sees possibilities wherever she sees risks. A warm-hearted novel about fear, control and life as a risk.'),
- ('manuscript','The Manuscript','','Evan J. Moore',N,'One rainy evening in Berlin, magazine editor Adrian Kessler finds a black notebook on the street. Soon afterward, handwritten pages describe his life with a precision that should be impossible. A quiet, hypnotic literary mystery about grief, memory, and what remains when the line between a story and reality begins to disappear.'),
- ('black-water','Black Water','','Juna Morel',N,'Lena Vargas is a ghostwriter in Vienna. When the reclusive investor Nikolaj Voss hires her to write his memoir, she travels to his estate in the Austrian mountains, where a small black lake lies among the firs. An atmospheric dark romance about control and trust, about what we hide and what we let someone see.'),
- ('game','The Game Never Stops','How Incentives Shape Societies — and Who Writes the Rules','Friedhelm Westerkamp',F,'Why do politicians, corporations and the media act the way they do? Because people respond to incentives, not ideals. Friedhelm Westerkamp combines game theory, psychology and economics to show how the rules of the game shape entire societies, and who writes those rules.'),
- ('beauty','Why Beauty Is Power','The Modern Art of Feminine Radiance and Impact','Katharina Bruns',F,'An honest look at beauty as a social force: how attractiveness shapes dating, friendships and the workplace, and which mechanisms run in the background that nobody names openly. Every chapter ends with a practical exercise.'),
- ('spirit','The Big Book of Spiritual Practice','','Leonard Kramer',F,'A workbook and reference guide for people who are searching but don’t want a doctrine. It keeps three things strictly apart: what research supports, what traditions teach, and what people report from their own experience. With 56 guided exercises and a 90-day integration program.'),
- ('psych','Psychology in Everyday Life','','Friedhelm Westerkamp',F,'A complete tour of the science of the human mind, written for curious readers rather than specialists. Forty chapters, from the brain, perception and memory to emotions, stress, relationships, sleep, work and aging, with an honest account of how the famous studies have held up.'),
- ('drugs','DRUGS','History, Effects, Addiction and Policy','Alessandro Noto',F,'A sober, fact-based account of psychoactive substances and their place in human history, from a thirteen-thousand-year-old brew to today’s synthetic opioids. With a reference lexicon of substances. Abridged English edition.'),
- ('body-cult','Body Cult','Scars, Ink and Identity','Samuel Dorn',F,'Long before people wrote, they began to change their skin. Body Cult follows this impulse across more than 100,000 years, from Stone Age body paint and the tattoos of Ötzi the Iceman to Polynesian tattooing, Japanese irezumi and modern body modification.'),
- ('astrology','ASTROLOGY','The Big Book of Zodiac Signs, Planets, Houses, and Your Personal Birth Chart','Vivian Dahl',F,'Your zodiac sign is only the first word of a much richer language. This book takes you from the basics to reading your own birth chart, step by step and without dogma, and is honest about what astrology is and isn’t.'),
- ('ai','Artificial Intelligence','Understand It. Use It. Shape It.','Friedhelm Westerkamp',F,'A clear, practical guide for beginners, professionals and businesses: what AI assistants actually do, how to write prompts that get results, and where AI saves real time and where it doesn’t. Revised and updated English edition.'),
- ('digital-exhaustion','Digital Exhaustion','How Constant Digital Stimulation Drains and Empties Us—and What We Can Really Do About It','Friedhelm Westerkamp',F,'Why do you feel exhausted after a day in which you did almost nothing? Friedhelm Westerkamp shows how the attention economy works, what it does to concentration, sleep and relationships, and how to win back attention and rest. Revised and updated English edition.'),
-]
-GPLAY={k:'' for k,*_ in EN}
-# Laufband oben auf en/: Die englischen Ausgaben sind noch nicht im Handel, daher KEIN „Bestseller“/„popular“,
-# sondern „Featured English Editions“. Sandro pflegt die Liste selbst (Schlüssel aus EN, gewünschte Reihenfolge).
-EN_FEATURED=['karma','astrology','drugs','manuscript','black-water','psych','beauty','luck','game','spirit','body-cult','ai','digital-exhaustion','order','bad-luck']  # z. B. GPLAY['karma']='https://play.google.com/store/books/details?id=...'
-
+from english_data import *
 def card(k,t,sub,a,sec,d):
     u=GPLAY.get(k)
     act=(f'<div class="buys"><a class="buy sm" href="{e(u)}" target="_blank" rel="noopener"><span class="fmt">E-book</span><span class="shop">Google Play Books</span></a></div>' if u

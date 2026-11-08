@@ -1,5 +1,6 @@
 # key: (Suchbegriff-Untertitel, [Für wen], [Das erwartet dich])
 SEO={
+'wns':('Psychologischer Kriminalroman',None,None),
 'sucht':('Psychologischer Roman über Sucht und Neuanfang',['Leser, die ehrliche Romane ohne Pathos mögen','alle, die verstehen wollen, wie Sucht einen Menschen festhält','Fans von Milieuromanen mit Tiefe'],['Marcel, Einbrecher und abhängig','ein letzter großer Auftrag und eine unerwartete zweite Chance','Entzug, Rückfall, Freundschaft und Vertrauen']),
 'koenige':('Düsterer Gangster- und Kriminalroman',['Fans von Gangsterromanen und Noir-Krimis','Leser, die Aufstiegs- und Fallgeschichten mögen','alle, die düstere Hafenstädte als Schauplatz lieben'],['Milan Bakker aus dem Kohlenhafen von Novahaven','der Aufstieg vom Pfandsammler zum Geldwäscher','Macht, Geld, Loyalität und Verrat']),
 'karma':('Humorvoller Kleinstadtroman',['Leser, die warmherzige Romane mit Witz mögen','Fans von Kleinstadtgeschichten mit skurrilen Figuren','alle, die sich fragen, ob gute Taten sich lohnen'],['Maggie Hollweg, Grundschullehrerin in Kellingrath','eine Frau, deren Karma scheinbar umgekehrt funktioniert','Situationskomik, Herz und überraschende Freundschaften','Band 1 der Reihe KARMA · GLÜCK · ORDNUNG · PECH']),

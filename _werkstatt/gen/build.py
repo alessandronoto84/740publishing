@@ -1,5 +1,7 @@
-import html, json, sys
+# Baut index.html (Startseite). Aufruf: python3 gen/build.py $S  (S/gen = dieser Ordner, S/site = Repo)
+import html, json, sys, re, datetime
 S=sys.argv[1]
+# Bücher mit Buchtrailer (Bereich „Buchtrailer“). Kauf-Links kommen zentral aus catalog.editions(), die Linkliste hier ist nur Altbestand.
 books=[
  ('astrologie','Astrologie','Das große Buch über Sternzeichen, Planeten, Häuser und dein persönliches Horoskop','Vivian Dahl','Spiritualität',None,'Du bist mehr als dein Sternzeichen. Dein Geburtshoroskop ist ein Fingerabdruck des Himmels. Dieses Buch zeigt Schritt für Schritt, wie Sternzeichen, Planeten und Häuser zusammenspielen, verständlich und ohne Vorwissen.',
   [('E-Book','epubli','https://www.epubli.com/shop/astrologie-9783565752201'),('Taschenbuch','Amazon','https://www.amazon.de/dp/3565752270'),('Hardcover','Amazon','https://www.amazon.de/dp/3565752289')],'9783565752270'),
@@ -18,68 +20,106 @@ books=[
  ('drogen','Drogen','Das umfassende Standardwerk','Alessandro Noto','Sachbuch',None,'Von uralten Ritualen bis zum globalen Drogenkrieg: über 200 Substanzen mit ihren Wirkungen, Mechanismen und Geschichten. Geschichte, Wirkung, Politik und Wissenschaft psychoaktiver Substanzen.',
   [('E-Book','epubli','https://www.epubli.com/shop/drogen-das-umfassende-standardwerk-9783565525911'),('Taschenbuch','Amazon','https://www.amazon.de/dp/3565526653'),('Hardcover','Amazon','https://www.amazon.de/dp/3565526637')],'9783565526659'),
 ]
-def isbnfmt(i): return f'{i[:3]}-{i[3]}-{i[4:10]}-{i[10:12]}-{i[12]}'
-genres=[]
-for b in books:
-    if b[4] not in genres: genres.append(b[4])
 sys.path.insert(0,f'{S}/gen')
-from catalog import new_links, new_pending, SERIES_OF
+import catalog as C
+from catalog import CAT, BLURB, SERIES_OF, editions, RELEASES, NEU_ANZAHL
+from render import badges, buttons, isbnfmt
+e=html.escape
+def slug(t):
+    t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss'); return re.sub(r'[^a-z0-9]+','-',t).strip('-')
+def cv(cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
+CD={x[0]:x for x in CAT}
+
+# ---- Buchtrailer (8 Bücher mit Video) ----
 NKEY={'freizeitpark':'k-freizeitpark','thailand':'k-thailand','kaffee':'k-kaffee','rap':'k-rap','schoenheit':'k-schoenheit','kifft':'k-kifft','drogen':'k-drogen','astrologie':'k-astrologie'}
-cards=[];ld=[]
+cards=[]
 for k,t,sub,a,g,series,blurb,links,isbn in books:
-    links=links+new_links(NKEY.get(k,k))
-    if NKEY.get(k,k) in SERIES_OF: series=f'{SERIES_OF[NKEY.get(k,k)][0]} · Band {SERIES_OF[NKEY.get(k,k)][1]}'
-    _fm=[f for f,_,_ in links]
-    pend=''.join(f'<span class="buy pend" title="ISBN {isbnfmt(i)}"><span class="fmt">{f}</span><span class="shop">erscheint in Kürze</span></span>' for f,i in new_pending(NKEY.get(k,k)) if f not in _fm)
-    btns=f'<button class="buy trl" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{html.escape(t)}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>'+''.join(f'<a class="buy" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">{s}</span></a>' for f,s,u in links)+pend
-    ser=f'<p class="series">Reihe: {html.escape(series)}</p>' if series else ''
+    ck=NKEY.get(k,k)
+    ser=f'<p class="series">Reihe: {e(SERIES_OF[ck][0])} · Band {SERIES_OF[ck][1]}</p>' if ck in SERIES_OF else ''
+    btns=f'<button class="buy trl" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{e(t)}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>'+buttons(ck)
     cards.append(f'''      <article class="book" id="{k}" data-genre="{g}">
-        <button class="covbtn" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{html.escape(t)}" aria-label="Trailer zu „{html.escape(t)}“ abspielen"><img class="cover" src="covers/cov_{k}.jpg" alt="Cover von „{html.escape(t)}“" width="150" height="225" loading="lazy"><span class="playic" aria-hidden="true"></span><span class="playlbl">Trailer</span></button>
+        <button class="covbtn" type="button" data-video="trailer/{k}.mp4" data-poster="trailer/{k}.jpg" data-title="{e(t)}" aria-label="Trailer zu „{e(t)}“ abspielen"><img class="cover" src="covers/cov_{k}.jpg" alt="Cover von „{e(t)}“" width="150" height="225" loading="lazy" decoding="async"><span class="playic" aria-hidden="true"></span><span class="playlbl">Trailer</span></button>
         <div class="info">
-          <p class="meta"><span class="genre">{g}</span><span>{a}</span></p>
-          <h2>{html.escape(t)}</h2>
-          <p class="sub">{html.escape(sub)}</p>
+          <p class="meta"><span class="genre">{g}</span><span>{e(a)}</span></p>
+          <h3><a href="buch/{slug(CD[ck][1])}.html">{e(t)}</a></h3>
+          <p class="sub">{e(sub)}</p>
           {ser}
-          <p class="blurb">{html.escape(blurb)}</p>
+          <p class="blurb">{e(blurb)}</p>
+          {badges(ck)}
           <div class="buys">{btns}</div>
-          <p class="isbn">ISBN {isbnfmt(isbn)}</p>
         </div>
       </article>''')
-    ld.append({"@type":"Book","name":t,"alternateName":sub,"author":{"@type":"Person","name":a},"isbn":isbn,"genre":g,"inLanguage":"de","image":f"covers/cov_{k}.jpg","publisher":{"@type":"Organization","name":"740 Publishing"},"offers":[{"@type":"Offer","url":u,"seller":{"@type":"Organization","name":s}} for f,s,u in links]})
-chips='<button class="chip" aria-pressed="true" data-g="alle">Alle</button>'+''.join(f'<button class="chip" aria-pressed="false" data-g="{g}">{g}</button>' for g in genres)
-tpl=open(f'{S}/gen/index_tpl.html').read()
-out=tpl.replace('{{CARDS}}','\n'.join(cards)).replace('{{CHIPS}}',chips).replace('{{LD}}',json.dumps({"@context":"https://schema.org","@graph":ld},ensure_ascii=False))
-open(f'{S}/site/index.html','w').write(out)
-print('ok',len(out))
+
+# ---- Neu erschienen: nach Erscheinungsdatum, neueste zuerst ----
+# Quellen: catalog.RELEASES (von Hand gepflegt) + Erscheinungsdatum aus dem epubli-Shop (linkstatus.json, vom linkcheck).
+ev={}
+for d,k,f,i in RELEASES: ev[(k,f)]=(d,k,f,i,'werkstatt')
+for x in CAT:
+    k=x[0]
+    for f,sh,u,i in C.candidate_links(k):
+        v=C._LS.get(u) or {}
+        if v.get('ok') and v.get('date') and (k,f) not in ev:
+            dd,mm,yy=v['date'].split('.'); ev[(k,f)]=(f'{yy}-{mm}-{dd}',k,f,i,'epubli')
+byk={}
+for d,k,f,i,src in ev.values():
+    if k not in CD: continue
+    byk.setdefault(k,[]).append((d,f))
+newest=sorted(((max(d for d,_ in v),k) for k,v in byk.items()),reverse=True)[:NEU_ANZAHL]
+MON=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
+def dlabel(d): y,m,dd=d.split('-'); return f'{int(dd)}. {MON[int(m)-1]} {y}'
+def fjoin(L): return L[0] if len(L)==1 else ', '.join(L[:-1])+' und '+L[-1]
+def short(s,n=170): return s if len(s)<=n else s[:n].rsplit(' ',1)[0].rstrip(',:;.')+' …'
+groups=[]
+for d,k in newest:
+    if not groups or groups[-1][0]!=d: groups.append((d,[]))
+    groups[-1][1].append(k)
+neu=[]
+for gi,(d,ks) in enumerate(groups):
+    items=[]
+    for k in ks:
+        _,t,a,c,eb,pr,pt,cov=CD[k]
+        fs=[f for dd,f in byk[k] if dd==d]; fs=[f for f in C.FMT_ORDER if f in fs]
+        eds={x['f']:x for x in editions(k)}
+        alln=set(fs)>=set(eds)   # alle Formate neu -> ganz neues Buch
+        what=('Neuer Titel' if alln and len(fs)>1 else 'Neu als '+fjoin(fs))
+        img=f'<a class="nb-cov" href="buch/{slug(t)}.html" tabindex="-1" aria-hidden="true"><img class="cover" src="{cv(cov)}" alt="" width="120" height="180" loading="lazy" decoding="async"></a>'
+        if gi==0:
+            items.append(f'''<article class="nb"><div class="nb-in">{img}<div class="info"><p class="nb-what">{e(what)}</p><h3><a href="buch/{slug(t)}.html">{e(t)}</a></h3><p class="author">{e(a)}</p>{('<p class="mblurb">'+e(short(BLURB[k]))+'</p>') if k in BLURB else ''}{badges(k)}<div class="buys">{buttons(k,sm=True,one=True)}</div></div></div></article>''')
+        else:   # ältere Tage kompakt: Cover, Titel, was neu ist, Status
+            nf=[x for x in eds.values() if x['f'] in fs]
+            st=' · '.join(f"{x['f']}{(' '+x['price']+' €') if x['price'] else ''}: {'bald verfügbar' if x['soon'] else 'erhältlich'}" for x in nf)
+            items.append(f'''<a class="nbc" href="buch/{slug(t)}.html"><img src="{cv(cov)}" alt="" width="56" height="84" loading="lazy" decoding="async"><span class="nbc-t"><b>{e(t)}</b><small>{e(a)}</small><em>{e(what)}</em><i>{e(st)}</i></span></a>''')
+    cls='nbgrid' if gi==0 else 'nbcgrid'
+    neu.append(f'<div class="nbgroup{" first" if gi==0 else ""}"><h3 class="nbdate"><time datetime="{d}">{dlabel(d)}</time></h3><div class="{cls}">{"".join(items)}</div></div>')
+NEU='\n'.join(neu)
+
+# ---- JSON-LD: alle Bücher mit geprüften Angeboten ----
+BASE='https://alessandronoto84.github.io/740publishing/'
+ld=[]
+for k,t,a,c,eb,pr,pt,cov in CAT:
+    offers=[]
+    for ed in editions(k):
+        for sh,u in ed['links']:
+            o={"@type":"Offer","url":u,"seller":{"@type":"Organization","name":sh},"availability":"https://schema.org/InStock"}
+            if ed['price']: o.update({"price":ed['price'].replace(',','.'),"priceCurrency":"EUR"})
+            offers.append(o)
+    b={"@type":"Book","name":t,"author":{"@type":"Person","name":a},"inLanguage":"de","image":BASE+cv(cov),"url":f'{BASE}buch/{slug(t)}.html',"publisher":{"@type":"Organization","name":"740 Publishing"}}
+    i=pr or eb
+    if i: b["isbn"]=i
+    if offers: b["offers"]=offers
+    ld.append(b)
 
 # ---- Gesamtkatalog ----
-sys.path.insert(0,f'{S}/gen')
-from catalog import CAT, EXTRA, SLUG, BLURB, new_links, new_pending
 TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
-def slug(t):
-    t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss')
-    import re; return re.sub(r'[^a-z0-9]+','-',t).strip('-')
-def isbn10(s):
-    c=s[3:12]; r=(11-sum((10-i)*int(d) for i,d in enumerate(c))%11)%11
-    return c+('X' if r==10 else str(r))
 order=['Romane','Sachbuch & Ratgeber','Reiseführer']
 secs=[]
 for cat in order:
     items=[]
     for k,t,a,c,eb,pr,pt,cov in CAT:
         if c!=cat: continue
-        if k in EXTRA: links=EXTRA[k]
-        else:
-            links=[]
-            if eb: links.append(('E-Book','epubli',f'https://www.epubli.com/shop/{SLUG.get(k,slug(t))}-{eb}'))
-            if pr: links.append((pt,'Amazon',f'https://www.amazon.de/dp/{isbn10(pr)}'))
-            if pr and not eb: links.append((pt,'epubli',f'https://www.epubli.com/shop/{slug(t)}-{pr}'))
-        links=links+new_links(k)
-        btns=''.join(f'<a class="buy sm" href="{u}" target="_blank" rel="noopener"><span class="fmt">{f}</span><span class="shop">{s}</span></a>' for f,s,u in links)
-        _fm=[f for f,_,_ in links]
-        btns+=''.join(f'<span class="buy sm pend" title="ISBN {isbnfmt(i)} · erscheint in Kürze im Handel"><span class="fmt">{f}</span><span class="shop">in Kürze</span></span>' for f,i in new_pending(k) if f not in _fm)
-        img=(f'<button class="covbtn" type="button" data-video="trailer/{TRAILER[k]}.mp4" data-poster="trailer/{TRAILER[k]}.jpg" data-title="{html.escape(t)}" aria-label="Trailer zu „{html.escape(t)}“ abspielen"><img class="cover" src="covers/cat/{cov}.jpg" alt="Cover von „{html.escape(t)}“" width="100" height="150" loading="lazy"><span class="playic" aria-hidden="true"></span></button>' if k in TRAILER else f'<img class="cover" src="covers/cat/{cov}.jpg" alt="Cover von „{html.escape(t)}“" width="100" height="150" loading="lazy">') if cov else f'<div class="cover blank" aria-hidden="true"><span>{html.escape(t)}</span></div>'
-        items.append(f'<article class="mini" id="{k}">{img}<div class="info"><h3><a href="buch/{slug(t)}.html">{html.escape(t)}</a></h3><p class="author">{html.escape(a)}</p>{("<p class=\"mblurb\">"+html.escape(BLURB[k])+"</p>") if k in BLURB else ""}<p class="more"><a href="buch/{slug(t)}.html">Mehr zum Buch →</a></p><div class="buys">{btns}</div></div></article>')
+        src=cv(cov)
+        img=(f'<button class="covbtn" type="button" data-video="trailer/{TRAILER[k]}.mp4" data-poster="trailer/{TRAILER[k]}.jpg" data-title="{e(t)}" aria-label="Trailer zu „{e(t)}“ abspielen"><img class="cover" src="{src}" alt="Cover von „{e(t)}“" width="100" height="150" loading="lazy" decoding="async"><span class="playic" aria-hidden="true"></span></button>' if k in TRAILER else f'<img class="cover" src="{src}" alt="Cover von „{e(t)}“" width="100" height="150" loading="lazy" decoding="async">') if cov else f'<div class="cover blank" aria-hidden="true"><span>{e(t)}</span></div>'
+        items.append(f'<article class="mini" id="{k}">{img}<div class="info"><h3><a href="buch/{slug(t)}.html">{e(t)}</a></h3><p class="author">{e(a)}</p>{badges(k)}{("<p class=\"mblurb\">"+e(BLURB[k])+"</p>") if k in BLURB else ""}<p class="more"><a href="buch/{slug(t)}.html">Mehr zum Buch</a></p><div class="buys">{buttons(k,sm=True)}</div></div></article>')
     secs.append(f'<section class="catsec" data-cat="{cat}"><h2 class="sech">{cat} <span>{len(items)}</span></h2><div class="minigrid">{"".join(items)}</div></section>')
 catchips='<button class="chip cchip" aria-pressed="true" data-c="alle">Alle</button>'+''.join(f'<button class="chip cchip" aria-pressed="false" data-c="{c}">{c}</button>' for c in order)
 import random as _r
@@ -96,19 +136,21 @@ SERIES=[('Die verborgene Seite der Welt','Reiseführer von Mika Solberg: 30 Orte
  ('KARMA · GLÜCK · ORDNUNG · PECH','Die Romanreihe von Konstanze Frey: warmherzige, humorvolle Kleinstadtromane.',['karma','glueck','ordnung','pech']),
  ('Projekt-Reihe von Victor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
  ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus und spirituelle Traditionen.',['k-astrologie','schamanismus'])]
-_C={x[0]:x for x in CAT}
-def _cv(cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
 _ser=[]
 for _n,_d,_ks in SERIES:
-    _it=''.join(f'<a class="sbk" href="buch/{slug(_C[k][1])}.html"><img src="{_cv(_C[k][7])}" alt="Cover von „{html.escape(_C[k][1])}“" width="120" height="180" loading="lazy"><span>{html.escape(_C[k][1].replace("Die verborgene Seite von ",""))}</span></a>' for k in _ks)
-    _ser.append(f'<div class="series"><div class="shead"><h3>{html.escape(_n)}</h3><p>{html.escape(_d)} <b>{len(_ks)} Bände</b></p></div><div class="srow">{_it}</div></div>')
+    _it=''.join(f'<a class="sbk" href="buch/{slug(CD[k][1])}.html"><img src="{cv(CD[k][7])}" alt="Cover von „{e(CD[k][1])}“" width="120" height="180" loading="lazy" decoding="async"><span>{e(CD[k][1].replace("Die verborgene Seite von ",""))}</span></a>' for k in _ks)
+    _ser.append(f'<div class="series"><div class="shead"><h3>{e(_n)}</h3><p>{e(_d)} <b>{len(_ks)} Bände</b></p></div><div class="srow">{_it}</div></div>')
 # ---- Laufband + Tipp des Tages + Zufallsbuch (gen/picks.py, Browser-Logik in entdecken.js) ----
 from catalog import BELIEBT
 import picks as _pk
-_PB=[{'k':k,'t':t,'a':a,'g':c,'cov':_cv(cov),'href':f'buch/{slug(t)}.html','d':BLURB.get(k,'')} for k,t,a,c,eb,pr,pt,cov in CAT if cov]
+_PB=[{'k':k,'t':t,'a':a,'g':c,'cov':cv(cov),'href':f'buch/{slug(t)}.html','d':BLURB.get(k,'')} for k,t,a,c,eb,pr,pt,cov in CAT if cov]
 _PBK={b['k']:b for b in _PB}
 TICKER=_pk.ticker([_PBK[k] for k in BELIEBT if k in _PBK],'Beliebt','bei unseren Lesern','Beliebt bei unseren Lesern')
 PICKS=_pk.picks(_PB,{'lang':'de','aria':'Buchtipps','day':'Unser Tipp des Tages','rnd':'Zufällig entdeckt','again':'↻ Noch ein Buch','more':'Mehr zum Buch →'})
-out=open(f'{S}/site/index.html').read().replace('{{TICKER}}',TICKER).replace('{{PICKS}}',PICKS).replace('{{SERIES}}','\n'.join(_ser)).replace('{{WALL}}',WALL).replace('{{CATALOG}}','\n'.join(secs)).replace('{{CATCHIPS}}',catchips).replace('{{COUNT}}',str(len(CAT)))
+tpl=open(f'{S}/gen/index_tpl.html').read()
+out=(tpl.replace('{{CARDS}}','\n'.join(cards)).replace('{{NEU}}',NEU).replace('{{LD}}',json.dumps({"@context":"https://schema.org","@graph":ld},ensure_ascii=False).replace('</','<\\/'))
+        .replace('{{TICKER}}',TICKER).replace('{{PICKS}}',PICKS).replace('{{SERIES}}','\n'.join(_ser)).replace('{{WALL}}',WALL)
+        .replace('{{CATALOG}}','\n'.join(secs)).replace('{{CATCHIPS}}',catchips).replace('{{COUNT}}',str(len(CAT))))
+assert '{{' not in out, re.findall(r'\{\{[A-Z]+\}\}',out)
 open(f'{S}/site/index.html','w').write(out)
-print('catalog',len(CAT))
+print('index ok',len(out),'· neu:',', '.join(f'{d}:{"/".join(ks)}' for d,ks in groups))

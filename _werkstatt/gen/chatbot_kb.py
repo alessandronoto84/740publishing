@@ -28,13 +28,13 @@ for f in sorted(glob.glob(f'{SITE}/buch/*.html')):
     cat = html.unescape(crumbs[1]) if len(crumbs) > 1 else ''
     fmts, shops = [], []
     for fm, shop in re.findall(r'<a class="buy"[^>]*><span class="fmt">([^<]+)</span><span class="shop">([^<]+)</span></a>', info):
-        fm = html.unescape(fm)
+        fm = html.unescape(fm).replace('\xa0', ' ')
         if fm not in fmts:
             fmts.append(fm)
         sh = re.sub(r'^bei | kaufen$', '', html.unescape(shop))
         if sh not in shops:
             shops.append(sh)
-    pend = [html.unescape(x) for x in re.findall(r'<span class="buy pend"[^>]*><span class="fmt">([^<]+)</span>', info)]
+    pend = [txt(x).replace('bald verfügbar', '').strip() for x in re.findall(r'<span class="fb bald"[^>]*>(.*?)</small></span>', info)]
     b = {
         't': one(r'<h1>(.*?)</h1>', info),
         'sub': one(r'<p class="bp-kw">(.*?)</p>', info),
@@ -42,7 +42,7 @@ for f in sorted(glob.glob(f'{SITE}/buch/*.html')):
         'g': one(r'<p class="eyebrow">(.*?)</p>', info),
         'c': cat,
         'd': one(r'<p class="bp-blurb">(.*?)</p>', info),
-        'f': fmts + [f'{p} (erscheint in Kürze)' for p in pend if p not in fmts],
+        'f': fmts + [f'{p} (bald verfügbar)' for p in pend if p not in fmts],
         'shops': shops,
         'u': 'buch/' + os.path.basename(f),
     }
@@ -54,8 +54,8 @@ for f in sorted(glob.glob(f'{SITE}/buch/*.html')):
 
 # ---------- Startseite ----------
 idx = open(f'{SITE}/index.html', encoding='utf-8').read()
-neu_sec = re.search(r'<section class="sec wrap" id="neu">(.*?)</section>', idx, re.S)
-neu_titles = [txt(t) for t in re.findall(r'<article class="book"[^>]*>.*?<h2>(.*?)</h2>', neu_sec.group(1) if neu_sec else '', re.S)]
+neu_sec = re.search(r'<section class="sec wrap" id="neu"[^>]*>(.*?)</section>', idx, re.S)
+neu_titles = [txt(t) for t in re.findall(r'<article class="nb">.*?<h3><a [^>]*>(.*?)</a></h3>', neu_sec.group(1) if neu_sec else '', re.S)]
 by_title = {b['t']: b for b in books}
 neu_urls = [by_title[t]['u'] for t in neu_titles if t in by_title]
 series = [(txt(n), txt(d)) for n, d in re.findall(r'<div class="series"><div class="shead"><h3>(.*?)</h3><p>(.*?)</p>', idx, re.S)]
@@ -118,7 +118,7 @@ F('programm', 'Welche Bücher gibt es?',
   ['welche bücher', 'bücher', 'buch', 'programm', 'katalog', 'sortiment', 'alle bücher', 'titel', 'angebot', 'gesamtkatalog', 'übersicht', 'liste'],
   [{'t': 'Gesamtkatalog', 'h': 'index.html#katalog'}], cats + ['Neuerscheinungen'])
 if neu_urls:
-    F('neu', 'Was ist neu?', 'Das sind die aktuellen Neuerscheinungen:',
+    F('neu', 'Was ist neu?', 'Das sind die neuesten Bücher und Ausgaben:',
       ['neu', 'neuerscheinung', 'neuerscheinungen', 'neuheiten', 'aktuell', 'neuste', 'neueste', 'rampenlicht', 'trailer'],
       [{'t': 'Neuerscheinungen ansehen', 'h': 'index.html#neu'}], ['Wie bestelle ich?', 'Welche Bücher gibt es?'], neu_urls[:4])
 if series:
@@ -126,7 +126,7 @@ if series:
       ['reihe', 'reihen', 'serie', 'serien', 'band', 'baende', 'fortsetzung', 'teil'],
       [{'t': 'Unsere Reihen', 'h': 'index.html#reihen'}], ['Reiseführer', 'Welche Bücher gibt es?'])
 F('bestellen', 'Wie bestelle ich?',
-  avail + '\nAuf jeder Buchseite findest du die Kauf-Buttons für die verfügbaren Formate, zum Beispiel „bei epubli kaufen“ oder „bei Amazon kaufen“, und die ISBN. Bei manchen Ausgaben steht „erscheint in Kürze“, die gibt es noch nicht im Handel.',
+  avail + '\nAuf jeder Buchseite findest du die Kauf-Buttons für die verfügbaren Formate, zum Beispiel „bei epubli kaufen“ oder „bei Amazon kaufen“, und die ISBN. Bei gerade erst veröffentlichten Ausgaben steht „bald verfügbar“: die sind in wenigen Tagen in den Shops.',
   ['bestellen', 'bestellung', 'kaufen', 'kauf', 'erhältlich', 'bekommen', 'kriegen', 'epubli', 'amazon', 'buchhandel', 'buchhandlung', 'hugendubel', 'shop', 'lieferung', 'versand', 'isbn', 'wo kaufen', 'wie bestelle'],
   [{'t': 'Zum Katalog', 'h': 'index.html#katalog'}], ['Gibt es E-Books?', 'Was kostet ein Buch?', 'Kontakt'])
 F('formate', 'Gibt es E-Books und gedruckte Bücher?',
@@ -134,7 +134,7 @@ F('formate', 'Gibt es E-Books und gedruckte Bücher?',
   ['ebook', 'e book', 'e-book', 'kindle', 'epub', 'taschenbuch', 'hardcover', 'gebunden', 'print', 'gedruckt', 'format', 'formate', 'digital', 'softcover'],
   None, ['Wie bestelle ich?', 'Welche Bücher gibt es?'])
 F('preis', 'Was kostet ein Buch?',
-  'Preise stehen nicht auf dieser Webseite. Den aktuellen Preis siehst du beim Shop, zu dem die Kauf-Buttons auf der Buchseite führen (zum Beispiel epubli oder Amazon).',
+  'Wo der Preis bekannt ist, steht er direkt beim Format, zum Beispiel „E-Book 4,99 €“ oder auf dem Kauf-Button. Bücher haben in Deutschland einen festen Ladenpreis, er ist also in jedem Shop gleich. Den aktuellen Preis siehst du auch beim Shop, zu dem die Kauf-Buttons führen (zum Beispiel epubli oder Amazon).',
   ['preis', 'preise', 'kosten', 'kostet', 'euro', 'teuer', 'guenstig', 'billig', 'rabatt', 'gutschein'],
   None, ['Wie bestelle ich?'])
 if en_count:

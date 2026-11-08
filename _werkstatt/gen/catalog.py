@@ -19,6 +19,7 @@ CAT=[
  ('blut-asphalt','Zwischen Blut und Asphalt','Juna Morel',R,'9783565495290','9783565496303','Taschenbuch','blut-asphalt'),
  ('manuskript','Das Manuskript','Evan J. Moore',R,'9783565463954','9783565463152','Taschenbuch','manuskript'),
  ('jenseits','Jenseits des Himmels','Leo Winter',R,None,'9783565446001','Taschenbuch','jenseits'),
+ ('wns','Wer nichts sieht …','Hanna Sedlak',R,'9783565858446','9783565858439','Taschenbuch','wns'),
  ('jabari','Jabari','Amari Diallo',R,'9783565455621','9783565455737','Hardcover','jabari'),
  ('underground','Generation Underground','Sandro Urban',S,'9783565496648','9783565496655','Taschenbuch','underground'),
  ('algorithmus','Generation Algorithmus','Friedhelm Westerkamp',S,'9783565585588','9783565585540','Taschenbuch','algorithmus'),
@@ -120,6 +121,7 @@ BLURB={
  'japan':'Von abgelegenen Bergdörfern Hokkaidos über stille Onsen-Dörfer Tohokus bis zu geheimen Küstenwegen im Süden. Mit Reiserouten und praktischen Reisetipps.',
  'vietnam':'Von Bergdörfern im Norden über die Höhlensysteme Zentralvietnams bis zu den Wasserwegen des Mekong-Deltas. Mit Reiserouten und praktischen Reisetipps zu Anreise, Kosten und Sicherheit.',
  'jabari':'Jabari Diallo wächst in Kibera auf, wo Armut zum Alltag gehört. Doch er hat einen außergewöhnlichen Verstand: Er repariert kaputte Radios, Fernseher und Handys und entdeckt die Macht von Wissen, Disziplin und Hoffnung. Ein emotionaler Roman über Bildung, Ehrgeiz und den Mut, an eine größere Zukunft zu glauben.',
+ 'wns':'Als die Journalistin Nadja Schumacher in einem alten Fall auf eine Ungereimtheit stößt, beginnt sie Fragen zu stellen, die längst hätten gestellt werden müssen. Eine Spur führt sie zu Leni und ihren Notizbüchern und damit in eine Welt, in der Menschen verschwinden, Geheimnisse geschützt und Informationen zur Waffe werden. Ein atmosphärischer, psychologisch dichter Kriminalroman über Wahrnehmung, Schuld und die gefährliche Macht von Informationen.',
  'koerperkult':'Lange bevor Menschen schrieben, begannen sie, ihre Haut zu verändern. Samuel Dorn reist durch mehr als 100.000 Jahre Menschheitsgeschichte: von steinzeitlicher Körperbemalung über Ötzis Tätowierungen und die Muster Polynesiens bis zur modernen Tattoo-Kultur. Eine Kulturgeschichte des menschlichen Körpers über Identität, Glauben, Macht und Schmerz.',
  'delegations':'Mental Load endlich loslassen: Ein praktischer Guide für erschöpfte Mütter mit Checklisten, Vorlagen und Gesprächsleitfaden. Das Buch erklärt, was Mental Load wirklich ist, zeigt die fünf Fallen, in die fast jede Mutter tappt, und führt mit einem 4-Schritte-Plan und dem Familien-Board zu mehr Entlastung, auch wenn die Familie nicht gleich mitmacht.',
  'manuskript':'In einem Berliner Herbst stößt der Redakteur Adrian Kessler auf ein Manuskript, das sein Leben protokolliert, bevor es geschieht. Mit jeder Seite wird die Verzögerung zwischen Text und Realität kleiner. Ein minimalistischer Mystery-Thriller mit philosophischer Tiefe, in dem die größte Spannung im Kopf entsteht.',
@@ -185,3 +187,119 @@ SERIES_OF={
 # gewünschten Reihenfolge. Startauswahl (07.11.2026): die Titel mit Buchtrailer/Reel aus der Social-Media-Kampagne.
 # Stand 07.11.2026: die 10 meistverkauften Titel laut Sandros Bücherliste (epubli-Abrechnungen bis Sep 2026 + offene Honorare), absteigend.
 BELIEBT=['piercing','spiritualitaet','k-drogen','psychologie','auswandern','selbstversorger','k-astrologie','k-rap','underground','blut-asphalt']
+
+# ---- Neue Ausgaben 08.11.2026 (laut Werkstatt-Jobs hc-spirit, hc2, piercing-ebook, wns) ----
+NEW_ED.setdefault('spiritualitaet',{})['Hardcover']=('9783565858378','')
+NEW_ED.setdefault('koerperkult',{})['Hardcover']=('9783565858385','')
+NEW_ED.setdefault('piercing',{})['E-Book']=('9783565858422','')
+NEW_ED.setdefault('ecuador',{})['Hardcover']=('','')        # ISBN noch nicht bekannt -> eintragen, sobald bekannt
+NEW_ED.setdefault('wns',{})['Hardcover']=('','')            # Hardcover erscheint 08.11.2026, ISBN folgt
+
+# ---- Preise (Euro, gebundener Ladenpreis je Ausgabe) ----
+# Nur belegte Preise: aus dem epubli-Shop (linkcheck) oder aus den Werkstatt-Jobs. Schlüssel = ISBN-13.
+# Preise ohne ISBN (Ausgabe noch ohne ISBN) stehen unter (key, Format).
+PRICE={
+ '9783565858378':'44,99',   # Spiritualität Hardcover (Job hc-spirit)
+ '9783565858385':'43,99',   # Körperkult Hardcover (Sandro, 08.11.)
+ '9783565858422':'19,99',   # Piercing Akademie E-Book (Job piercing-ebook)
+ '9783565858439':'21,99',   # Wer nichts sieht … Taschenbuch
+ '9783565858446':'4,99',    # Wer nichts sieht … E-Book
+ # Roman-E-Books nach Preissenkung (Job romane-preise, 07.11.2026; Jenseits: Job jenseits-preis)
+ '9783565538997':'4,99','9783565560974':'6,99','9783565564859':'6,99','9783565568963':'6,99','9783565463954':'6,99',
+ '9783565575763':'6,99','9783565478262':'5,99','9783565599707':'5,99','9783565668472':'5,99','9783565850648':'5,99',
+ '9783565850587':'5,99','9783565658695':'5,99','9783565662821':'5,99','9783565455621':'5,99','9783565739790':'5,99',
+ '9783565571475':'7,99','9783565526857':'4,99','9783565530717':'6,49','9783565495290':'9,99',
+}
+PRICE_NOISBN={('ecuador','Hardcover'):'31,99',('wns','Hardcover'):'31,99',('jenseits','E-Book'):'5,99'}
+# Preise, die der linkcheck im epubli-Shop gelesen hat, ergänzen PRICE (Werkstatt-Werte haben Vorrang, weil sie neuer sind).
+try:
+    import json as _j, os as _o
+    _LS=_j.load(open(_o.path.join(_o.path.dirname(__file__),'linkstatus.json')))
+except Exception:
+    _LS={}
+for _u,_v in _LS.items():
+    if _v.get('ok') and _v.get('isbn') and _v.get('price') and _v['isbn'] not in PRICE: PRICE[_v['isbn']]=_v['price']
+
+# ---- Erscheinungen für den Bereich „Neu erschienen“ (neueste zuerst wird automatisch sortiert) ----
+# (Datum JJJJ-MM-TT, key, Format, ISBN oder '') – Datum = Veröffentlichung bei epubli
+# (Quelle: epubli-Shop „Erscheinungsdatum“ bzw. Werkstatt-Job, wenn die Shopseite noch fehlt). Neue Ausgabe: oben ergänzen.
+RELEASES=[
+ ('2026-11-08','wns','Taschenbuch','9783565858439'),
+ ('2026-11-08','wns','E-Book','9783565858446'),
+ ('2026-11-08','wns','Hardcover',''),
+ ('2026-11-08','spiritualitaet','Hardcover','9783565858378'),
+ ('2026-11-08','koerperkult','Hardcover','9783565858385'),
+ ('2026-11-08','ecuador','Hardcover',''),
+ ('2026-11-08','piercing','E-Book','9783565858422'),
+ # Werkstatt-Job hc-heute („Hardcover heute veröffentlicht“, Stand 07.11.2026); Shopseiten waren am 08.11. noch nicht online
+ ('2026-11-07','bier','Hardcover','9783565855452'),('2026-11-07','k-rap','Hardcover','9783565855476'),
+ ('2026-11-07','china','Hardcover','9783565855513'),('2026-11-07','japan','Hardcover','9783565855544'),
+ ('2026-11-07','mexiko','Hardcover','9783565855575'),('2026-11-07','vietnam','Hardcover','9783565855612'),
+ ('2026-11-07','schamanismus','Hardcover','9783565855469'),('2026-11-07','underground','Hardcover','9783565855490'),
+ ('2026-11-07','emilia','Hardcover','9783565855506'),('2026-11-07','liebe','Hardcover','9783565855537'),
+ ('2026-11-07','erwachsen','Hardcover','9783565855568'),('2026-11-07','k-freizeitpark','Hardcover','9783565855636'),
+ ('2026-11-07','koerperkult','Taschenbuch','9783565855605'),
+ ('2026-11-07','koerperkult','E-Book','9783565855650'),   # Job kk-ebook
+ # Fußball: Amazon-Erscheinungstermin 05.11.2026 (geprüft 07.11.)
+ ('2026-11-05','fussball','Taschenbuch','9783565850662'),
+]
+NEU_ANZAHL=22   # so viele Titel zeigt „Neu erschienen“ (neuester Tag groß, ältere Tage kompakt)
+
+# ---- Kauf-Links zentral (für build.py, pages.py, english.py) ----
+import re as _re
+def _slug(t):
+    t=t.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss'); return _re.sub(r'[^a-z0-9]+','-',t).strip('-')
+def _isbn10(s):
+    c=s[3:12]; r=(11-sum((10-i)*int(d) for i,d in enumerate(c))%11)%11; return c+('X' if r==10 else str(r))
+_CATD={x[0]:x for x in CAT}
+OTHER_LINKS={'k-thailand':[('Taschenbuch','Hugendubel','https://www.hugendubel.de/de/buch_kartoniert/mika_solberg-die_verborgene_seite_von_thailand-54175286-produkt-details.html')]}
+AMAZON_HC={'k-kifft':'3565740426','k-astrologie':'3565752289','k-kaffee':'3565737905','k-drogen':'3565526637'}
+def candidate_links(k):
+    """Alle bekannten Kauf-Links eines Buchs: [(Format, Shop, URL, ISBN)] – noch ungeprüft."""
+    _,t,a,c,eb,pr,pt,cov=_CATD[k]; s=SLUG.get(k,_slug(t)); L=[]
+    for f,sh,u in EXTRA.get(k,[])+OTHER_LINKS.get(k,[]):
+        L.append((f,sh,u,(_re.findall(r'\d{13}',u) or [pr if f==pt else ''])[0]))
+    if eb: L.append(('E-Book','epubli',f'https://www.epubli.com/shop/{s}-{eb}',eb))
+    if pr: L.append((pt,'epubli',f'https://www.epubli.com/shop/{s}-{pr}',pr))
+    if pr: L.append((pt,'Amazon',f'https://www.amazon.de/dp/{_isbn10(pr)}',pr))
+    if k in AMAZON_HC: L.append(('Hardcover','Amazon',f'https://www.amazon.de/dp/{AMAZON_HC[k]}',''))
+    for f,(i,u) in NEW_ED.get(k,{}).items():
+        if i: L.append((f,'epubli',u or f'https://www.epubli.com/shop/{s}-{i}',i))
+    seen=set(); out=[]
+    for x in L:
+        if x[2] not in seen: seen.add(x[2]); out.append(x)
+    return out
+def link_ok(u):
+    v=_LS.get(u); return bool(v and v.get('ok'))
+FMT_ORDER=['E-Book','Taschenbuch','Hardcover']
+def editions(k):
+    """Ausgaben eines Buchs: [{f, isbn, price, links:[(Shop,URL)], soon:bool}] in fester Reihenfolge.
+    soon=True, wenn es (noch) keinen geprüft funktionierenden Kauf-Link gibt -> „Bald verfügbar“."""
+    _,t,a,c,eb,pr,pt,cov=_CATD[k]; E={}
+    def ed(f): return E.setdefault(f,{'f':f,'isbn':'','price':'','links':[]})
+    if eb: ed('E-Book')['isbn']=eb
+    if pr: ed(pt)['isbn']=pr
+    for f,(i,u) in NEW_ED.get(k,{}).items():
+        e=ed(f)
+        if i: e['isbn']=i   # neuere Ausgabe gleichen Formats ersetzt die alte ISBN in der Anzeige
+    for f,sh,u,i in candidate_links(k):
+        if link_ok(u):
+            e=ed(f)
+            if (sh,u) not in e['links']: e['links'].append((sh,u))
+            if i and not e.get('live'): e['live']=i   # ISBN der Ausgabe, die wirklich im Handel ist
+    _SO={'epubli':0,'Amazon':1}
+    for e in E.values(): e['links'].sort(key=lambda x:_SO.get(x[0],2))
+    extra=[]
+    for f,e in E.items():
+        if e.get('live'):
+            if e['isbn'] and e['isbn']!=e['live']:
+                # neue Ausgabe gleichen Formats (andere ISBN) noch ohne Link -> zusätzlich als „bald verfügbar“ zeigen
+                extra.append({'f':f,'isbn':e['isbn'],'price':PRICE.get(e['isbn'],''),'links':[],'soon':True})
+            e['isbn']=e.pop('live')
+        e['price']=PRICE.get(e['isbn'],'') or ('' if any(x['f']==f for x in extra) else PRICE_NOISBN.get((k,f),''))
+        e['soon']=not e['links']
+    out=[]
+    for f in FMT_ORDER+[f for f in E if f not in FMT_ORDER]:
+        if f in E: out.append(E[f])
+        out+=[x for x in extra if x['f']==f]
+    return out

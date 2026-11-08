@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://alessandronoto84.github.io/740publishing/logo.png">
 <link rel="icon" href="logo-small.png">
-<link rel="stylesheet" href="style.css?v=1793400000">
+<link rel="stylesheet" href="style.css?v=1794200000">
 <script type="application/ld+json">{{LD}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"740 Publishing","url":"https://alessandronoto84.github.io/740publishing/","logo":"https://alessandronoto84.github.io/740publishing/logo.png","email":"740publishingverlag@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Burgstraße 12","postalCode":"49808","addressLocality":"Lingen (Ems)","addressCountry":"DE"}}</script>
 </head>
@@ -37,16 +37,22 @@
       <div class="logobox"><img class="logo" src="logo.png" alt="740 Publishing" width="987" height="761"><span class="shine" aria-hidden="true"></span></div>
       <h1><span style="animation-delay:1.7s">Für</span> <span style="animation-delay:1.9s">alle,</span> <span style="animation-delay:2.1s">die</span> <span style="animation-delay:2.3s">mehr</span> <span style="animation-delay:2.5s">wissen</span> <span style="animation-delay:2.7s">wollen.</span></h1>
       <p>Sachbücher, Ratgeber, Reiseführer und Romane über Psychologie, Gesundheit, Kultur, Gesellschaft und die Welt.</p>
-      <div class="cta"><a class="btn solid" href="#neu">Neuerscheinungen</a><a class="btn ghost" href="#katalog">Alle {{COUNT}} Bücher</a></div>
+      <div class="cta"><a class="btn solid" href="#neu">Neu erschienen</a><a class="btn ghost" href="#katalog">Alle {{COUNT}} Bücher</a></div>
       <div class="facts"><span><b>{{COUNT}}</b> Titel</span><span>Roman · Sachbuch · Reiseführer</span><span>E-Book &amp; Print</span></div>
     </div>
   </section>
 
   {{PICKS}}
 
-  <section class="sec wrap" id="neu">
-    <p class="eyebrow">Im Rampenlicht</p>
-    <h2 class="sech">Neuerscheinungen</h2>
+  <section class="sec wrap" id="neu" aria-labelledby="neu-h">
+    <h2 class="sech" id="neu-h">Neu erschienen</h2>
+    <p class="seclead">Die neuesten Bücher und Ausgaben, nach Erscheinungsdatum. Was gerade erst veröffentlicht wurde, ist in wenigen Tagen in den Shops: bis dahin steht dort „Bald verfügbar“.</p>
+    <hr class="rule">
+{{NEU}}
+  </section>
+
+  <section class="sec wrap" id="trailer" aria-labelledby="tr-h">
+    <h2 class="sech" id="tr-h">Buchtrailer</h2>
     <hr class="rule">
     <div class="shelf">
 {{CARDS}}
@@ -78,7 +84,7 @@
         <h2 class="sech">Über 740 Publishing</h2>
         <hr class="rule">
         <p>740 Publishing ist ein unabhängiger Verlag aus Lingen (Ems). Unser Programm ist so vielfältig wie die Fragen, die Menschen sich stellen: Psychologie und Persönlichkeitsentwicklung, Fitness, Gesundheit und Selbstversorgung, Spiritualität, Kulturgeschichte und gesellschaftliche Debatten sowie Reiseführer zu Orten jenseits der bekannten Routen.</p>
-        <p>Dazu kommen Romane, von warmherzigen Kleinstadtgeschichten bis zu packenden Thrillern. Was alle Bücher verbindet: Sie erklären verständlich, gehen in die Tiefe und bieten echten Mehrwert. Alle Titel erscheinen als E-Book und gedruckt und sind über epubli, Amazon und den Buchhandel erhältlich.</p>
+        <p>Dazu kommen Romane, von warmherzigen Kleinstadtgeschichten bis zu packenden Thrillern. Was alle Bücher verbindet: Sie erklären verständlich, gehen in die Tiefe und bieten echten Mehrwert. Die Titel erscheinen als E-Book, Taschenbuch oder Hardcover und sind über epubli, Amazon und den Buchhandel erhältlich.</p>
       </div>
       <div class="press" id="presse">
         <p class="eyebrow">Presse &amp; Blogger</p>
