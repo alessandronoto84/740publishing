@@ -3,7 +3,7 @@ S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
 from catalog import CAT, EXTRA, SLUG, BLURB, SERIES_OF, editions
 from render import badges, buttons, live_formats, soon_formats
 from seo import SEO
-BASE='https://alessandronoto84.github.io/740publishing/'
+BASE='https://740publishing.de/'
 TRAILER={'bier':'bier','fussball':'fussball','k-freizeitpark':'freizeitpark','k-rap':'rap','k-kifft':'kifft','k-drogen':'drogen','k-kaffee':'kaffee','k-schoenheit':'schoenheit','k-astrologie':'astrologie','k-thailand':'thailand'}
 GENRE={'Romane':'Roman','Sachbuch & Ratgeber':'Sachbuch','Reiseführer':'Reiseführer'}
 def slug(t):

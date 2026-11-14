@@ -94,7 +94,7 @@ for gi,(d,ks) in enumerate(groups):
 NEU='\n'.join(neu)
 
 # ---- JSON-LD: alle Bücher mit geprüften Angeboten ----
-BASE='https://alessandronoto84.github.io/740publishing/'
+BASE='https://740publishing.de/'
 ld=[]
 for k,t,a,c,eb,pr,pt,cov in CAT:
     offers=[]

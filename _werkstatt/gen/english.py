@@ -3,7 +3,7 @@
 # GPLAY: sobald ein Buch bei Google Play Books live ist, den geprüften Link eintragen -> Kaufbutton statt "Coming soon".
 import html, json, sys, os
 S=sys.argv[1]
-BASE='https://alessandronoto84.github.io/740publishing/'
+BASE='https://740publishing.de/'
 CSSV='1794300000'
 e=html.escape
 from english_data import *

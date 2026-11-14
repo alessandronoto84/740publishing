@@ -11,7 +11,7 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
 - **Arbeitsweise:** Er will nach jedem abgeschlossenen Schritt ein ausdrückliches **„Go“**. Gewünscht sind ehrliche Einschätzungen, klare Empfehlungen statt Optionslisten und keine Passwörter im Chat. Er spricht viel per Sprachnachricht, deshalb Tippfehler großzügig deuten.
 
 ## 2. Webseite
-- **Live:** https://alessandronoto84.github.io/740publishing/
+- **Live:** https://740publishing.de/
 - **Repo:** `alessandronoto84/740publishing` (public, GitHub Pages, Branch `main`, `.nojekyll`). Commits als `Alessandro Noto <740publishingverlag@gmail.com>`.
 - **Design:** Schwarz-Gold. Schriften Cormorant Garamond und Figtree, selbst gehostet (keine Google Fonts, wegen DSGVO).
 - **Startseite:**
@@ -68,7 +68,7 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
 - **Konto:**
   - Metricool, `blogId` **7678602**, Brand-Zeitzone Asia/Bangkok. Daten immer mit `timezone: Europe/Berlin` senden.
   - Netzwerke: Instagram @740_publishing, TikTok @740publishing (Firmenkonto; **nie** das Privatkonto „Mr. Oni Mahoni“), YouTube, Facebook. Free-Plan.
-  - Medien müssen öffentliche URLs sein. Die Karussellbilder liegen unter `https://alessandronoto84.github.io/740publishing/posts/<k>_<n>.jpg`. Vor dem Einplanen warten, bis GitHub Pages fertig deployt ist, sonst kommt „Failed to normalize media“.
+  - Medien müssen öffentliche URLs sein. Die Karussellbilder liegen unter `https://740publishing.de/posts/<k>_<n>.jpg`. Vor dem Einplanen warten, bis GitHub Pages fertig deployt ist, sonst kommt „Failed to normalize media“.
 - **Karussell-Format:**
   - Instagram, Facebook (`type POST`) und TikTok (Foto-Post mit `title`, `commercialContentOwnBrand: true`), `instagramData.isAiGenerated: true`.
   - Text: Hook + Emoji, Verkaufstext, Titel/Autor, Formate, „Wischen für mehr“, Kauflinks, „Link in der Bio“, Frage, 5 Hashtags.
@@ -134,8 +134,9 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
 - **Downloads aus der Sandbox:** epubli, Amazon und github.io sind dort gesperrt (Proxy 403). Bilder also nicht dort herunterladen, sondern vom PC nehmen.
 - **Cookie-Banner:** immer „Mehr“ → „Services speichern“, also nur die notwendigen Cookies.
 
-## 7. Domain (für später)
-Bei 740publishing.de:
+## 7. Domain
+Die Seite läuft unter **https://740publishing.de/** (Domain bei United Domains). `CNAME` im Repo-Stamm enthält die Domain, `BASE` in `build.py`, `pages.py`, `english.py` und alle Adressen in `index_tpl.html` stehen auf `https://740publishing.de/`. Die Interview-App bekommt die Subdomain `interview.740publishing.de` (eigener Server, nicht GitHub Pages).
+DNS bei 740publishing.de:
 - A-Records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
 - CNAME `www` → `alessandronoto84.github.io`
 - danach in GitHub Pages die Custom Domain eintragen und in allen Dateien `BASE` (in `pages.py`, `index_tpl.html`) und die Sitemap anpassen.
