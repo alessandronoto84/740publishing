@@ -68,6 +68,8 @@ CAT += [
  ('fussball','Die dunkle Seite des Fußballs','Jan Völker',S,None,'9783565850662','Taschenbuch','../cov_fussball'),
 ]
 EXTRA['fussball']=[('Taschenbuch','Amazon','https://www.amazon.de/dp/3565850663')]
+# Die zweite Emilia: zweites Softcover laut epubli_list.txt; im epubli-Shop live (geprüft 14.11.2026, erschienen 18.08.2026), die Shopseite von 9783565662722 ist seitdem 404
+EXTRA['emilia']=[('Taschenbuch','epubli','https://www.epubli.com/shop/die-zweite-emilia-9783565662739')]
 SLUG={'fitness':'das-grosse-fitnessbuch','k-drogen':'drogen-das-umfassende-standardwerk'}
 SOLB='30 Orte abseits der Touristenpfade: Geheimtipps und Routen für respektvolles Reisen. Aus der Reihe „Die verborgene Seite der Welt“.'
 BLURB={
@@ -195,10 +197,20 @@ NEW_ED.setdefault('piercing',{})['E-Book']=('9783565858422','')
 NEW_ED.setdefault('ecuador',{})['Hardcover']=('','')        # ISBN noch nicht bekannt -> eintragen, sobald bekannt
 NEW_ED.setdefault('wns',{})['Hardcover']=('9783565858453','')   # Hardcover veröffentlicht 08.11.2026 (Werkstatt-Job web-740, Notiz)
 
+# ---- Neue Ausgaben 14.11.2026 (Angaben Sandro; Shopseiten bei epubli am 14.11. noch nicht erreichbar) ----
+NEW_ED.setdefault('mensch',{})['Taschenbuch']=('9783565871926','')        # neue Taschenbuch-Ausgabe (alte TB 9783565585861 bleibt im Handel)
+NEW_ED.setdefault('delegations',{})['Hardcover']=('9783565871940','')
+NEW_ED.setdefault('ki',{})['Taschenbuch']=('9783565871995','')
+NEW_ED.setdefault('ki',{})['Hardcover']=('9783565872015','')
+
 # ---- Preise (Euro, gebundener Ladenpreis je Ausgabe) ----
 # Nur belegte Preise: aus dem epubli-Shop (linkcheck) oder aus den Werkstatt-Jobs. Schlüssel = ISBN-13.
 # Preise ohne ISBN (Ausgabe noch ohne ISBN) stehen unter (key, Format).
 PRICE={
+ '9783565871926':'21,99',   # Was ist der Mensch? Taschenbuch neu (Sandro, 14.11.)
+ '9783565871940':'21,99',   # Das Delegations System Hardcover (Sandro, 14.11.)
+ '9783565871995':'20,99',   # Künstliche Intelligenz Taschenbuch (Sandro, 14.11.)
+ '9783565872015':'28,99',   # Künstliche Intelligenz Hardcover (Sandro, 14.11.)
  '9783565858378':'44,99',   # Spiritualität Hardcover (Job hc-spirit)
  '9783565858385':'43,99',   # Körperkult Hardcover (Sandro, 08.11.)
  '9783565858422':'19,99',   # Piercing Akademie E-Book (Job piercing-ebook)
@@ -225,6 +237,10 @@ for _u,_v in _LS.items():
 # (Datum JJJJ-MM-TT, key, Format, ISBN oder '') – Datum = Veröffentlichung bei epubli
 # (Quelle: epubli-Shop „Erscheinungsdatum“ bzw. Werkstatt-Job, wenn die Shopseite noch fehlt). Neue Ausgabe: oben ergänzen.
 RELEASES=[
+ ('2026-11-14','mensch','Taschenbuch','9783565871926'),
+ ('2026-11-14','delegations','Hardcover','9783565871940'),
+ ('2026-11-14','ki','Taschenbuch','9783565871995'),
+ ('2026-11-14','ki','Hardcover','9783565872015'),
  ('2026-11-08','wns','Taschenbuch','9783565858439'),
  ('2026-11-08','wns','E-Book','9783565858446'),
  ('2026-11-08','wns','Hardcover','9783565858453'),
@@ -286,19 +302,23 @@ def editions(k):
     for f,sh,u,i in candidate_links(k):
         if link_ok(u):
             e=ed(f)
-            if (sh,u) not in e['links']: e['links'].append((sh,u))
+            if (sh,u) not in e['links']: e['links'].append((sh,u)); e.setdefault('lk',[]).append((sh,u,i))
             if i and not e.get('live'): e['live']=i   # ISBN der Ausgabe, die wirklich im Handel ist
     _SO={'epubli':0,'Amazon':1}
     for e in E.values(): e['links'].sort(key=lambda x:_SO.get(x[0],2))
     extra=[]
     for f,e in E.items():
         if e.get('live'):
-            if e['isbn'] and e['isbn']!=e['live']:
-                # neue Ausgabe gleichen Formats (andere ISBN) noch ohne Link -> zusätzlich als „bald verfügbar“ zeigen
-                extra.append({'f':f,'isbn':e['isbn'],'price':PRICE.get(e['isbn'],''),'links':[],'soon':True})
-            e['isbn']=e.pop('live')
+            # nur echte neue Ausgaben (NEW_ED) – eine ältere ISBN, deren Shopseite ersetzt wurde, nicht als „neu“ zeigen
+            if e['isbn'] and e['isbn']!=e['live'] and e['isbn'] in {i for i,_ in new_isbns(k)}:
+                # neue Ausgabe gleichen Formats (andere ISBN) zusätzlich zeigen: mit eigenem geprüften Link als Kaufbutton,
+                # sonst als „bald verfügbar“ (Links nach ISBN getrennt, damit der Link der neuen Ausgabe nicht bei der alten landet)
+                nl=[(sh,u) for sh,u,i in e.get('lk',[]) if i==e['isbn']]
+                e['links']=[x for x in e['links'] if x not in nl]
+                extra.append({'f':f,'isbn':e['isbn'],'price':PRICE.get(e['isbn'],''),'links':nl,'soon':not nl})
+            e['isbn']=e.pop('live'); e.pop('lk',None)
         e['price']=PRICE.get(e['isbn'],'') or ('' if any(x['f']==f for x in extra) else PRICE_NOISBN.get((k,f),''))
-        e['soon']=not e['links']
+        e['soon']=not e['links']; e.pop('lk',None)
     out=[]
     for f in FMT_ORDER+[f for f in E if f not in FMT_ORDER]:
         if f in E: out.append(E[f])

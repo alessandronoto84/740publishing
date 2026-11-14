@@ -28,5 +28,5 @@ def buttons(k, sm=False, verb=False, one=False):
     # Formate ohne funktionierenden Link stehen als „bald verfügbar“ in badges(), nicht als Button.
     return ''.join(out)
 
-def live_formats(k): return [ed['f'] for ed in editions(k) if not ed['soon']]
+def live_formats(k): return list(dict.fromkeys(ed['f'] for ed in editions(k) if not ed['soon']))   # jedes Format nur einmal (z. B. zwei Hardcover-Ausgaben)
 def soon_formats(k): return [ed for ed in editions(k) if ed['soon']]

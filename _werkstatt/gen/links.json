@@ -242,6 +242,14 @@
  {
   "k": "emilia",
   "t": "Die zweite Emilia",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565662739",
+  "isbn": "9783565662739"
+ },
+ {
+  "k": "emilia",
+  "t": "Die zweite Emilia",
   "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565668472",
@@ -550,6 +558,22 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565465750",
   "isbn": "9783565465750"
+ },
+ {
+  "k": "ki",
+  "t": "Künstliche Intelligenz",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565871995",
+  "isbn": "9783565871995"
+ },
+ {
+  "k": "ki",
+  "t": "Künstliche Intelligenz",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565872015",
+  "isbn": "9783565872015"
  },
  {
   "k": "digitale-erschoepfung",
@@ -952,6 +976,14 @@
   "isbn": "9783565585861"
  },
  {
+  "k": "mensch",
+  "t": "Was ist der Mensch?",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/was-ist-der-mensch-9783565871926",
+  "isbn": "9783565871926"
+ },
+ {
   "k": "spiritualitaet",
   "t": "Das große Praxisbuch der Spiritualität",
   "f": "E-Book",
@@ -1038,6 +1070,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/das-delegations-system-9783565437696",
   "isbn": "9783565437696"
+ },
+ {
+  "k": "delegations",
+  "t": "Das Delegations System",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/das-delegations-system-9783565871940",
+  "isbn": "9783565871940"
  },
  {
   "k": "piercing",
