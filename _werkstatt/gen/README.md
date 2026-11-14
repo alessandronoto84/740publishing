@@ -47,5 +47,6 @@ Das Ergebnis als JSON `{url: {"ok":true|false,"code":200,"shop":"epubli","checke
 - `buch-schreiben-lassen/index.html` und `ghostwriting.css` (Repo-Wurzel) sind **handgepflegt**, nicht generiert. Kein Bauskript überschreibt sie.
 - Preise, Paketumfänge, FAQ und Texte direkt in `buch-schreiben-lassen/index.html` pflegen (auch das JSON-LD im `<head>` und die FAQ-Daten dort mitändern).
 - Anfrageformular: Ohne Endpunkt öffnet es das E-Mail-Programm des Besuchers (mailto an die Verlagsadresse). Für einen Formulardienst die Adresse am Formular eintragen: `<form … data-endpoint="https://…">`. Dann wird per POST (JSON) gesendet. Vorher Datenschutzerklärung ergänzen.
+- Werbung auf der Startseite: Hinweis-Pille im Hero (`.hero-gw`) und Werbeblock `#ghostwriting` (`.gwpromo`, zwischen Tipp des Tages und „Neu erschienen“) stehen fest in `index_tpl.html`, Styles am Ende von `style.css`. Preis „ab 3.900 €“ dort mitändern, wenn sich der START-Preis ändert.
 - Navigation „Buch schreiben lassen“ (`class="nav-gw"`) steht in `index_tpl.html`, `pages.py` (HEAD/FOOT), `impressum.html`, `datenschutz.html`. Die URL steht in der Sitemap (`pages.py`).
 - Der Chat-Assistent liest die Seite mit ein (`chatbot_kb.py`, Pakete aus `.pack`, FAQ aus `<details>`). Nach Änderungen an der Seite `python3 gen/chatbot_kb.py $S` laufen lassen.
