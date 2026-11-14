@@ -4,7 +4,7 @@
 import html, json, sys, os
 S=sys.argv[1]
 BASE='https://740publishing.de/'
-CSSV='1794700000'
+CSSV='1794800000'
 e=html.escape
 from english_data import *
 def card(k,t,sub,a,sec,d):

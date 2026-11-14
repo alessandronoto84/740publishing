@@ -34,7 +34,7 @@ HEAD='''<!doctype html>
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../logo-small.png">
-<link rel="stylesheet" href="../style.css?v=1794300000">
+<link rel="stylesheet" href="../style.css?v=1794800000">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
