@@ -34,7 +34,9 @@ a{color:inherit}
 .top nav{display:flex;gap:22px;font-size:.88rem;letter-spacing:.06em}
 .top nav a{text-decoration:none;color:var(--muted)}
 .top nav a:hover{color:var(--gold2)}
-@media (max-width:560px){.brand span{display:none}.top nav{gap:16px;font-size:.82rem}}
+.top nav a.nav-gw{color:var(--gold2)}
+@media (max-width:560px){.brand span{display:none}.top nav{gap:16px;font-size:.82rem}.top nav .nav-opt{display:none}}
+@media (max-width:400px){.top .wrap{gap:10px}.top nav{gap:11px;font-size:.76rem;letter-spacing:.02em}.brand img{height:34px}}
 
 /* Bühne */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);

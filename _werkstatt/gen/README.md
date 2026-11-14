@@ -42,3 +42,10 @@ Das Ergebnis als JSON `{url: {"ok":true|false,"code":200,"shop":"epubli","checke
 - Bauen ohne Fehler (alle fünf Schritte oben).
 - `python3 gen/linkcheck.py --report`
 - Lokale Seite: `python3 -m http.server` im Repo, Startseite und eine Buchseite bei 390 px und 1440 px ansehen.
+
+## Ghostwriting-Seite „Buch schreiben lassen“
+- `buch-schreiben-lassen/index.html` und `ghostwriting.css` (Repo-Wurzel) sind **handgepflegt**, nicht generiert. Kein Bauskript überschreibt sie.
+- Preise, Paketumfänge, FAQ und Texte direkt in `buch-schreiben-lassen/index.html` pflegen (auch das JSON-LD im `<head>` und die FAQ-Daten dort mitändern).
+- Anfrageformular: Ohne Endpunkt öffnet es das E-Mail-Programm des Besuchers (mailto an die Verlagsadresse). Für einen Formulardienst die Adresse am Formular eintragen: `<form … data-endpoint="https://…">`. Dann wird per POST (JSON) gesendet. Vorher Datenschutzerklärung ergänzen.
+- Navigation „Buch schreiben lassen“ (`class="nav-gw"`) steht in `index_tpl.html`, `pages.py` (HEAD/FOOT), `impressum.html`, `datenschutz.html`. Die URL steht in der Sitemap (`pages.py`).
+- Der Chat-Assistent liest die Seite mit ein (`chatbot_kb.py`, Pakete aus `.pack`, FAQ aus `<details>`). Nach Änderungen an der Seite `python3 gen/chatbot_kb.py $S` laufen lassen.

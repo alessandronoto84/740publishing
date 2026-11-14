@@ -1,6 +1,6 @@
 # Wissensbasis für den Chat-Assistenten (chatbot.js) aus den fertigen Seiten erzeugen.
 # Aufruf nach build.py, pages.py und english.py:  python3 gen/chatbot_kb.py $S
-# Liest nur, was auf der Webseite steht (Buchseiten, Startseite, English Editions, Impressum),
+# Liest nur, was auf der Webseite steht (Buchseiten, Startseite, Ghostwriting-Seite, English Editions, Impressum),
 # und schreibt $S/site/chatbot-wissen.js (setzt window.ChatbotWissen).
 import glob, html, json, os, re, sys
 
@@ -144,6 +144,41 @@ if en_count:
       '\nAusgaben: ' + ', '.join(en_titles) + '.',
       ['englisch', 'english', 'englische', 'englischer', 'übersetzung', 'übersetzt', 'translation', 'google play', 'play books', 'ausland', 'in english', 'edition', 'editions'],
       [{'t': 'English Editions', 'h': 'en/'}], ['Welche Bücher gibt es?', 'Kontakt'])
+# ---------- Ghostwriting-Seite (handgepflegt: buch-schreiben-lassen/index.html) ----------
+GW = 'buch-schreiben-lassen/'
+_gwf = f'{SITE}/buch-schreiben-lassen/index.html'
+if os.path.exists(_gwf):
+    gw = open(_gwf, encoding='utf-8').read()
+    gw_main = gw[gw.find('<main'):gw.find('</main>')]
+    packs = []
+    for art in re.split(r'<(?:article|div) class="pack(?:\s[^"]*)?"', gw_main)[1:]:
+        h = re.search(r'<h3[^>]*>(.*?)</h3>', art, re.S)
+        name = txt(re.sub(r'<small>.*?</small>', '', h.group(1), flags=re.S)) if h else ''
+        price = one(r'<p class="price">(.*?)</p>', art)
+        scope = one(r'<p class="scope">(.*?)</p>', art)
+        if name and price:
+            packs.append(f'- {name}: {price}' + (f' ({scope})' if scope else ''))
+    gw_lead = one(r'<p class="lead">(.*?)</p>', gw_main)
+    gw_ans = '740 Publishing schreibt dein Buch für dich: Biografien und Autobiografien, Sachbücher und Ratgeber sowie Romane. ' \
+        'Du erzählst, zum Beispiel in Interviews auf unserer KI-gestützten Interviewplattform, wir übernehmen Konzept, Ghostwriting, Lektorat, Cover, Satz und Veröffentlichung.' \
+        + (('\n' + gw_lead) if gw_lead and gw_lead not in ('',) else '')
+    F('ghostwriting', 'Kann ich mein Buch schreiben lassen?', gw_ans,
+      ['buch schreiben lassen', 'schreiben lassen', 'ghostwriting', 'ghostwriter', 'biografie', 'autobiografie', 'memoiren', 'lebensgeschichte', 'familiengeschichte',
+       'eigenes buch', 'mein buch', 'buch veröffentlichen', 'veröffentlichen', 'roman schreiben', 'sachbuch schreiben', 'ratgeber schreiben', 'interview', 'interviewplattform', 'buchidee'],
+      [{'t': 'Buch schreiben lassen', 'h': GW}, {'t': 'Projekt anfragen', 'h': GW + '#anfrage'}], ['Was kosten die Pakete?', 'Kontakt'])
+    if packs:
+        F('pakete', 'Was kosten die Pakete?',
+          'Es gibt drei Komplettpakete bis zur Veröffentlichung, jeweils mit zehn gedruckten Exemplaren:\n' + '\n'.join(packs) +
+          '\nDer genaue Preis richtet sich nach Umfang und Aufwand und wird nach dem Erstgespräch individuell angeboten. Eine Anfrage ist unverbindlich.',
+          ['paket', 'pakete', 'start', 'classic', 'premium', 'ghostwriting preis', 'ghostwriting kosten', 'was kostet ghostwriting', 'buch schreiben lassen kosten',
+           'kosten buch schreiben', 'preis ghostwriter', 'exemplare', 'zehn exemplare', 'freiexemplare'],
+          [{'t': 'Pakete ansehen', 'h': GW + '#pakete'}, {'t': 'Projekt anfragen', 'h': GW + '#anfrage'}], ['Kann ich mein Buch schreiben lassen?', 'Kontakt'])
+    for i, (q, a) in enumerate(re.findall(r'<details[^>]*>\s*<summary>(.*?)</summary>(.*?)</details>', gw_main, re.S)):
+        q, a = txt(q), txt(a)
+        if q and a:
+            kw = [w for w in re.findall(r'[a-zäöüß]{5,}', q.lower()) if w not in ('kann', 'wird', 'werden', 'meine', 'meinen', 'einen', 'einem', 'eines', 'dieser', 'diese', 'welche', 'wieviel', 'gibt')]
+            F(f'gw{i+1}', q, a, kw[:6], [{'t': 'Buch schreiben lassen', 'h': GW + '#faq'}], ['Was kosten die Pakete?', 'Kontakt'])
+
 F('kontakt', 'Wie erreiche ich den Verlag?',
   f'740 Publishing\n{addr}\nE-Mail: {mail}' + ('\nAuf Social Media: ' + ', '.join(s["t"] for s in social) + '.' if social else ''),
   ['kontakt', 'kontaktieren', 'erreichen', 'email', 'e mail', 'mail', 'adresse', 'anschrift', 'schreiben', 'nachricht', 'frage', 'anfrage', 'ansprechpartner', 'telefon', 'anrufen', 'instagram', 'tiktok', 'linktree', 'social media'],
@@ -172,7 +207,7 @@ F('danke', 'Danke', 'Gern! Wenn du noch etwas wissen möchtest, frag einfach.',
 kb = {
     'titel': '740 Publishing · Assistent',
     'begruessung': 'Hallo! Ich bin der automatische Assistent von 740 Publishing. Frag mich nach Büchern, Autorinnen und Autoren, Themen, Bestellung oder Kontakt.',
-    'vorschlaege': ['Welche Bücher gibt es?', 'Wie bestelle ich?', 'Kontakt', 'Gibt es englische Ausgaben?'],
+    'vorschlaege': ['Welche Bücher gibt es?', 'Wie bestelle ich?', 'Kann ich mein Buch schreiben lassen?', 'Kontakt'],
     'nachBuch': ['Wie bestelle ich?', 'Welche Bücher gibt es?', 'Kontakt'],
     'fallback': {
         'a': 'Dazu habe ich auf dieser Webseite leider nichts gefunden. Versuch es mit einem Buchtitel, einem Namen oder einem Thema, oder schreib dem Verlag direkt: ' + mail,

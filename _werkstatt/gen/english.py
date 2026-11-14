@@ -4,7 +4,7 @@
 import html, json, sys, os
 S=sys.argv[1]
 BASE='https://alessandronoto84.github.io/740publishing/'
-CSSV='1793400000'
+CSSV='1794300000'
 e=html.escape
 from english_data import *
 def card(k,t,sub,a,sec,d):
@@ -62,7 +62,7 @@ page=f'''<!doctype html>
 </main>
 <footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems) · Germany<br>740publishingverlag@gmail.com</address><nav><a href="../impressum.html" hreflang="de">Legal notice</a><a href="../datenschutz.html" hreflang="de">Privacy</a></nav></div></footer>
 <script src="../entdecken.js?v=1" defer></script>
-<script src="../chatbot.js?v=2" defer></script>
+<script src="../chatbot.js?v=3" defer></script>
 </body>
 </html>
 '''

@@ -34,14 +34,14 @@ HEAD='''<!doctype html>
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../logo-small.png">
-<link rel="stylesheet" href="../style.css?v=1794200000">
+<link rel="stylesheet" href="../style.css?v=1794300000">
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="../#neu">Neu</a><a href="../#reihen">Reihen</a><a href="../#katalog">Alle Bücher</a><a href="../#verlag">Verlag</a><a href="../en/" hreflang="en" lang="en" title="English Editions">EN</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="../#neu">Neu</a><a class="nav-opt" href="../#reihen">Reihen</a><a href="../#katalog">Alle Bücher</a><a class="nav-opt" href="../#verlag">Verlag</a><a class="nav-gw" href="../buch-schreiben-lassen/">Buch schreiben lassen</a><a href="../en/" hreflang="en" lang="en" title="English Editions">EN</a></nav></div></header>
 '''
-FOOT='''<footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems)<br>740publishingverlag@gmail.com</address><nav><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></nav></div></footer>
-<script src="../chatbot.js?v=2" defer></script>
+FOOT='''<footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems)<br>740publishingverlag@gmail.com</address><nav><a href="../buch-schreiben-lassen/">Buch schreiben lassen</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></nav></div></footer>
+<script src="../chatbot.js?v=3" defer></script>
 '''
 PLAYER='''<dialog class="player" id="player" aria-label="Buchtrailer"><div class="pl-head"><span class="pl-title" id="pl-title"></span><button class="pl-close" type="button" id="pl-close" aria-label="Schließen">✕</button></div><video id="pl-video" controls playsinline preload="none"></video></dialog>
 <script>(function(){var d=document.getElementById('player'),v=document.getElementById('pl-video'),t=document.getElementById('pl-title');function c(){try{v.pause()}catch(e){}v.removeAttribute('src');v.load();if(d.open)d.close()}document.querySelectorAll('[data-video]').forEach(function(b){b.addEventListener('click',function(){v.poster=b.getAttribute('data-poster');v.src=b.getAttribute('data-video');t.textContent=b.getAttribute('data-title');if(d.showModal)d.showModal();else d.setAttribute('open','');var p=v.play();if(p&&p.catch)p.catch(function(){})})});document.getElementById('pl-close').addEventListener('click',c);d.addEventListener('click',function(e){if(e.target===d)c()});d.addEventListener('cancel',function(e){e.preventDefault();c()})})();</script>
@@ -101,7 +101,7 @@ for b in books:
     page=HEAD.format(title=e(title),desc=e(desc),url=url,ogt=e(f'{b["t"]} – {b["a"]}'),img=img,ld=json.dumps(ld,ensure_ascii=False).replace('</','<\\/'))+body+(PLAYER if tr else '')+FOOT+'</body>\n</html>\n'
     open(f'{S}/site/buch/{b["s"]}.html','w').write(page)
 today=datetime.date.today().isoformat()
-urls=[BASE,BASE+'en/']+[f'{BASE}buch/{b["s"]}.html' for b in books]
+urls=[BASE,BASE+'buch-schreiben-lassen/',BASE+'en/']+[f'{BASE}buch/{b["s"]}.html' for b in books]
 open(f'{S}/site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls)+'</urlset>\n')
 open(f'{S}/site/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n')
 print(len(books),'Seiten')
