@@ -74,7 +74,14 @@ EN+=[
  ('ecuador','The Hidden Side of Ecuador','30 Places Off the Beaten Track','Mika Solberg',F,'Four worlds in one small country: volcanoes and crater lakes, cloud forests, the Amazon and the Pacific. 30 places off the beaten track, from Cuicocha and the Quilotoa Loop to Cajas, Cuyabeno and Isla Isabela, each with a practical toolkit, plus a detailed safety chapter, realistic budgets and itineraries.'),
  ('tolerance','In the Name of Tolerance','How Morality Becomes a Weapon','Theodor Brenner',F,'Are there things you think but don’t say? This book is about a diffuse social pressure that narrows the range of what can be said, and justifies itself with ideals of openness and tolerance. It describes mechanisms found on the left and the right, insists on the difference between criticism and annihilation, and makes the case for dissent as a democratic virtue.'),
 ]
+# --- Nachtrag 15.11.2026: NOMEN (Der Schöpfer) und Those Who See Nothing … (Wer nichts sieht …) – bei Google angelegt, Konto noch in Prüfung ---
+EN+=[
+ ('nomen','NOMEN','A Novel','Markus Wieland',N,'His project has been cut, but robotics researcher Anselm Kroll doesn’t stop. In the basement of his late father’s house he secretly builds a machine that is meant to learn everything, not from data, but from attention. Nomen learns words, then people, then the white lie. Then one night it is gone. A quiet, haunting novel about creation, responsibility and trust.'),
+ ('see-nothing','Those Who See Nothing …','A Crime Novel','Hanna Sedlak',N,'Twelve dead people and a graphic: that is all the year-end piece is supposed to be. Then journalist Nadja Schumacher notices that a dead man’s phone was used minutes before he died. A dark, character-driven crime novel told from many perspectives, about watching and being watched, loyalty and guilt.'),
+]
 GPLAY={k:'' for k,*_ in EN}
+# Draft2Digital (Apple Books, Kobo, Barnes & Noble, Bibliotheken …): Universal Book Link je Titel, sobald live.
+D2D={'addiction':'https://books2read.com/u/zpDaJZ'}   # live laut Werkstatt (Job d2d-englisch), Stand 15.11.2026
 # Laufband oben auf en/: Die englischen Ausgaben sind noch nicht im Handel, daher KEIN „Bestseller“/„popular“,
 # sondern „Featured English Editions“. Sandro pflegt die Liste selbst (Schlüssel aus EN, gewünschte Reihenfolge).
 EN_FEATURED=['karma','crown','coffee','sicily','jabari','astrology','drugs','manuscript','black-water','psych','beauty','luck','game','spirit','body-cult','ai','digital-exhaustion','order','bad-luck']  # z. B. GPLAY['karma']='https://play.google.com/store/books/details?id=...'

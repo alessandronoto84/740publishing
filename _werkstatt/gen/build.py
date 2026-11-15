@@ -91,6 +91,15 @@ for gi,(d,ks) in enumerate(groups):
             items.append(f'''<a class="nbc" href="buch/{slug(t)}.html"><img src="{cv(cov)}" alt="" width="56" height="84" loading="lazy" decoding="async"><span class="nbc-t"><b>{e(t)}</b><small>{e(a)}</small><em>{e(what)}</em><i>{e(st)}</i></span></a>''')
     cls='nbgrid' if gi==0 else 'nbcgrid'
     neu.append(f'<div class="nbgroup{" first" if gi==0 else ""}"><h3 class="nbdate"><time datetime="{d}">{dlabel(d)}</time></h3><div class="{cls}">{"".join(items)}</div></div>')
+# Demnächst: neue Titel, die noch nicht im Handel sind (catalog.DEMNAECHST) – alle Formate „bald verfügbar“, ohne Link
+_dm=[k for k in getattr(C,'DEMNAECHST',[]) if k in CD]
+if _dm:
+    _it=[]
+    for k in _dm:
+        _,t,a,c,eb,pr,pt,cov=CD[k]
+        st=' · '.join(x['f'] for x in editions(k))+': bald verfügbar'
+        _it.append(f'<a class="nbc" href="buch/{slug(t)}.html"><img src="{cv(cov)}" alt="" width="56" height="84" loading="lazy" decoding="async"><span class="nbc-t"><b>{e(t)}</b><small>{e(a)}</small><em>Neuer Titel – demnächst</em><i>{e(st)}</i></span></a>')
+    neu.append(f'<div class="nbgroup soon"><h3 class="nbdate">Demnächst</h3><div class="nbcgrid">{"".join(_it)}</div></div>')
 NEU='\n'.join(neu)
 
 # ---- JSON-LD: alle Bücher mit geprüften Angeboten ----
@@ -135,7 +144,7 @@ SERIES=[('Die verborgene Seite der Welt','Reiseführer von Mika Solberg: 30 Orte
  ('Die verborgene Seite der Kulinarik','Die Kulturgeschichte dessen, was wir täglich genießen.',['k-kaffee','bier']),
  ('KARMA · GLÜCK · ORDNUNG · PECH','Die Romanreihe von Konstanze Frey: warmherzige, humorvolle Kleinstadtromane.',['karma','glueck','ordnung','pech']),
  ('Projekt-Reihe von Victor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
- ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus und spirituelle Traditionen.',['k-astrologie','schamanismus'])]
+ ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus und spirituelle Traditionen.',['k-astrologie','schamanismus','rituale'])]
 _ser=[]
 for _n,_d,_ks in SERIES:
     _it=''.join(f'<a class="sbk" href="buch/{slug(CD[k][1])}.html"><img src="{cv(CD[k][7])}" alt="Cover von „{e(CD[k][1])}“" width="120" height="180" loading="lazy" decoding="async"><span>{e(CD[k][1].replace("Die verborgene Seite von ",""))}</span></a>' for k in _ks)

@@ -70,6 +70,18 @@ CAT += [
 EXTRA['fussball']=[('Taschenbuch','Amazon','https://www.amazon.de/dp/3565850663')]
 # Die zweite Emilia: zweites Softcover laut epubli_list.txt; im epubli-Shop live (geprüft 14.11.2026, erschienen 18.08.2026), die Shopseite von 9783565662722 ist seitdem 404
 EXTRA['emilia']=[('Taschenbuch','epubli','https://www.epubli.com/shop/die-zweite-emilia-9783565662739')]
+# ---- Neue Titel 15.11.2026 (Werkstatt: rituale-veroeffentlichung, neu-restzweifel, lektorat-schoepfer, lektorat-verborgene) ----
+# Noch NICHT bei epubli veröffentlicht (neue Druckprojekte bei epubli scheitern seit 14.11., Ticket dkp5u5q) -> noch keine ISBN.
+# Formate stehen in NEW_ED mit leerer ISBN -> Webseite zeigt „bald verfügbar“ ohne Link. Sobald live: ISBN + Link in CAT/NEW_ED
+# eintragen, Zeile in RELEASES ergänzen, Schlüssel aus DEMNAECHST nehmen, linkcheck + neu bauen.
+# Cover = E-Book-Cover aus Sandros Motiv (Rituale\Cover, Neu fuer epubli\<Titel>), 420x630.
+CAT += [
+ ('rituale','RITUALE','Vivian Dahl',S,None,None,None,'rituale'),
+ ('restzweifel','Restzweifel','Markus Wieland',S,None,None,None,'restzweifel'),
+ ('schoepfer','Der Schöpfer','Markus Wieland',R,None,None,None,'schoepfer'),
+ ('verborgene','Das Verborgene in uns','Michael Rabenau',S,None,None,None,'verborgene'),
+]
+DEMNAECHST=['rituale','restzweifel','schoepfer','verborgene']   # Bereich „Demnächst“ oben in „Neu erschienen“
 SLUG={'fitness':'das-grosse-fitnessbuch','k-drogen':'drogen-das-umfassende-standardwerk'}
 SOLB='30 Orte abseits der Touristenpfade: Geheimtipps und Routen für respektvolles Reisen. Aus der Reihe „Die verborgene Seite der Welt“.'
 BLURB={
@@ -336,3 +348,14 @@ def editions(k):
         if f in E: out.append(E[f])
         out+=[x for x in extra if x['f']==f]
     return out
+
+# ---- Neue Titel 15.11.2026: geplante Formate (noch ohne ISBN -> „bald verfügbar“) ----
+for _k,_fs in {'rituale':['E-Book','Taschenbuch','Hardcover'],'restzweifel':['E-Book','Taschenbuch','Hardcover'],
+               'schoepfer':['E-Book','Taschenbuch'],'verborgene':['E-Book','Taschenbuch','Hardcover']}.items():
+    for _f in _fs: NEW_ED.setdefault(_k,{}).setdefault(_f,('',''))
+BLURB.update({
+ 'rituale':'Du klopfst auf Holz, zündest vor einem schweren Tag eine Kerze an und drückst jemandem die Daumen, und an Magie glaubst du eigentlich nicht. Dieses Buch erzählt, woher unsere Rituale kommen, warum sie uns guttun, und zeigt dir mit 191 Ritualen zum Selbermachen, wie du eigene gestaltest. Nach „Astrologie“ und „Schamanismus“ das dritte große Buch von Vivian Dahl.',
+ 'restzweifel':'32 mysteriöse Fälle, rätselhafte Phänomene und die Frage, was wirklich bewiesen ist: vom Phantom von Heilbronn über die Lichter von Hessdalen und den Djatlow-Pass bis zu Kaspar Hauser. Jeder Fall wird erzählt wie eine Akte, mit nüchterner „Beweiswaage“ am Ende.',
+ 'schoepfer':'Sein Projekt ist gestrichen, doch der Robotiker Anselm Kroll hört nicht auf. Im Keller seines verstorbenen Vaters baut er heimlich eine Maschine, die nicht aus Daten lernen soll, sondern aus Zuwendung. Nomen lernt schnell: erst Wörter, dann Menschen, dann die Notlüge. Ein leiser, eindringlicher Roman über Schöpfung und Verantwortung.',
+ 'verborgene':'Ist da noch etwas? Michael Rabenau folgt der Frage, die älter ist als jede Religion: von den ersten Gräbern und Schamanen über Ägypten, Mystiker und Alchemisten bis zu Psychedelika-Forschung und Nahtoderfahrungen. Er trennt sorgfältig, was belegt ist, was umstritten bleibt und was Legende ist.',
+})
