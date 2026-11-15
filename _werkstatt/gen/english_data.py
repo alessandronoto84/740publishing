@@ -79,6 +79,11 @@ EN+=[
  ('nomen','NOMEN','A Novel','Markus Wieland',N,'His project has been cut, but robotics researcher Anselm Kroll doesn’t stop. In the basement of his late father’s house he secretly builds a machine that is meant to learn everything, not from data, but from attention. Nomen learns words, then people, then the white lie. Then one night it is gone. A quiet, haunting novel about creation, responsibility and trust.'),
  ('see-nothing','Those Who See Nothing …','A Crime Novel','Hanna Sedlak',N,'Twelve dead people and a graphic: that is all the year-end piece is supposed to be. Then journalist Nadja Schumacher notices that a dead man’s phone was used minutes before he died. A dark, character-driven crime novel told from many perspectives, about watching and being watched, loyalty and guilt.'),
 ]
+# --- Nachtrag 15.11.2026 (Quelle: 04 Englisch\\Englisch\\*_Beschreibung.txt; fertig übersetzt, noch nicht im Shop) ---
+EN+=[
+ ('hidden-within','The Hidden Within Us','A Journey Through Spirituality, Mysticism, and the Great Mystery of Being Human','Michael Rabenau',F,'Is there something more? From the first graves and the shamans to Egypt, Eleusis and the Gnostics, to mystics, alchemists and Freemasons, and on to psychedelic research and near-death experiences: Michael Rabenau carefully separates what is documented, what remains disputed and what is legend. Neither a confession of faith nor a debunking, but an honest journey.'),
+ ('lingering-doubt','Lingering Doubt','32 Mysterious Cases, Baffling Phenomena, and the Question of What Is Really Proven','Markus Wieland',F,'A phantom who never existed, three lighthouse keepers who vanish without a trace, the deaths at Dyatlov Pass: 32 baffling cases and phenomena, each told like a case file. At the end of every chapter, the Evidence Scale shows soberly what a piece of evidence proves and what it does not. For everyone who loves unsolved puzzles and still wants to know what has really been proven.'),
+]
 GPLAY={k:'' for k,*_ in EN}
 # Draft2Digital (Apple Books, Kobo, Barnes & Noble, Bibliotheken …): Universal Book Link je Titel, sobald live.
 D2D={'addiction':'https://books2read.com/u/zpDaJZ'}   # live laut Werkstatt (Job d2d-englisch), Stand 15.11.2026

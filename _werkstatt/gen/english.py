@@ -56,7 +56,7 @@ page=f'''<!doctype html>
     <p class="eyebrow">740 Publishing</p>
     <h1 class="sech">English Editions</h1>
     <hr class="rule">
-    <p class="enlead">Selected titles from our German program, now translated into English. All {len(EN)} e-books have been submitted to Google Play Books and will be available there soon. <em>Addiction</em> is already available as an e-book in selected stores (link on the book).</p>
+    <p class="enlead">Selected titles from our German program, now translated into English. All {len(EN)} e-books will be available on Google Play Books soon. <em>Addiction</em> is already available as an e-book in selected stores (link on the book).</p>
   </section>
   {PICKS}
   <div class="catalog enlist"><div class="sec wrap">

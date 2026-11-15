@@ -359,3 +359,17 @@ BLURB.update({
  'schoepfer':'Sein Projekt ist gestrichen, doch der Robotiker Anselm Kroll hört nicht auf. Im Keller seines verstorbenen Vaters baut er heimlich eine Maschine, die nicht aus Daten lernen soll, sondern aus Zuwendung. Nomen lernt schnell: erst Wörter, dann Menschen, dann die Notlüge. Ein leiser, eindringlicher Roman über Schöpfung und Verantwortung.',
  'verborgene':'Ist da noch etwas? Michael Rabenau folgt der Frage, die älter ist als jede Religion: von den ersten Gräbern und Schamanen über Ägypten, Mystiker und Alchemisten bis zu Psychedelika-Forschung und Nahtoderfahrungen. Er trennt sorgfältig, was belegt ist, was umstritten bleibt und was Legende ist.',
 })
+
+# ---- Neue Formate vorhandener Bücher (15.11.2026, Upload-Ordner „JETZT HOCHLADEN“ / UPLOAD_LIESMICH Rang 10–73) ----
+# Noch nicht hochgeladen bzw. ohne ISBN -> „bald verfügbar“. Nur Formate, die es bisher nicht gibt (Neuausgaben eines
+# vorhandenen Formats ändern die Anzeige erst, wenn ihre ISBN bekannt ist).
+for _k,_f in [('optimierte','Taschenbuch'),('optimierte','Hardcover'),('piercing','Hardcover'),('mensch','Hardcover'),
+              ('fitness','Hardcover'),('k-thailand','Hardcover'),('kolumbien','Hardcover'),('blut-asphalt','Hardcover'),
+              ('k-schoenheit','Hardcover'),('unsichtbarkeit','Hardcover'),('zurueck-ins-leben','Hardcover'),
+              ('karma','Hardcover'),('glueck','Hardcover'),('ordnung','Hardcover'),('pech','Hardcover'),('krone','Hardcover'),
+              ('sucht','Hardcover'),('koenige','Hardcover'),('manuskript','Hardcover'),('aurora','Hardcover'),
+              ('schwarzes-wasser','Hardcover'),('karten','Hardcover'),('katastrophe','Hardcover'),('sizilien','Hardcover'),
+              ('jenseits','Hardcover'),('fussball','Hardcover'),('toleranz','Hardcover'),('powerfrau','Hardcover'),
+              ('uebermensch','Hardcover'),('licht-schatten','Hardcover'),('algorithmus','Hardcover'),('psychologie','Hardcover')]:
+    NEW_ED.setdefault(_k,{}).setdefault(_f,('',''))
+
