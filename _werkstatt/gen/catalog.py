@@ -194,7 +194,7 @@ BELIEBT=['piercing','spiritualitaet','k-drogen','psychologie','auswandern','selb
 NEW_ED.setdefault('spiritualitaet',{})['Hardcover']=('9783565858378','')
 NEW_ED.setdefault('koerperkult',{})['Hardcover']=('9783565858385','')
 NEW_ED.setdefault('piercing',{})['E-Book']=('9783565858422','')
-NEW_ED.setdefault('ecuador',{})['Hardcover']=('','')        # ISBN noch nicht bekannt -> eintragen, sobald bekannt
+NEW_ED.setdefault('ecuador',{})['Hardcover']=('9783565871896','')   # ISBN laut Werkstatt-Job web-740 (Notiz, 14.11.)
 NEW_ED.setdefault('wns',{})['Hardcover']=('9783565858453','')   # Hardcover veröffentlicht 08.11.2026 (Werkstatt-Job web-740, Notiz)
 
 # ---- Neue Ausgaben 14.11.2026 (Angaben Sandro; Shopseiten bei epubli am 14.11. noch nicht erreichbar) ----
@@ -203,10 +203,19 @@ NEW_ED.setdefault('delegations',{})['Hardcover']=('9783565871940','')
 NEW_ED.setdefault('ki',{})['Taschenbuch']=('9783565871995','')
 NEW_ED.setdefault('ki',{})['Hardcover']=('9783565872015','')
 
+# ---- Nachgetragen 15.11.2026 (Werkstatt-Jobs druck-ki-deleg, web-740 Notiz) ----
+NEW_ED.setdefault('delegations',{})['Taschenbuch']=('9783565871865','')   # Delegations System Taschenbuch
+NEW_ED.setdefault('peru',{})['Hardcover']=('9783565871858','')            # Peru Hardcover
+NEW_ED.setdefault('gaertner',{})['Hardcover']=('9783565858644','')        # Die Gärtner der Geschichte Hardcover (08.11.)
+
 # ---- Preise (Euro, gebundener Ladenpreis je Ausgabe) ----
 # Nur belegte Preise: aus dem epubli-Shop (linkcheck) oder aus den Werkstatt-Jobs. Schlüssel = ISBN-13.
 # Preise ohne ISBN (Ausgabe noch ohne ISBN) stehen unter (key, Format).
 PRICE={
+ '9783565871865':'15,99',   # Das Delegations System Taschenbuch (Job druck-ki-deleg)
+ '9783565871858':'32,99',   # Peru Hardcover (Job web-740 Notiz)
+ '9783565871896':'31,99',   # Ecuador Hardcover (Job web-740 Notiz)
+ '9783565858644':'30,99',   # Gärtner der Geschichte Hardcover (Job web-740 Notiz)
  '9783565871926':'21,99',   # Was ist der Mensch? Taschenbuch neu (Sandro, 14.11.)
  '9783565871940':'21,99',   # Das Delegations System Hardcover (Sandro, 14.11.)
  '9783565871995':'20,99',   # Künstliche Intelligenz Taschenbuch (Sandro, 14.11.)
@@ -237,6 +246,9 @@ for _u,_v in _LS.items():
 # (Datum JJJJ-MM-TT, key, Format, ISBN oder '') – Datum = Veröffentlichung bei epubli
 # (Quelle: epubli-Shop „Erscheinungsdatum“ bzw. Werkstatt-Job, wenn die Shopseite noch fehlt). Neue Ausgabe: oben ergänzen.
 RELEASES=[
+ ('2026-11-14','delegations','Taschenbuch','9783565871865'),
+ ('2026-11-14','peru','Hardcover','9783565871858'),
+ ('2026-11-14','ecuador','Hardcover','9783565871896'),
  ('2026-11-14','mensch','Taschenbuch','9783565871926'),
  ('2026-11-14','delegations','Hardcover','9783565871940'),
  ('2026-11-14','ki','Taschenbuch','9783565871995'),
@@ -246,7 +258,7 @@ RELEASES=[
  ('2026-11-08','wns','Hardcover','9783565858453'),
  ('2026-11-08','spiritualitaet','Hardcover','9783565858378'),
  ('2026-11-08','koerperkult','Hardcover','9783565858385'),
- ('2026-11-08','ecuador','Hardcover',''),
+ ('2026-11-08','gaertner','Hardcover','9783565858644'),
  ('2026-11-08','piercing','E-Book','9783565858422'),
  # Werkstatt-Job hc-heute („Hardcover heute veröffentlicht“, Stand 07.11.2026); Shopseiten waren am 08.11. noch nicht online
  ('2026-11-07','bier','Hardcover','9783565855452'),('2026-11-07','k-rap','Hardcover','9783565855476'),

@@ -3,7 +3,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565437535"
  },
@@ -11,7 +11,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565438679"
  },
@@ -19,7 +19,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "28,99",
   "isbn": "9783565446001"
  },
@@ -27,7 +27,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565455737"
  },
@@ -35,7 +35,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565463060"
  },
@@ -43,7 +43,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "29,99",
   "isbn": "9783565463152"
  },
@@ -51,7 +51,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565465521"
  },
@@ -59,7 +59,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565473236"
  },
@@ -67,7 +67,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "49,99",
   "isbn": "9783565476664"
  },
@@ -75,13 +75,13 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14"
+  "checked": "2026-11-15"
  },
  "https://www.amazon.de/dp/3565476796": {
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "29,99",
   "isbn": "9783565476794"
  },
@@ -89,7 +89,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "17,99",
   "isbn": "9783565476831"
  },
@@ -97,7 +97,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565478279"
  },
@@ -105,7 +105,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "39,99",
   "isbn": "9783565488827"
  },
@@ -113,7 +113,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "39,99",
   "isbn": "9783565491414"
  },
@@ -121,7 +121,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565496303"
  },
@@ -129,7 +129,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "16,99",
   "isbn": "9783565496426"
  },
@@ -137,7 +137,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565496655"
  },
@@ -145,7 +145,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "16,99",
   "isbn": "9783565501366"
  },
@@ -153,7 +153,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "49,99",
   "isbn": ""
  },
@@ -161,7 +161,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "44,99",
   "isbn": "9783565526659"
  },
@@ -169,7 +169,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565526864"
  },
@@ -177,7 +177,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "17,99",
   "isbn": "9783565530700"
  },
@@ -185,7 +185,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "21,99",
   "isbn": "9783565539000"
  },
@@ -193,7 +193,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565546800"
  },
@@ -201,7 +201,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565560950"
  },
@@ -209,7 +209,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565564835"
  },
@@ -217,7 +217,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565568956"
  },
@@ -225,7 +225,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "29,99",
   "isbn": "9783565571468"
  },
@@ -233,7 +233,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565575718"
  },
@@ -241,7 +241,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "18,99",
   "isbn": "9783565580064"
  },
@@ -249,7 +249,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "18,99",
   "isbn": "9783565580224"
  },
@@ -257,7 +257,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "18,99",
   "isbn": "9783565585540"
  },
@@ -265,13 +265,13 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14"
+  "checked": "2026-11-15"
  },
  "https://www.amazon.de/dp/3565585862": {
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565585861"
  },
@@ -279,7 +279,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565636082"
  },
@@ -287,7 +287,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "16,99",
   "isbn": "9783565645787"
  },
@@ -295,7 +295,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "24,99",
   "isbn": "9783565652105"
  },
@@ -303,7 +303,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "14,99",
   "isbn": "9783565658558"
  },
@@ -311,7 +311,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "18,99",
   "isbn": "9783565658664"
  },
@@ -319,7 +319,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "23,99",
   "isbn": "9783565662692"
  },
@@ -327,7 +327,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "15,99",
   "isbn": "9783565662722"
  },
@@ -335,7 +335,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "16,99",
   "isbn": "9783565662807"
  },
@@ -343,7 +343,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "23,99",
   "isbn": "9783565701865"
  },
@@ -351,7 +351,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "23,99",
   "isbn": "9783565725564"
  },
@@ -359,7 +359,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "22,99",
   "isbn": "9783565728756"
  },
@@ -367,7 +367,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "23,99",
   "isbn": "9783565730506"
  },
@@ -375,7 +375,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "23,99",
   "isbn": "9783565737895"
  },
@@ -383,7 +383,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "34,99",
   "isbn": ""
  },
@@ -391,7 +391,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "18,99",
   "isbn": "9783565739776"
  },
@@ -399,7 +399,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "25,99",
   "isbn": "9783565740413"
  },
@@ -407,7 +407,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "36,99",
   "isbn": ""
  },
@@ -415,7 +415,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "25,99",
   "isbn": "9783565752270"
  },
@@ -423,7 +423,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "34,99",
   "isbn": ""
  },
@@ -431,7 +431,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565830497"
  },
@@ -439,7 +439,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "28,99",
   "isbn": "9783565830510"
  },
@@ -447,7 +447,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565833375"
  },
@@ -455,7 +455,7 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "19,99",
   "isbn": "9783565833382"
  },
@@ -463,19 +463,19 @@
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14"
+  "checked": "2026-11-15"
  },
  "https://www.amazon.de/dp/3565858435": {
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14"
+  "checked": "2026-11-15"
  },
  "https://www.amazon.de/dp/3818756686": {
   "ok": true,
   "code": 200,
   "shop": "Amazon",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "price": "39,99",
   "isbn": "9783818756680"
  },
@@ -483,7 +483,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565752201",
   "price": "14,99",
   "date": "21.09.2026"
@@ -492,7 +492,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565752270",
   "price": "25,99",
   "date": "21.09.2026"
@@ -501,7 +501,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565752287",
   "price": "34,99",
   "date": "21.09.2026"
@@ -510,7 +510,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565580064",
   "price": "18,99",
   "date": "23.07.2026"
@@ -519,7 +519,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565580156",
   "price": "8,99",
   "date": "23.07.2026"
@@ -528,7 +528,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855438"
  },
@@ -536,7 +536,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565830497",
   "date": "27.10.2026"
  },
@@ -544,7 +544,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850624"
  },
@@ -552,7 +552,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855452"
  },
@@ -560,7 +560,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565658664",
   "price": "18,99",
   "date": "16.08.2026"
@@ -569,7 +569,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565658695",
   "price": "5,99",
   "date": "16.08.2026"
@@ -578,21 +578,28 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565437696"
+ },
+ "https://www.epubli.com/shop/das-delegations-system-9783565871865": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-15",
+  "isbn": "9783565871865"
  },
  "https://www.epubli.com/shop/das-delegations-system-9783565871940": {
   "ok": false,
   "code": 404,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565871940"
  },
  "https://www.epubli.com/shop/das-grosse-fitnessbuch-9783565438679": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565438679",
   "price": "24,99",
   "date": "07.05.2026"
@@ -601,14 +608,14 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565438822"
  },
  "https://www.epubli.com/shop/das-grosse-praxisbuch-der-spiritualitaet-9783565488827": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565488827",
   "price": "39,99",
   "date": "09.06.2026"
@@ -617,7 +624,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565489398",
   "price": "29,99",
   "date": "09.06.2026"
@@ -626,7 +633,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565858378"
  },
@@ -634,7 +641,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565437535",
   "price": "24,99",
   "date": "06.05.2026"
@@ -643,14 +650,14 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565437597"
  },
  "https://www.epubli.com/shop/das-manuskript-9783565463152": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565463152",
   "price": "29,99",
   "date": "27.05.2026"
@@ -659,7 +666,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565463954",
   "price": "6,99",
   "date": "27.05.2026"
@@ -668,7 +675,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565496426",
   "price": "16,99",
   "date": "13.06.2026"
@@ -677,7 +684,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565496631",
   "price": "9,99",
   "date": "14.06.2026"
@@ -686,7 +693,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855414"
  },
@@ -694,7 +701,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565470846",
   "price": "14,99",
   "date": "02.06.2026"
@@ -703,7 +710,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565491414",
   "price": "39,99",
   "date": "10.06.2026"
@@ -712,7 +719,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565491421",
   "price": "24,99",
   "date": "10.06.2026"
@@ -721,7 +728,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855476"
  },
@@ -729,7 +736,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565739585",
   "date": "13.09.2026"
  },
@@ -737,7 +744,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565740413",
   "date": "14.09.2026"
  },
@@ -745,7 +752,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565740420",
   "date": "14.09.2026"
  },
@@ -753,7 +760,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850662"
  },
@@ -761,7 +768,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850679"
  },
@@ -769,7 +776,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565530700",
   "price": "17,99",
   "date": "29.06.2026"
@@ -778,7 +785,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565530717",
   "price": "6,49",
   "date": "29.06.2026"
@@ -787,7 +794,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662807",
   "price": "16,99",
   "date": "18.08.2026"
@@ -796,15 +803,22 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662821",
   "date": "18.08.2026"
+ },
+ "https://www.epubli.com/shop/die-gaertner-der-geschichte-9783565858644": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-15",
+  "isbn": "9783565858644"
  },
  "https://www.epubli.com/shop/die-piercing-akademie-9783565858422": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565858422"
  },
@@ -812,7 +826,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783818756680",
   "price": "39,99",
   "date": "30.12.2024"
@@ -821,7 +835,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662692",
   "price": "23,99",
   "date": "18.08.2026"
@@ -830,7 +844,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662708",
   "date": "18.08.2026"
  },
@@ -838,7 +852,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855513"
  },
@@ -846,7 +860,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565728756",
   "price": "22,99",
   "date": "06.09.2026"
@@ -855,16 +869,23 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565728763",
   "price": "12,99",
   "date": "06.09.2026"
+ },
+ "https://www.epubli.com/shop/die-verborgene-seite-von-ecuador-9783565871896": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-15",
+  "isbn": "9783565871896"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-japan-9783565652105": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565652105",
   "price": "24,99",
   "date": "14.08.2026"
@@ -873,7 +894,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565652112",
   "price": "12,99",
   "date": "14.08.2026"
@@ -882,7 +903,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855544"
  },
@@ -890,7 +911,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565725564",
   "price": "23,99",
   "date": "04.09.2026"
@@ -899,7 +920,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565725632",
   "price": "9,99",
   "date": "04.09.2026"
@@ -908,7 +929,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565701865",
   "price": "23,99",
   "date": "27.08.2026"
@@ -917,7 +938,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565701933",
   "date": "27.08.2026"
  },
@@ -925,7 +946,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855575"
  },
@@ -933,7 +954,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565730506",
   "date": "07.09.2026"
  },
@@ -941,16 +962,23 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565730513",
   "price": "12,99",
   "date": "07.09.2026"
+ },
+ "https://www.epubli.com/shop/die-verborgene-seite-von-peru-9783565871858": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-15",
+  "isbn": "9783565871858"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-thailand-9783565585656": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585656",
   "price": "24,99",
   "date": "25.07.2026"
@@ -959,7 +987,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585663",
   "price": "12,99",
   "date": "25.07.2026"
@@ -968,7 +996,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565636082",
   "date": "11.08.2026"
  },
@@ -976,7 +1004,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565636112",
   "price": "12,99",
   "date": "11.08.2026"
@@ -985,7 +1013,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855612"
  },
@@ -993,14 +1021,14 @@
   "ok": false,
   "code": 404,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662722"
  },
  "https://www.epubli.com/shop/die-zweite-emilia-9783565662739": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565662739",
   "price": "15,99",
   "date": "18.08.2026"
@@ -1009,7 +1037,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565668472",
   "date": "20.08.2026"
  },
@@ -1017,7 +1045,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855506"
  },
@@ -1025,7 +1053,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565463060",
   "price": "24,99",
   "date": "27.05.2026"
@@ -1034,7 +1062,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565463312",
   "price": "9,49",
   "date": "27.05.2026"
@@ -1043,7 +1071,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565525911",
   "price": "19,99",
   "date": "23.06.2026"
@@ -1052,7 +1080,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565526635",
   "price": "49,99",
   "date": "24.06.2026"
@@ -1061,7 +1089,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565526659",
   "price": "44,99",
   "date": "24.06.2026"
@@ -1070,7 +1098,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565546800",
   "price": "19,99",
   "date": "08.07.2026"
@@ -1079,7 +1107,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565549474",
   "date": "09.07.2026"
  },
@@ -1087,7 +1115,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585540",
   "price": "18,99",
   "date": "25.07.2026"
@@ -1096,7 +1124,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585588",
   "price": "8,99",
   "date": "25.07.2026"
@@ -1105,7 +1133,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565496648",
   "price": "9,99",
   "date": "14.06.2026"
@@ -1114,7 +1142,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565496655",
   "price": "19,99",
   "date": "14.06.2026"
@@ -1123,7 +1151,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855490"
  },
@@ -1131,7 +1159,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565560950",
   "date": "14.07.2026"
  },
@@ -1139,7 +1167,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565560974",
   "date": "14.07.2026"
  },
@@ -1147,7 +1175,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565465415",
   "price": "15,99",
   "date": "28.05.2026"
@@ -1156,7 +1184,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565465521",
   "price": "24,99",
   "date": "28.05.2026"
@@ -1165,7 +1193,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565645787",
   "price": "16,99",
   "date": "13.08.2026"
@@ -1174,7 +1202,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565645817",
   "date": "13.08.2026"
  },
@@ -1182,7 +1210,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855537"
  },
@@ -1190,7 +1218,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565455621",
   "price": "5,99",
   "date": "23.05.2026"
@@ -1199,7 +1227,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565455737",
   "price": "24,99",
   "date": "23.05.2026"
@@ -1208,7 +1236,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565446001",
   "price": "28,99",
   "date": "15.05.2026"
@@ -1217,7 +1245,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565737895",
   "price": "23,99",
   "date": "12.09.2026"
@@ -1226,7 +1254,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565737901",
   "price": "34,99",
   "date": "12.09.2026"
@@ -1235,7 +1263,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565737932",
   "price": "9,49",
   "date": "12.09.2026"
@@ -1244,7 +1272,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565538997",
   "date": "05.07.2026"
  },
@@ -1252,7 +1280,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565539000",
   "date": "05.07.2026"
  },
@@ -1260,7 +1288,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565833382",
   "price": "19,99",
   "date": "28.10.2026"
@@ -1269,7 +1297,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850648"
  },
@@ -1277,7 +1305,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565476664",
   "price": "49,99",
   "date": "04.06.2026"
@@ -1286,7 +1314,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855605"
  },
@@ -1294,7 +1322,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855650"
  },
@@ -1302,7 +1330,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565858385"
  },
@@ -1310,7 +1338,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565575718",
   "date": "22.07.2026"
  },
@@ -1318,7 +1346,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565575763",
   "date": "22.07.2026"
  },
@@ -1326,7 +1354,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565465750",
   "price": "14,99",
   "date": "28.05.2026"
@@ -1335,21 +1363,21 @@
   "ok": false,
   "code": 404,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565871995"
  },
  "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565872015": {
   "ok": false,
   "code": 404,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565872015"
  },
  "https://www.epubli.com/shop/ordnung-9783565564835": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565564835",
   "date": "16.07.2026"
  },
@@ -1357,7 +1385,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565564859",
   "date": "16.07.2026"
  },
@@ -1365,7 +1393,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565568956",
   "date": "17.07.2026"
  },
@@ -1373,7 +1401,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565568963",
   "date": "17.07.2026"
  },
@@ -1381,7 +1409,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565580224",
   "date": "23.07.2026"
  },
@@ -1389,7 +1417,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565599707",
   "price": "5,99",
   "date": "29.07.2026"
@@ -1398,7 +1426,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565472833",
   "price": "19,99",
   "date": "03.06.2026"
@@ -1407,7 +1435,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565476794",
   "price": "29,99",
   "date": "04.06.2026"
@@ -1416,7 +1444,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565473410",
   "price": "19,99",
   "date": "03.06.2026"
@@ -1425,7 +1453,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565476770",
   "price": "29,99",
   "date": "04.06.2026"
@@ -1434,7 +1462,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565473014",
   "price": "13,99",
   "date": "03.06.2026"
@@ -1443,7 +1471,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565473236",
   "price": "19,99",
   "date": "03.06.2026"
@@ -1452,7 +1480,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565830510",
   "date": "27.10.2026"
  },
@@ -1460,7 +1488,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850631"
  },
@@ -1468,7 +1496,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855469"
  },
@@ -1476,7 +1504,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565478262",
   "price": "5,99",
   "date": "05.06.2026"
@@ -1485,7 +1513,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565478279",
   "price": "19,99",
   "date": "05.06.2026"
@@ -1494,7 +1522,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565833375",
   "date": "28.10.2026"
  },
@@ -1502,7 +1530,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850587"
  },
@@ -1510,7 +1538,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565501366",
   "price": "16,99",
   "date": "18.06.2026"
@@ -1519,7 +1547,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565501397",
   "price": "7,99",
   "date": "18.06.2026"
@@ -1528,7 +1556,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585861",
   "price": "19,99",
   "date": "25.07.2026"
@@ -1537,7 +1565,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565585939",
   "date": "25.07.2026"
  },
@@ -1545,14 +1573,14 @@
   "ok": false,
   "code": 404,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565871926"
  },
  "https://www.epubli.com/shop/wer-nichts-sieht-9783565858439": {
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565858439"
  },
@@ -1560,7 +1588,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565858446"
  },
@@ -1568,7 +1596,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Hardcover gerade veröffentlicht, Shopseite noch nicht online (nicht einzeln geprüft)",
   "isbn": "9783565858453"
  },
@@ -1576,7 +1604,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565473328",
   "price": "10,99",
   "date": "03.06.2026"
@@ -1585,7 +1613,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565476831",
   "price": "17,99",
   "date": "04.06.2026"
@@ -1594,7 +1622,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565739776",
   "date": "13.09.2026"
  },
@@ -1602,7 +1630,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565739790",
   "date": "13.09.2026"
  },
@@ -1610,7 +1638,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855636"
  },
@@ -1618,7 +1646,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565658558",
   "date": "16.08.2026"
  },
@@ -1626,7 +1654,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565658565",
   "date": "16.08.2026"
  },
@@ -1634,7 +1662,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855568"
  },
@@ -1642,7 +1670,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565571468",
   "date": "19.07.2026"
  },
@@ -1650,7 +1678,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565571475",
   "date": "19.07.2026"
  },
@@ -1658,7 +1686,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565495290",
   "price": "9,99",
   "date": "12.06.2026"
@@ -1667,7 +1695,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565496303",
   "price": "19,99",
   "date": "13.06.2026"
@@ -1676,7 +1704,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565526857",
   "price": "4,99",
   "date": "24.06.2026"
@@ -1685,7 +1713,7 @@
   "ok": true,
   "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-14",
+  "checked": "2026-11-15",
   "isbn": "9783565526864",
   "price": "19,99",
   "date": "24.06.2026"

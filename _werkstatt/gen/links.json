@@ -304,6 +304,14 @@
   "isbn": "9783565662807"
  },
  {
+  "k": "gaertner",
+  "t": "Die Gärtner der Geschichte",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-gaertner-der-geschichte-9783565858644",
+  "isbn": "9783565858644"
+ },
+ {
   "k": "sucht",
   "t": "Sucht",
   "f": "Taschenbuch",
@@ -1080,6 +1088,14 @@
   "isbn": "9783565871940"
  },
  {
+  "k": "delegations",
+  "t": "Das Delegations System",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/das-delegations-system-9783565871865",
+  "isbn": "9783565871865"
+ },
+ {
   "k": "piercing",
   "t": "Die Piercing Akademie",
   "f": "Taschenbuch",
@@ -1320,6 +1336,14 @@
   "isbn": "9783565728756"
  },
  {
+  "k": "ecuador",
+  "t": "Die verborgene Seite von Ecuador",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-verborgene-seite-von-ecuador-9783565871896",
+  "isbn": "9783565871896"
+ },
+ {
   "k": "peru",
   "t": "Die verborgene Seite von Peru",
   "f": "E-Book",
@@ -1342,6 +1366,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565730501",
   "isbn": "9783565730506"
+ },
+ {
+  "k": "peru",
+  "t": "Die verborgene Seite von Peru",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-verborgene-seite-von-peru-9783565871858",
+  "isbn": "9783565871858"
  },
  {
   "k": "k-freizeitpark",
