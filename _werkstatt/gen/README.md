@@ -45,6 +45,7 @@ Das Ergebnis als JSON `{url: {"ok":true|false,"code":200,"shop":"epubli","checke
 
 ## Ghostwriting-Seite „Buch schreiben lassen“
 - `buch-schreiben-lassen/index.html` und `ghostwriting.css` (Repo-Wurzel) sind **handgepflegt**, nicht generiert. Kein Bauskript überschreibt sie.
+- `app/index.html` (Anleitung zum Installieren der Buchinterview-App, mit `app/qr-buchinterview.svg`) ist ebenfalls **handgepflegt** und bewusst `noindex` (nur für Kunden mit Zugangscode, nicht in der Sitemap).
 - Preise, Paketumfänge, FAQ und Texte direkt in `buch-schreiben-lassen/index.html` pflegen (auch das JSON-LD im `<head>` und die FAQ-Daten dort mitändern).
 - Anfrageformular: Ohne Endpunkt öffnet es das E-Mail-Programm des Besuchers (mailto an die Verlagsadresse). Für einen Formulardienst die Adresse am Formular eintragen: `<form … data-endpoint="https://…">`. Dann wird per POST (JSON) gesendet. Vorher Datenschutzerklärung ergänzen.
 - Werbung auf der Startseite: Hinweis-Pille im Hero (`.hero-gw`) und Werbeblock `#ghostwriting` (`.gwpromo`, zwischen Tipp des Tages und „Neu erschienen“) stehen fest in `index_tpl.html`, Styles am Ende von `style.css`. Preis „ab 3.900 €“ dort mitändern, wenn sich der START-Preis ändert.
