@@ -317,6 +317,14 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 .gwp-kinds span{font-size:.74rem;letter-spacing:.06em;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
 .gwp-price{margin:4px 0 0;font-family:var(--f-display);font-weight:700;font-size:clamp(2.2rem,4vw,2.9rem);line-height:1;color:var(--gold2)}
 .gwp-price small{display:block;font-family:var(--f-body);font-weight:400;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+/* Drei Schritte: erzählen in der App, Entwurf, Nachschleifen (Startseite und Ghostwriting-Seite) */
+.app-steps{list-style:none;counter-reset:st;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.app-steps li{counter-increment:st;display:grid;grid-template-columns:34px 1fr;gap:2px 12px;align-items:start}
+.app-steps li::before{content:counter(st);grid-row:span 2;width:30px;height:30px;border-radius:50%;border:1px solid var(--line2);color:var(--gold2);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:1.05rem}
+.app-steps b{color:var(--gold2);font-weight:600;letter-spacing:.02em}
+.app-steps span{color:#cfc6b4;font-size:.92rem;line-height:1.55}
+.gw-hero .app-steps{max-width:760px;margin:26px auto 0;text-align:left}
+@media (min-width:900px){.gw-hero .app-steps{grid-template-columns:repeat(3,1fr);gap:18px}}
 .gwp-perpage{margin:-6px 0 0;font-size:.86rem;color:var(--gold2)}
 .gwp-note{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted)}
 .gwp-more{align-self:flex-start;font-size:.82rem;font-weight:600;letter-spacing:.06em;color:var(--gold2);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:1px}
