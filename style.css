@@ -317,6 +317,7 @@ button.buy{font:inherit;cursor:pointer;background:transparent}
 .gwp-kinds span{font-size:.74rem;letter-spacing:.06em;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
 .gwp-price{margin:4px 0 0;font-family:var(--f-display);font-weight:700;font-size:clamp(2.2rem,4vw,2.9rem);line-height:1;color:var(--gold2)}
 .gwp-price small{display:block;font-family:var(--f-body);font-weight:400;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.gwp-perpage{margin:-6px 0 0;font-size:.86rem;color:var(--gold2)}
 .gwp-note{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted)}
 .gwp-more{align-self:flex-start;font-size:.82rem;font-weight:600;letter-spacing:.06em;color:var(--gold2);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:1px}
 .gwp-more:hover{color:var(--gold);border-color:var(--gold)}

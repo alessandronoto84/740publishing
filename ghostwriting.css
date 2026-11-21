@@ -62,6 +62,9 @@
 .pack h3{margin:0;font-family:var(--f-display);font-size:1.25rem;letter-spacing:.14em;font-weight:600;color:var(--gold2)}
 .pack h3 small{display:block;font-family:var(--f-body);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
 .pack .price{margin:0;font-family:var(--f-display);font-size:2.5rem;line-height:1;font-weight:700;color:var(--ink)}
+.pack .perpage{margin:8px 0 0;font-size:.86rem;letter-spacing:.02em;color:var(--gold2)}
+.gw-vergleich{margin:14px 0 0;font-size:.92rem;line-height:1.6;color:#d9d2c3}
+.gw-vergleich b{color:var(--gold2)}
 .pack .price span{font-size:1rem;font-family:var(--f-body);font-weight:500;color:var(--muted);margin-right:6px}
 .pack .for{margin:0;color:#d9d2c3;font-size:.94rem}
 .pack .scope{margin:0;font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
