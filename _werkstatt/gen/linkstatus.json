@@ -697,6 +697,30 @@
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565855414"
  },
+ "https://www.epubli.com/shop/das-verborgene-in-uns-9783565876679": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "21,99",
+  "isbn": "9783565876679"
+ },
+ "https://www.epubli.com/shop/das-verborgene-in-uns-9783565876686": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "30,99",
+  "isbn": "9783565876686"
+ },
+ "https://www.epubli.com/shop/das-verborgene-in-uns-9783565877522": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "11,99",
+  "isbn": "9783565877522"
+ },
  "https://www.epubli.com/shop/der-optimierte-mensch-9783565470846": {
   "ok": true,
   "code": 200,
@@ -705,6 +729,14 @@
   "isbn": "9783565470846",
   "price": "14,99",
   "date": "02.06.2026"
+ },
+ "https://www.epubli.com/shop/der-optimierte-mensch-9783565876662": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "27,99",
+  "isbn": "9783565876662"
  },
  "https://www.epubli.com/shop/deutsch-rap-9783565491414": {
   "ok": true,
@@ -875,11 +907,12 @@
   "date": "06.09.2026"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-ecuador-9783565871896": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-15",
-  "isbn": "9783565871896"
+  "checked": "2026-11-21",
+  "isbn": "9783565871896",
+  "price": "31,99"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-japan-9783565652105": {
   "ok": true,
@@ -968,11 +1001,12 @@
   "date": "07.09.2026"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-peru-9783565871858": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-15",
-  "isbn": "9783565871858"
+  "checked": "2026-11-21",
+  "isbn": "9783565871858",
+  "price": "32,99"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-thailand-9783565585656": {
   "ok": true,
@@ -1360,18 +1394,20 @@
   "date": "28.05.2026"
  },
  "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565871995": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-15",
-  "isbn": "9783565871995"
+  "checked": "2026-11-21",
+  "isbn": "9783565871995",
+  "price": "20,99"
  },
  "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565872015": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-15",
-  "isbn": "9783565872015"
+  "checked": "2026-11-21",
+  "isbn": "9783565872015",
+  "price": "28,99"
  },
  "https://www.epubli.com/shop/ordnung-9783565564835": {
   "ok": true,
@@ -1476,6 +1512,54 @@
   "price": "19,99",
   "date": "03.06.2026"
  },
+ "https://www.epubli.com/shop/restzweifel-9783565875771": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "19,99",
+  "isbn": "9783565875771"
+ },
+ "https://www.epubli.com/shop/restzweifel-9783565875832": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "25,99",
+  "isbn": "9783565875832"
+ },
+ "https://www.epubli.com/shop/restzweifel-9783565875870": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "9,49",
+  "isbn": "9783565875870"
+ },
+ "https://www.epubli.com/shop/rituale-9783565876198": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "40,99",
+  "isbn": "9783565876198"
+ },
+ "https://www.epubli.com/shop/rituale-9783565876259": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "46,99",
+  "isbn": "9783565876259"
+ },
+ "https://www.epubli.com/shop/rituale-9783565876358": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-21",
+  "price": "11,99",
+  "isbn": "9783565876358"
+ },
  "https://www.epubli.com/shop/schamanismus-9783565830510": {
   "ok": true,
   "code": 200,
@@ -1570,11 +1654,12 @@
   "date": "25.07.2026"
  },
  "https://www.epubli.com/shop/was-ist-der-mensch-9783565871926": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-15",
-  "isbn": "9783565871926"
+  "checked": "2026-11-21",
+  "isbn": "9783565871926",
+  "price": "21,99"
  },
  "https://www.epubli.com/shop/wer-nichts-sieht-9783565858439": {
   "ok": true,

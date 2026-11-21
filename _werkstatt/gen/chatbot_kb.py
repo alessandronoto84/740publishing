@@ -22,6 +22,7 @@ def one(pat, s, flags=re.S):
 books = []
 for f in sorted(glob.glob(f'{SITE}/buch/*.html')):
     s = open(f, encoding='utf-8').read()
+    if 'name="robots" content="noindex"' in s: continue   # nicht mehr erhältliche Bücher nicht empfehlen
     info = s[s.find('<article class="bp">'):s.find('</article>')]
     cr = re.search(r'<nav class="crumbs".*?</nav>', s, re.S)
     crumbs = re.findall(r'<a href="[^"]*">([^<]+)</a>', cr.group(0) if cr else '')

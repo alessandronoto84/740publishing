@@ -373,3 +373,39 @@ for _k,_f in [('optimierte','Taschenbuch'),('optimierte','Hardcover'),('piercing
               ('uebermensch','Hardcover'),('licht-schatten','Hardcover'),('algorithmus','Hardcover'),('psychologie','Hardcover')]:
     NEW_ED.setdefault(_k,{}).setdefault(_f,('',''))
 
+
+# ---- Stand 21.11.2026: im epubli-Shop live (geprüft per Browser 21.11.2026, Preise laut Shop) ----
+# RITUALE: Taschenbuch + Hardcover (Upload 15.11.), E-Book neu. Restzweifel: Taschenbuch + E-Book (15.11.), Hardcover neu.
+# Das Verborgene in uns: alle drei Formate live. Der optimierte Mensch: neues Taschenbuch.
+# Der Schöpfer ist noch NICHT im Shop -> bleibt in „Demnächst“.
+NEW_ED['rituale'].update({'E-Book':('9783565876358',''),'Taschenbuch':('9783565876198',''),'Hardcover':('9783565876259','')})
+NEW_ED['restzweifel'].update({'E-Book':('9783565875870',''),'Taschenbuch':('9783565875771',''),'Hardcover':('9783565875832','')})
+NEW_ED['verborgene'].update({'E-Book':('9783565877522',''),'Taschenbuch':('9783565876679',''),'Hardcover':('9783565876686','')})
+NEW_ED['optimierte']['Taschenbuch']=('9783565876662','')
+DEMNAECHST=[k for k in DEMNAECHST if k not in ('rituale','restzweifel','verborgene')]
+PRICE.update({'9783565876358':'11,99','9783565876198':'40,99','9783565876259':'46,99',
+              '9783565875870':'9,49','9783565875771':'19,99','9783565875832':'25,99',
+              '9783565877522':'11,99','9783565876679':'21,99','9783565876686':'30,99',
+              '9783565876662':'27,99'})
+RELEASES[:0]=[
+ ('2026-11-21','verborgene','E-Book','9783565877522'),('2026-11-21','verborgene','Taschenbuch','9783565876679'),
+ ('2026-11-21','verborgene','Hardcover','9783565876686'),
+ ('2026-11-21','optimierte','Taschenbuch','9783565876662'),
+ ('2026-11-21','rituale','E-Book','9783565876358'),
+ ('2026-11-21','restzweifel','Hardcover','9783565875832'),
+ ('2026-11-15','rituale','Taschenbuch','9783565876198'),('2026-11-15','rituale','Hardcover','9783565876259'),
+ ('2026-11-15','restzweifel','Taschenbuch','9783565875771'),('2026-11-15','restzweifel','E-Book','9783565875870'),
+]
+# Datum 21.11. = Tag, an dem die Shopseiten erstmals geprüft live waren (Upload durch Sandro zwischen 16. und 21.11.).
+
+# ---- Nicht mehr erhältlich (auf Sandros Wunsch aus dem Verkauf genommen) ----
+# Die Buchseite bleibt bestehen (pages.py baut sie mit Hinweis „nicht mehr erhältlich“, noindex, ohne Kauf-Links),
+# aber das Buch erscheint nicht mehr im Katalog, in „Neu erschienen“, in Laufband/Tipps, verwandten Büchern oder der Sitemap.
+NICHT_MEHR={'delegations':'Dieses Buch ist nicht mehr erhältlich.'}   # 21.11.2026: Das Delegations System
+CAT_ALL=list(CAT)
+CAT[:]=[x for x in CAT if x[0] not in NICHT_MEHR]
+RELEASES[:]=[r for r in RELEASES if r[1] not in NICHT_MEHR]
+BELIEBT[:]=[k for k in BELIEBT if k not in NICHT_MEHR]
+# Ganz neue Titel, die gerade erst in den Shop gekommen sind: in „Neu erschienen“ als „Neuer Titel“ zeigen,
+# auch wenn am neuesten Tag nur ein Teil der Formate dazukam.
+NEUE_TITEL={'rituale','restzweifel','verborgene'}

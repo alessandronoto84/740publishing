@@ -81,7 +81,7 @@ for gi,(d,ks) in enumerate(groups):
         fs=[f for dd,f in byk[k] if dd==d]; fs=[f for f in C.FMT_ORDER if f in fs]
         eds={x['f']:x for x in editions(k)}
         alln=set(fs)>=set(eds)   # alle Formate neu -> ganz neues Buch
-        what=('Neuer Titel' if alln and len(fs)>1 else 'Neu als '+fjoin(fs))
+        what=('Neuer Titel' if (alln and len(fs)>1) or k in getattr(C,'NEUE_TITEL',()) else 'Neu als '+fjoin(fs))
         img=f'<a class="nb-cov" href="buch/{slug(t)}.html" tabindex="-1" aria-hidden="true"><img class="cover" src="{cv(cov)}" alt="" width="120" height="180" loading="lazy" decoding="async"></a>'
         if gi==0:
             items.append(f'''<article class="nb"><div class="nb-in">{img}<div class="info"><p class="nb-what">{e(what)}</p><h3><a href="buch/{slug(t)}.html">{e(t)}</a></h3><p class="author">{e(a)}</p>{('<p class="mblurb">'+e(short(BLURB[k]))+'</p>') if k in BLURB else ''}{badges(k)}<div class="buys">{buttons(k,sm=True,one=True)}</div></div></div></article>''')

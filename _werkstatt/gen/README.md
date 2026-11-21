@@ -24,6 +24,8 @@ Vor jedem Push: `python3 gen/linkcheck.py --report` (zeigt, welche Links nicht f
 | Preise | `catalog.py` → `PRICE` (ISBN → Preis). Der Linkcheck ergänzt Preise aus dem epubli-Shop automatisch; Einträge in `PRICE` haben Vorrang (z. B. nach einer Preisänderung). |
 | Englische Ausgaben | `english_data.py` → `EN`. Sobald ein Buch bei Google Play live ist: geprüften Link in `GPLAY['<key>']` eintragen → Kaufbutton statt „Coming soon“. |
 | Laufband „Beliebt“ | `catalog.py` → `BELIEBT` |
+| Buch aus dem Verkauf genommen | `catalog.py` → `NICHT_MEHR['<key>']='Hinweistext'`. Buchseite bleibt (noindex, ohne Kauf-Links, Hinweis), sonst überall ausgeblendet (Katalog, Neu erschienen, Laufband, verwandte Bücher, Sitemap, Chat-Assistent). |
+| Ganz neuer Titel in „Neu erschienen“ | `catalog.py` → `NEUE_TITEL` (Label „Neuer Titel“, auch wenn am neuesten Tag nur ein Format dazukam) |
 
 ## Kauf-Links und „Bald verfügbar“
 Die Webseite zeigt einen Kauf-Button **nur**, wenn der Link in `linkstatus.json` als funktionierend (`"ok": true`) steht.

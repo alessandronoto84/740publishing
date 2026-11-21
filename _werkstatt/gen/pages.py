@@ -1,6 +1,8 @@
 import html, json, sys, os, re, datetime
 S=sys.argv[1]; sys.path.insert(0,f'{S}/gen')
 from catalog import CAT, EXTRA, SLUG, BLURB, SERIES_OF, editions
+import catalog as _C
+NICHT_MEHR=getattr(_C,'NICHT_MEHR',{}); CAT_ALL=getattr(_C,'CAT_ALL',CAT)
 from render import badges, buttons, live_formats, soon_formats
 from seo import SEO
 BASE='https://740publishing.de/'
@@ -14,8 +16,10 @@ def isbnfmt(i): return f'{i[:3]}-{i[3]}-{i[4:10]}-{i[10:12]}-{i[12]}'
 def cover_of(k,cov): return f'covers/{cov[3:]}.jpg' if cov.startswith('../') else f'covers/cat/{cov}.jpg'
 e=html.escape
 books=[]
-for k,t,a,c,eb,pr,pt,cov in CAT:
-    books.append(dict(k=k,t=t,a=a,c=c,eb=eb,pr=pr,pt=pt,img=cover_of(k,cov),s=slug(t),eds=editions(k),b=BLURB.get(k,'')))
+for k,t,a,c,eb,pr,pt,cov in CAT_ALL:
+    books.append(dict(k=k,t=t,a=a,c=c,eb=eb,pr=pr,pt=pt,img=cover_of(k,cov),s=slug(t),eds=[] if k in NICHT_MEHR else editions(k),b=BLURB.get(k,''),ret=k in NICHT_MEHR))
+# Nicht mehr erhältliche Bücher (catalog.NICHT_MEHR): Seite bleibt, aber ohne Kauf-Links, noindex, nicht verlinkt/in Sitemap
+live_books=[b for b in books if not b['ret']]
 os.makedirs(f'{S}/site/buch',exist_ok=True)
 HEAD='''<!doctype html>
 <html lang="de">
@@ -24,7 +28,7 @@ HEAD='''<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="{url}">
+{robots}<link rel="canonical" href="{url}">
 <meta name="theme-color" content="#0b0a08">
 <meta property="og:type" content="book">
 <meta property="og:title" content="{ogt}">
@@ -51,7 +55,7 @@ def trunc(s,n=155):
     return s if len(s)<=n else s[:n-1].rsplit(' ',1)[0].rstrip(',:;')+'…'
 for b in books:
     url=f'{BASE}buch/{b["s"]}.html'; img=BASE+b['img']; g=GENRE[b['c']]
-    fmts=live_formats(b['k']); allf=[x['f'] for x in b['eds']]
+    fmts=[] if b['ret'] else live_formats(b['k']); allf=[x['f'] for x in b['eds']] or ['Buch']
     kw,fw,inh=SEO.get(b['k'],(None,None,None))
     desc=trunc(f'„{b["t"]}“ von {b["a"]}{" – "+kw if kw else ""}. {b["b"]}' if b['b'] else f'„{b["t"]}“ von {b["a"]} bei 740 Publishing. Als {fjoin(allf)}.')
     title=f'{b["t"]}: {kw} – {b["a"]} | 740 Publishing' if kw else f'{b["t"]} – {b["a"]} | {g} kaufen | 740 Publishing'
@@ -63,17 +67,17 @@ for b in books:
        "offers":[{"@type":"Offer","url":u,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":s},**({"price":x['price'].replace(',','.'),"priceCurrency":"EUR"} if x['price'] else {})} for x in b['eds'] for s,u in x['links']]},
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"740 Publishing","item":BASE},{"@type":"ListItem","position":2,"name":b['c'],"item":BASE+"#katalog"},{"@type":"ListItem","position":3,"name":b['t'],"item":url}]}]}
     ld["@graph"][0]={k:v for k,v in ld["@graph"][0].items() if v is not None}
-    btns=buttons(b['k'],verb=True)
+    btns='' if b['ret'] else buttons(b['k'],verb=True)
     tr=TRAILER.get(b['k'])
-    pend=[x['f']+(' (neue Ausgabe)' if x['f'] in fmts else '') for x in soon_formats(b['k'])]
+    pend=[] if b['ret'] else [x['f']+(' (neue Ausgabe)' if x['f'] in fmts else '') for x in soon_formats(b['k'])]
     parts=([f'Erhältlich als {fjoin(fmts)}'] if fmts else [])+([f'{fjoin(pend)}: bald verfügbar'] if pend else [])
-    avail=e(' · '.join(parts))
+    avail=e(NICHT_MEHR[b['k']] if b['ret'] else ' · '.join(parts))
     trbtn=f'<button class="buy trl" type="button" data-video="../trailer/{tr}.mp4" data-poster="../trailer/{tr}.jpg" data-title="{e(b["t"])}"><span class="fmt">▶ Trailer</span><span class="shop">ansehen</span></button>' if tr else ''
     isbns=' · '.join(f'{x["f"]}: ISBN {isbnfmt(x["isbn"])}' for x in b['eds'] if x['isbn'])
     ser=SERIES_OF.get(b['k'])
-    same=[x for x in books if x is not b and x['a']==b['a'] and x['t']!=b['t']]
+    same=[x for x in live_books if x is not b and x['a']==b['a'] and x['t']!=b['t']]
     more=same[:4] if same else []
-    more+= [x for x in books if x is not b and x['c']==b['c'] and x not in more and x['t']!=b['t']][:4-len(more)]
+    more+= [x for x in live_books if x is not b and x['c']==b['c'] and x not in more and x['t']!=b['t']][:4-len(more)]
     rel=''.join(f'<a class="relb" href="{x["s"]}.html"><img src="../{x["img"]}" alt="Cover von „{e(x["t"])}“" width="90" height="135" loading="lazy"><span>{e(x["t"])}</span><small>{e(x["a"])}</small></a>' for x in more)
     body=f'''<main class="wrap bookpage">
 <nav class="crumbs" aria-label="Brotkrumen"><a href="../">Start</a> › <a href="../#katalog">{e(b["c"])}</a> › <span>{e(b["t"])}</span></nav>
@@ -87,7 +91,7 @@ for b in books:
     {f'<p class="bp-series">Reihe: {e(ser[0])} · Band {ser[1]}</p>' if ser else ''}
     <hr class="rule">
     {f'<p class="bp-blurb">{e(b["b"])}</p>' if b['b'] else ''}
-    {badges(b['k'])}
+    {'' if b['ret'] else badges(b['k'])}
     <p class="bp-avail">{avail}</p>
     <div class="buys">{trbtn}{btns}</div>
     <p class="isbn">{isbns}</p>
@@ -98,10 +102,10 @@ for b in books:
 <p class="bp-back"><a href="../#katalog">← Alle Bücher von 740 Publishing</a></p>
 </main>
 '''
-    page=HEAD.format(title=e(title),desc=e(desc),url=url,ogt=e(f'{b["t"]} – {b["a"]}'),img=img,ld=json.dumps(ld,ensure_ascii=False).replace('</','<\\/'))+body+(PLAYER if tr else '')+FOOT+'</body>\n</html>\n'
+    page=HEAD.format(robots='<meta name="robots" content="noindex">\n' if b['ret'] else '',title=e(title),desc=e(desc),url=url,ogt=e(f'{b["t"]} – {b["a"]}'),img=img,ld=json.dumps(ld,ensure_ascii=False).replace('</','<\\/'))+body+(PLAYER if tr else '')+FOOT+'</body>\n</html>\n'
     open(f'{S}/site/buch/{b["s"]}.html','w').write(page)
 today=datetime.date.today().isoformat()
-urls=[BASE,BASE+'buch-schreiben-lassen/',BASE+'en/']+[f'{BASE}buch/{b["s"]}.html' for b in books]
+urls=[BASE,BASE+'buch-schreiben-lassen/',BASE+'en/']+[f'{BASE}buch/{b["s"]}.html' for b in live_books]
 open(f'{S}/site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls)+'</urlset>\n')
 open(f'{S}/site/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n')
-print(len(books),'Seiten')
+print(len(books),'Seiten, davon nicht mehr erhältlich:',[b['k'] for b in books if b['ret']])
