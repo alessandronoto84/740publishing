@@ -259,17 +259,9 @@
   "k": "emilia",
   "t": "Die zweite Emilia",
   "f": "Taschenbuch",
-  "shop": "epubli",
-  "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565662722",
-  "isbn": "9783565662722"
- },
- {
-  "k": "emilia",
-  "t": "Die zweite Emilia",
-  "f": "Taschenbuch",
   "shop": "Amazon",
-  "url": "https://www.amazon.de/dp/3565662727",
-  "isbn": "9783565662722"
+  "url": "https://www.amazon.de/dp/3565662735",
+  "isbn": "9783565662739"
  },
  {
   "k": "emilia",
@@ -277,6 +269,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565855506",
+  "isbn": "9783565855506"
+ },
+ {
+  "k": "emilia",
+  "t": "Die zweite Emilia",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855509",
   "isbn": "9783565855506"
  },
  {
@@ -309,6 +309,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-gaertner-der-geschichte-9783565858644",
+  "isbn": "9783565858644"
+ },
+ {
+  "k": "gaertner",
+  "t": "Die Gärtner der Geschichte",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565858648",
   "isbn": "9783565858644"
  },
  {
@@ -448,6 +456,14 @@
   "isbn": "9783565446001"
  },
  {
+  "k": "jenseits",
+  "t": "Jenseits des Himmels",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/jenseits-des-himmels-9783565857227",
+  "isbn": "9783565857227"
+ },
+ {
   "k": "wns",
   "t": "Wer nichts sieht …",
   "f": "E-Book",
@@ -477,6 +493,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/wer-nichts-sieht-9783565858453",
+  "isbn": "9783565858453"
+ },
+ {
+  "k": "wns",
+  "t": "Wer nichts sieht …",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565858451",
   "isbn": "9783565858453"
  },
  {
@@ -536,6 +560,14 @@
   "isbn": "9783565855490"
  },
  {
+  "k": "underground",
+  "t": "Generation Underground",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855495",
+  "isbn": "9783565855490"
+ },
+ {
   "k": "algorithmus",
   "t": "Generation Algorithmus",
   "f": "E-Book",
@@ -581,6 +613,22 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/kuenstliche-intelligenz-9783565872015",
+  "isbn": "9783565872015"
+ },
+ {
+  "k": "ki",
+  "t": "Künstliche Intelligenz",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565871997",
+  "isbn": "9783565871995"
+ },
+ {
+  "k": "ki",
+  "t": "Künstliche Intelligenz",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565872012",
   "isbn": "9783565872015"
  },
  {
@@ -640,6 +688,14 @@
   "isbn": "9783565855414"
  },
  {
+  "k": "spiel",
+  "t": "Das Spiel läuft immer",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/356585541X",
+  "isbn": "9783565855414"
+ },
+ {
   "k": "liebe",
   "t": "Ist das noch Liebe?",
   "f": "E-Book",
@@ -672,6 +728,14 @@
   "isbn": "9783565855537"
  },
  {
+  "k": "liebe",
+  "t": "Ist das noch Liebe?",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855533",
+  "isbn": "9783565855537"
+ },
+ {
   "k": "erwachsen",
   "t": "Wir spielen erwachsen",
   "f": "E-Book",
@@ -701,6 +765,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/wir-spielen-erwachsen-9783565855568",
+  "isbn": "9783565855568"
+ },
+ {
+  "k": "erwachsen",
+  "t": "Wir spielen erwachsen",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855568",
   "isbn": "9783565855568"
  },
  {
@@ -808,6 +880,22 @@
   "isbn": "9783565470846"
  },
  {
+  "k": "optimierte",
+  "t": "Der optimierte Mensch",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/der-optimierte-mensch-9783565876662",
+  "isbn": "9783565876662"
+ },
+ {
+  "k": "optimierte",
+  "t": "Der optimierte Mensch",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565876662",
+  "isbn": "9783565876662"
+ },
+ {
   "k": "psychologie",
   "t": "Psychologie im Alltag",
   "f": "E-Book",
@@ -864,6 +952,14 @@
   "isbn": "9783565850631"
  },
  {
+  "k": "schamanismus",
+  "t": "Schamanismus",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855460",
+  "isbn": "9783565855469"
+ },
+ {
   "k": "bier",
   "t": "Bier",
   "f": "Taschenbuch",
@@ -894,6 +990,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/bier-9783565850624",
   "isbn": "9783565850624"
+ },
+ {
+  "k": "bier",
+  "t": "Bier",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855452",
+  "isbn": "9783565855452"
  },
  {
   "k": "koerperkult",
@@ -933,6 +1037,22 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/koerperkult-9783565858385",
+  "isbn": "9783565858385"
+ },
+ {
+  "k": "koerperkult",
+  "t": "Körperkult",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855606",
+  "isbn": "9783565855605"
+ },
+ {
+  "k": "koerperkult",
+  "t": "Körperkult",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565858389",
   "isbn": "9783565858385"
  },
  {
@@ -992,6 +1112,14 @@
   "isbn": "9783565871926"
  },
  {
+  "k": "mensch",
+  "t": "Was ist der Mensch?",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/356587192X",
+  "isbn": "9783565871926"
+ },
+ {
   "k": "spiritualitaet",
   "t": "Das große Praxisbuch der Spiritualität",
   "f": "E-Book",
@@ -1022,6 +1150,190 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/das-grosse-praxisbuch-der-spiritualitaet-9783565858378",
   "isbn": "9783565858378"
+ },
+ {
+  "k": "spiritualitaet",
+  "t": "Das große Praxisbuch der Spiritualität",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565858370",
+  "isbn": "9783565858378"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/energetische-grenzen-9783565892655",
+  "isbn": "9783565892655"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/energetische-grenzen-9783565892624",
+  "isbn": "9783565892624"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565892625",
+  "isbn": "9783565892624"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/energetische-grenzen-9783565892648",
+  "isbn": "9783565892648"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565892641",
+  "isbn": "9783565892648"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892617",
+  "isbn": "9783565892617"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892532",
+  "isbn": "9783565892532"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565892536",
+  "isbn": "9783565892532"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892587",
+  "isbn": "9783565892587"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565892587",
+  "isbn": "9783565892587"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/dein-innerer-kompass-9783565891788",
+  "isbn": "9783565891788"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/dein-innerer-kompass-9783565891733",
+  "isbn": "9783565891733"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565891734",
+  "isbn": "9783565891733"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/dein-innerer-kompass-9783565891757",
+  "isbn": "9783565891757"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Taschenbuch A5",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/dein-innerer-kompass-9783565891351",
+  "isbn": "9783565891351"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565891750",
+  "isbn": "9783565891757"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Taschenbuch A5",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565891351",
+  "isbn": "9783565891351"
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/deutschland-kippt-9783565879953",
+  "isbn": "9783565879953"
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/deutschland-kippt-9783565879946",
+  "isbn": "9783565879946"
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565879947",
+  "isbn": "9783565879946"
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/deutschland-kippt-9783565879960",
+  "isbn": "9783565879960"
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565879963",
+  "isbn": "9783565879960"
  },
  {
   "k": "fitness",
@@ -1070,30 +1382,6 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565437537",
   "isbn": "9783565437535"
- },
- {
-  "k": "delegations",
-  "t": "Das Delegations System",
-  "f": "E-Book",
-  "shop": "epubli",
-  "url": "https://www.epubli.com/shop/das-delegations-system-9783565437696",
-  "isbn": "9783565437696"
- },
- {
-  "k": "delegations",
-  "t": "Das Delegations System",
-  "f": "Hardcover",
-  "shop": "epubli",
-  "url": "https://www.epubli.com/shop/das-delegations-system-9783565871940",
-  "isbn": "9783565871940"
- },
- {
-  "k": "delegations",
-  "t": "Das Delegations System",
-  "f": "Taschenbuch",
-  "shop": "epubli",
-  "url": "https://www.epubli.com/shop/das-delegations-system-9783565871865",
-  "isbn": "9783565871865"
  },
  {
   "k": "piercing",
@@ -1160,6 +1448,14 @@
   "isbn": "9783565855438"
  },
  {
+  "k": "auswandern",
+  "t": "Auswandern, aber wohin?",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855436",
+  "isbn": "9783565855438"
+ },
+ {
   "k": "vietnam",
   "t": "Die verborgene Seite von Vietnam",
   "f": "E-Book",
@@ -1189,6 +1485,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-vietnam-9783565855612",
+  "isbn": "9783565855612"
+ },
+ {
+  "k": "vietnam",
+  "t": "Die verborgene Seite von Vietnam",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855614",
   "isbn": "9783565855612"
  },
  {
@@ -1224,6 +1528,14 @@
   "isbn": "9783565855544"
  },
  {
+  "k": "japan",
+  "t": "Die verborgene Seite von Japan",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855541",
+  "isbn": "9783565855544"
+ },
+ {
   "k": "china",
   "t": "Die verborgene Seite von China",
   "f": "E-Book",
@@ -1256,6 +1568,14 @@
   "isbn": "9783565855513"
  },
  {
+  "k": "china",
+  "t": "Die verborgene Seite von China",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855517",
+  "isbn": "9783565855513"
+ },
+ {
   "k": "mexiko",
   "t": "Die verborgene Seite von Mexiko",
   "f": "E-Book",
@@ -1285,6 +1605,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-mexiko-9783565855575",
+  "isbn": "9783565855575"
+ },
+ {
+  "k": "mexiko",
+  "t": "Die verborgene Seite von Mexiko",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855576",
   "isbn": "9783565855575"
  },
  {
@@ -1344,6 +1672,14 @@
   "isbn": "9783565871896"
  },
  {
+  "k": "ecuador",
+  "t": "Die verborgene Seite von Ecuador",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/356587189X",
+  "isbn": "9783565871896"
+ },
+ {
   "k": "peru",
   "t": "Die verborgene Seite von Peru",
   "f": "E-Book",
@@ -1373,6 +1709,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-peru-9783565871858",
+  "isbn": "9783565871858"
+ },
+ {
+  "k": "peru",
+  "t": "Die verborgene Seite von Peru",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565871857",
   "isbn": "9783565871858"
  },
  {
@@ -1408,6 +1752,14 @@
   "isbn": "9783565855636"
  },
  {
+  "k": "k-freizeitpark",
+  "t": "Wir fahren in den Freizeitpark",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855630",
+  "isbn": "9783565855636"
+ },
+ {
   "k": "k-rap",
   "t": "Deutsch-Rap",
   "f": "E-Book",
@@ -1437,6 +1789,14 @@
   "f": "Hardcover",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/deutsch-rap-9783565855476",
+  "isbn": "9783565855476"
+ },
+ {
+  "k": "k-rap",
+  "t": "Deutsch-Rap",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565855479",
   "isbn": "9783565855476"
  },
  {
@@ -1678,5 +2038,125 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-dunkle-seite-des-fussballs-9783565850679",
   "isbn": "9783565850679"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/rituale-9783565876358",
+  "isbn": "9783565876358"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/rituale-9783565876198",
+  "isbn": "9783565876198"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/rituale-9783565876259",
+  "isbn": "9783565876259"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565876190",
+  "isbn": "9783565876198"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565876255",
+  "isbn": "9783565876259"
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/restzweifel-9783565875870",
+  "isbn": "9783565875870"
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/restzweifel-9783565875771",
+  "isbn": "9783565875771"
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/restzweifel-9783565875832",
+  "isbn": "9783565875832"
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565875771",
+  "isbn": "9783565875771"
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565875836",
+  "isbn": "9783565875832"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/das-verborgene-in-uns-9783565877522",
+  "isbn": "9783565877522"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/das-verborgene-in-uns-9783565876679",
+  "isbn": "9783565876679"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/das-verborgene-in-uns-9783565876686",
+  "isbn": "9783565876686"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565876670",
+  "isbn": "9783565876679"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565876689",
+  "isbn": "9783565876686"
  }
 ]

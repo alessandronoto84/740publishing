@@ -11,7 +11,7 @@ CAT=[
  ('karten','Wo die Karten enden','Alessandro Noto',R,'9783565571475','9783565571468','Taschenbuch','karten'),
  ('sizilien','Bis nach Sizilien','Alessandro Noto',R,'9783565658695','9783565658664','Taschenbuch','sizilien'),
  ('aurora','Projekt Aurora','Judith Bahlmann',R,'9783565599707','9783565580224','Taschenbuch','aurora'),
- ('emilia','Die zweite Emilia','Judith Bahlmann',R,'9783565668472','9783565662722','Taschenbuch','emilia'),
+ ('emilia','Die zweite Emilia','Judith Bahlmann',R,'9783565668472','9783565662739','Taschenbuch','emilia'),
  ('gaertner','Die Gärtner der Geschichte','Markus Wieland',R,'9783565662821','9783565662807','Taschenbuch','gaertner'),
  ('sucht','Sucht','Sandro Urban',R,None,'9783565833375','Taschenbuch','sucht'),
  ('koenige','Könige der Asche','Evan J. Moore',R,None,'9783565833382','Taschenbuch','koenige'),
@@ -40,6 +40,10 @@ CAT=[
  ('unsichtbarkeit','Erlernte Unsichtbarkeit','Konstantin Reeder',S,'9783565549474','9783565546800','Taschenbuch','unsichtbarkeit'),
  ('mensch','Was ist der Mensch?','Michael Rabenau',S,'9783565585939','9783565585861','Taschenbuch','mensch'),
  ('spiritualitaet','Das große Praxisbuch der Spiritualität','Leonard Kramer',S,'9783565489398','9783565488827','Taschenbuch','spiritualitaet'),
+ ('grenzen','Energetische Grenzen','Leonard Kramer',S,'9783565892655','9783565892624','Taschenbuch','grenzen'),
+ ('notfall','Die spirituelle Notfallapotheke','Leonard Kramer',S,'9783565892617','9783565892532','Taschenbuch','notfall'),
+ ('kompass','Dein innerer Kompass','Leonard Kramer',S,'9783565891788','9783565891733','Taschenbuch','kompass'),
+ ('kippt','Deutschland kippt','Theodor Brenner',S,'9783565879953','9783565879946','Taschenbuch','kippt'),
  ('fitness','Das große Fitnessbuch','Alessandro Noto',S,'9783565438822','9783565438679','Taschenbuch','fitness'),
  ('selbstversorger','Das große Selbstversorgerbuch','Alessandro Noto',S,'9783565437597','9783565437535','Taschenbuch','selbstversorger'),
  ('delegations','Das Delegations System','Alessandro Noto',S,'9783565437696',None,None,'delegations'),
@@ -295,6 +299,8 @@ def _isbn10(s):
 _CATD={x[0]:x for x in CAT}
 OTHER_LINKS={'k-thailand':[('Taschenbuch','Hugendubel','https://www.hugendubel.de/de/buch_kartoniert/mika_solberg-die_verborgene_seite_von_thailand-54175286-produkt-details.html')]}
 AMAZON_HC={'k-kifft':'3565740426','k-astrologie':'3565752289','k-kaffee':'3565737905','k-drogen':'3565526637'}
+# Thalia-Artikelnummern je ISBN (ISBN-Suche auf thalia.de, 22.11.2026; Rest wegen Thalia-Sperre 429 noch ungeprüft)
+THALIA={'9783565538997': 'A1080775261', '9783565560974': 'A1080929995', '9783565560950': 'A1080915472', '9783565568963': 'A1080965656', '9783565568956': 'A1080948786', '9783565564835': 'A1080947558', '9783565564859': 'A1080961785', '9783565530717': 'A1080711281', '9783565530700': 'A1080722154', '9783565575763': 'A1081048698', '9783565575718': 'A1081027301', '9783565526857': 'A1080633386', '9783565526864': 'A1080649198', '9783565571475': 'A1081009123', '9783565571468': 'A1080990548', '9783565658664': 'A1081361700', '9783565658695': 'A1081357876', '9783565599707': 'A1081130848', '9783565580224': 'A1081046496', '9783565668472': 'A1081395626', '9783565662821': 'A1081374401', '9783565662739': 'A1081372839', '9783565662807': 'A1081372948', '9783565833375': 'A1082403774', '9783565833382': 'A1082404330', '9783565850587': 'A1082519141', '9783565850648': 'A1082518899', '9783565478262': 'A1080153281', '9783565478279': 'A1080155205', '9783565495290': 'A1080283870', '9783565496303': 'A1080301711', '9783565463954': 'A1080018912', '9783565463152': 'A1080049430', '9783565446001': 'A1079869150', '9783565857227': 'A1082593810', '9783565858446': 'A1082594119', '9783565858439': 'A1082589395', '9783565496648': 'A1080292492', '9783565496655': 'A1080444825', '9783565585588': 'A1081078903', '9783565585540': 'A1081072851'}
 def candidate_links(k):
     """Alle bekannten Kauf-Links eines Buchs: [(Format, Shop, URL, ISBN)] – noch ungeprüft."""
     _,t,a,c,eb,pr,pt,cov=_CATD[k]; s=SLUG.get(k,_slug(t)); L=[]
@@ -306,6 +312,11 @@ def candidate_links(k):
     if k in AMAZON_HC: L.append(('Hardcover','Amazon',f'https://www.amazon.de/dp/{AMAZON_HC[k]}',''))
     for f,(i,u) in NEW_ED.get(k,{}).items():
         if i: L.append((f,'epubli',u or f'https://www.epubli.com/shop/{s}-{i}',i))
+    _ed=([('E-Book',eb)] if eb else [])+([(pt,pr)] if pr else [])+[(f,i) for f,(i,u) in NEW_ED.get(k,{}).items() if i]
+    for f,i in _ed:   # Thalia: Artikelseite laut ISBN-Suche auf thalia.de (THALIA unten)
+        if i in THALIA: L.append((f,'Thalia',f'https://www.thalia.de/shop/home/artikeldetails/{THALIA[i]}',i))
+    for f,(i,u) in NEW_ED.get(k,{}).items():   # 22.11.2026: Amazon auch für neue Druckausgaben (Link zeigt nur, wenn geprüft ok)
+        if i and f!='E-Book': L.append((f,'Amazon',f'https://www.amazon.de/dp/{_isbn10(i)}',i))
     seen=set(); out=[]
     for x in L:
         if x[2] not in seen: seen.add(x[2]); out.append(x)
@@ -409,3 +420,33 @@ BELIEBT[:]=[k for k in BELIEBT if k not in NICHT_MEHR]
 # Ganz neue Titel, die gerade erst in den Shop gekommen sind: in „Neu erschienen“ als „Neuer Titel“ zeigen,
 # auch wenn am neuesten Tag nur ein Teil der Formate dazukam.
 NEUE_TITEL={'rituale','restzweifel','verborgene'}
+
+
+# ---- Stand 22.11.2026: neue Titel bei epubli veröffentlicht (Bücherliste „Meine Bücher“, 22.11.2026) ----
+# Leonard Kramer, Reihe „Spiritualität im wirklichen Leben“ (Band 1 Grenzen, Band 2 Notfallapotheke, Band 3 Kompass)
+# und Theodor Brenner „Deutschland kippt“ (17.11.). Preise laut epubli-Veröffentlichung.
+NEW_ED.setdefault('grenzen',{})['Hardcover']=('9783565892648','')
+NEW_ED.setdefault('notfall',{})['Hardcover']=('9783565892587','')
+NEW_ED.setdefault('kompass',{})['Hardcover']=('9783565891757','')
+NEW_ED.setdefault('kompass',{})['Taschenbuch A5']=('9783565891351','')   # erste Taschenbuch-Ausgabe im A5-Format (21.11.)
+NEW_ED.setdefault('kippt',{})['Hardcover']=('9783565879960','')
+NEW_ED.setdefault('jenseits',{})['E-Book']=('9783565857227','')          # E-Book veröffentlicht 07.11.2026
+SERIES_OF.update({'grenzen':('Spiritualität im wirklichen Leben',1),'notfall':('Spiritualität im wirklichen Leben',2),
+                  'kompass':('Spiritualität im wirklichen Leben',3)})
+PRICE.update({'9783565892624':'23,99','9783565892648':'32,99','9783565892532':'22,99','9783565892587':'29,99',
+              '9783565892617':'11,99','9783565891733':'24,99','9783565891757':'31,99','9783565891788':'12,99'})
+BLURB.update({
+ 'grenzen':'Du hörst zu, tröstest, hilfst und spürst genau, wie es anderen geht – und nimmst ihre Sorgen mit nach Hause. Leonard Kramer zeigt, wie eine gesunde Grenze aussieht: als durchlässige Membran, die Nähe ermöglicht und gleichzeitig schützt. Mit 44 alltagstauglichen Übungen, Grenz-Sätzen und einem 21-Tage-Programm. Band 1 der Reihe „Spiritualität im wirklichen Leben“.',
+ 'notfall':'Wenn es dir schlecht geht, hast du oft keine Kraft, ein Buch zu lesen. Diese Notfallapotheke führt dich direkt zu deinem Zustand und zu einer Übung, die jetzt hilft: 55 kurze Übungen für 18 typische Situationen, von Angst und Gedankenkarussell bis Schlaflosigkeit, die meisten in höchstens fünf Minuten. Band 2 der Reihe „Spiritualität im wirklichen Leben“.',
+ 'kompass':'Ist es deine innere Stimme – oder nur Angst, Wunschdenken, alte Erfahrung oder der Einfluss anderer? Mit der Kompassprobe in fünf Schritten, sieben Störfeldern, 43 Übungen und einem 21-Tage-Plan lernst du, deine innere Stimme zu prüfen und ihr wieder zu vertrauen. Band 3 der Reihe „Spiritualität im wirklichen Leben“.',
+ 'kippt':'Wirtschaftliche Schwäche, Migration, Energiepolitik, Bildungsprobleme, wachsende Staatsausgaben und der Verlust politischen Vertrauens: Theodor Brenner zeichnet die Entwicklung Deutschlands von den Erfolgsjahren der Bundesrepublik bis in die Gegenwart nach und stellt die unbequemen Fragen. Ein streitbares Sachbuch darüber, ob ein Land seinen Kurs noch korrigieren kann.',
+})
+RELEASES[:0]=[
+ ('2026-11-22','grenzen','E-Book','9783565892655'),('2026-11-22','grenzen','Taschenbuch','9783565892624'),('2026-11-22','grenzen','Hardcover','9783565892648'),
+ ('2026-11-22','notfall','E-Book','9783565892617'),('2026-11-22','notfall','Taschenbuch','9783565892532'),('2026-11-22','notfall','Hardcover','9783565892587'),
+ ('2026-11-22','kompass','E-Book','9783565891788'),('2026-11-22','kompass','Taschenbuch','9783565891733'),('2026-11-22','kompass','Hardcover','9783565891757'),
+ ('2026-11-21','kompass','Taschenbuch A5','9783565891351'),
+ ('2026-11-17','kippt','E-Book','9783565879953'),('2026-11-17','kippt','Taschenbuch','9783565879946'),('2026-11-17','kippt','Hardcover','9783565879960'),
+ ('2026-11-07','jenseits','E-Book','9783565857227'),
+]
+NEUE_TITEL|={'grenzen','notfall','kompass','kippt'}

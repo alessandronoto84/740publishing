@@ -144,6 +144,7 @@ SERIES=[('Die verborgene Seite der Welt','Reiseführer von Mika Solberg: 30 Orte
  ('Die verborgene Seite der Kulinarik','Die Kulturgeschichte dessen, was wir täglich genießen.',['k-kaffee','bier']),
  ('KARMA · GLÜCK · ORDNUNG · PECH','Die Romanreihe von Konstanze Frey: warmherzige, humorvolle Kleinstadtromane.',['karma','glueck','ordnung','pech']),
  ('Projekt-Reihe von Victor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
+ ('Spiritualität im wirklichen Leben','Praxisbücher von Leonard Kramer: Spiritualität, die im Alltag trägt – mit Übungen und klaren Programmen.',['grenzen','notfall','kompass']),
  ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus, Rituale und spirituelle Traditionen.',['k-astrologie','schamanismus','rituale'])]
 _ser=[]
 for _n,_d,_ks in SERIES:
