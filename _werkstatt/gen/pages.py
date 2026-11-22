@@ -44,7 +44,7 @@ HEAD='''<!doctype html>
 <body>
 <header class="top"><div class="wrap"><a class="brand" href="../"><img src="../logo-small.png" alt="740 Publishing" width="52" height="40"><span>740 Publishing</span></a><nav><a href="../#neu">Neu</a><a class="nav-opt" href="../#reihen">Reihen</a><a href="../#katalog">Alle Bücher</a><a class="nav-opt" href="../#verlag">Verlag</a><a class="nav-gw" href="../buch-schreiben-lassen/">Buch schreiben lassen</a><a href="../en/" hreflang="en" lang="en" title="English Editions">EN</a></nav></div></header>
 '''
-FOOT='''<footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems)<br>740publishingverlag@gmail.com</address><nav><a href="../buch-schreiben-lassen/">Buch schreiben lassen</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></nav></div></footer>
+FOOT='''<footer class="foot"><div class="wrap"><img src="../logo-small.png" alt="740 Publishing" width="70" height="54"><address>740 Publishing · Burgstraße 12 · 49808 Lingen (Ems)<br>info@740publishing.de</address><nav><a href="../buch-schreiben-lassen/">Buch schreiben lassen</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></nav></div></footer>
 <script src="../chatbot.js?v=3" defer></script>
 '''
 PLAYER='''<dialog class="player" id="player" aria-label="Buchtrailer"><div class="pl-head"><span class="pl-title" id="pl-title"></span><button class="pl-close" type="button" id="pl-close" aria-label="Schließen">✕</button></div><video id="pl-video" controls playsinline preload="none"></video></dialog>

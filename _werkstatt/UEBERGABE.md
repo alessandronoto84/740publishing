@@ -6,13 +6,13 @@ Diese Datei ist die Übergabe an einen neuen Chat. **Bitte zuerst komplett lesen
 ---
 
 ## 1. Wer und was
-- **Sandro (Alessandro Noto)**, Verleger von **740 Publishing**, Burgstraße 12, 49808 Lingen (Ems), 740publishingverlag@gmail.com.
+- **Sandro (Alessandro Noto)**, Verleger von **740 Publishing**, Burgstraße 12, 49808 Lingen (Ems), info@740publishing.de.
 - Er schreibt unter vielen Pseudonymen (Konstanze Frey, Victor Cross, Friedhelm Westerkamp, Juna Morel, Leo Winter, Clara Winter, Sandro Urban, Leonard Kramer, Evan J. Moore, Mika Solberg, Vivian Dahl, Judith Bahlmann u. a.). Veröffentlicht wird über **epubli**, die Bücher landen dann bei Amazon und im Buchhandel.
 - **Arbeitsweise:** Er will nach jedem abgeschlossenen Schritt ein ausdrückliches **„Go“**. Gewünscht sind ehrliche Einschätzungen, klare Empfehlungen statt Optionslisten und keine Passwörter im Chat. Er spricht viel per Sprachnachricht, deshalb Tippfehler großzügig deuten.
 
 ## 2. Webseite
 - **Live:** https://740publishing.de/
-- **Repo:** `alessandronoto84/740publishing` (public, GitHub Pages, Branch `main`, `.nojekyll`). Commits als `Alessandro Noto <740publishingverlag@gmail.com>`.
+- **Repo:** `alessandronoto84/740publishing` (public, GitHub Pages, Branch `main`, `.nojekyll`). Commits als `Alessandro Noto <info@740publishing.de>`.
 - **Design:** Schwarz-Gold. Schriften Cormorant Garamond und Figtree, selbst gehostet (keine Google Fonts, wegen DSGVO).
 - **Startseite:**
   - Animierte Bühne: schräge, laufende Cover-Wand, das Logo erscheint mit goldenem Lichtstreifen.
