@@ -1,5 +1,253 @@
 [
  {
+  "k": "zeichen",
+  "t": "Wenn das Leben dir Zeichen gibt",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893195",
+  "isbn": "9783565893195"
+ },
+ {
+  "k": "zeichen",
+  "t": "Wenn das Leben dir Zeichen gibt",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893140",
+  "isbn": "9783565893140"
+ },
+ {
+  "k": "zeichen",
+  "t": "Wenn das Leben dir Zeichen gibt",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565893141",
+  "isbn": "9783565893140"
+ },
+ {
+  "k": "zeichen",
+  "t": "Wenn das Leben dir Zeichen gibt",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893171",
+  "isbn": "9783565893171"
+ },
+ {
+  "k": "zeichen",
+  "t": "Wenn das Leben dir Zeichen gibt",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565893176",
+  "isbn": "9783565893171"
+ },
+ {
+  "k": "brot",
+  "t": "Brot",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/brot-9783565896653",
+  "isbn": "9783565896653"
+ },
+ {
+  "k": "brot",
+  "t": "Brot",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/brot-9783565896646",
+  "isbn": "9783565896646"
+ },
+ {
+  "k": "brot",
+  "t": "Brot",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565896647",
+  "isbn": "9783565896646"
+ },
+ {
+  "k": "brot",
+  "t": "Brot",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/brot-9783565906550",
+  "isbn": "9783565906550"
+ },
+ {
+  "k": "brot",
+  "t": "Brot",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906553",
+  "isbn": "9783565906550"
+ },
+ {
+  "k": "system",
+  "t": "Im System",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/im-system-9783565896608",
+  "isbn": "9783565896608"
+ },
+ {
+  "k": "system",
+  "t": "Im System",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/im-system-9783565896578",
+  "isbn": "9783565896578"
+ },
+ {
+  "k": "system",
+  "t": "Im System",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565896574",
+  "isbn": "9783565896578"
+ },
+ {
+  "k": "system",
+  "t": "Im System",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/im-system-9783565906512",
+  "isbn": "9783565906512"
+ },
+ {
+  "k": "system",
+  "t": "Im System",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906510",
+  "isbn": "9783565906512"
+ },
+ {
+  "k": "tuer",
+  "t": "Die Tür hinter dem Schrank",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565906505",
+  "isbn": "9783565906505"
+ },
+ {
+  "k": "tuer",
+  "t": "Die Tür hinter dem Schrank",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565893430",
+  "isbn": "9783565893430"
+ },
+ {
+  "k": "tuer",
+  "t": "Die Tür hinter dem Schrank",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565893435",
+  "isbn": "9783565893430"
+ },
+ {
+  "k": "tuer",
+  "t": "Die Tür hinter dem Schrank",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565906499",
+  "isbn": "9783565906499"
+ },
+ {
+  "k": "tuer",
+  "t": "Die Tür hinter dem Schrank",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906499",
+  "isbn": "9783565906499"
+ },
+ {
+  "k": "leise",
+  "t": "Die leisen Jahre",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-leisen-jahre-9783565906697",
+  "isbn": "9783565906697"
+ },
+ {
+  "k": "leise",
+  "t": "Die leisen Jahre",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-leisen-jahre-9783565906659",
+  "isbn": "9783565906659"
+ },
+ {
+  "k": "leise",
+  "t": "Die leisen Jahre",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906650",
+  "isbn": "9783565906659"
+ },
+ {
+  "k": "leise",
+  "t": "Die leisen Jahre",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/die-leisen-jahre-9783565906666",
+  "isbn": "9783565906666"
+ },
+ {
+  "k": "leise",
+  "t": "Die leisen Jahre",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906669",
+  "isbn": "9783565906666"
+ },
+ {
+  "k": "tarot",
+  "t": "Tarot",
+  "f": "E-Book",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/tarot-9783565906949",
+  "isbn": "9783565906949"
+ },
+ {
+  "k": "tarot",
+  "t": "Tarot",
+  "f": "Taschenbuch",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/tarot-9783565906857",
+  "isbn": "9783565906857"
+ },
+ {
+  "k": "tarot",
+  "t": "Tarot",
+  "f": "Taschenbuch",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906855",
+  "isbn": "9783565906857"
+ },
+ {
+  "k": "tarot",
+  "t": "Tarot",
+  "f": "Hardcover",
+  "shop": "epubli",
+  "url": "https://www.epubli.com/shop/tarot-9783565906901",
+  "isbn": "9783565906901"
+ },
+ {
+  "k": "tarot",
+  "t": "Tarot",
+  "f": "Hardcover",
+  "shop": "Amazon",
+  "url": "https://www.amazon.de/dp/3565906901",
+  "isbn": "9783565906901"
+ },
+ {
+  "k": "karma",
+  "t": "KARMA",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=p77xEQAAQBAJ",
+  "isbn": ""
+ },
+ {
   "k": "karma",
   "t": "KARMA",
   "f": "E-Book",
@@ -30,6 +278,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080775261",
   "isbn": "9783565538997"
+ },
+ {
+  "k": "glueck",
+  "t": "GLÜCK",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=RQj1EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "glueck",
@@ -75,6 +331,14 @@
   "k": "pech",
   "t": "PECH",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=fir2EQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "pech",
+  "t": "PECH",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/pech-9783565568963",
   "isbn": "9783565568963"
@@ -110,6 +374,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080948786",
   "isbn": "9783565568956"
+ },
+ {
+  "k": "ordnung",
+  "t": "ORDNUNG",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=EqL1EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "ordnung",
@@ -155,6 +427,14 @@
   "k": "katastrophe",
   "t": "Die freundliche Katastrophe",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=T7LvEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "katastrophe",
+  "t": "Die freundliche Katastrophe",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-freundliche-katastrophe-9783565530717",
   "isbn": "9783565530717"
@@ -190,6 +470,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080722154",
   "isbn": "9783565530700"
+ },
+ {
+  "k": "krone",
+  "t": "Krone aus Beton",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=WVb3EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "krone",
@@ -235,6 +523,14 @@
   "k": "licht-schatten",
   "t": "Zwischen Licht und Schatten",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=PiPuEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "licht-schatten",
+  "t": "Zwischen Licht und Schatten",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/zwischen-licht-und-schatten-9783565526857",
   "isbn": "9783565526857"
@@ -270,6 +566,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080649198",
   "isbn": "9783565526864"
+ },
+ {
+  "k": "karten",
+  "t": "Wo die Karten enden",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=grD2EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "karten",
@@ -315,6 +619,14 @@
   "k": "sizilien",
   "t": "Bis nach Sizilien",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=w2sCEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "sizilien",
+  "t": "Bis nach Sizilien",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/bis-nach-sizilien-9783565658695",
   "isbn": "9783565658695"
@@ -350,6 +662,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1081361700",
   "isbn": "9783565658664"
+ },
+ {
+  "k": "aurora",
+  "t": "Projekt Aurora",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=G2n7EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "aurora",
@@ -403,6 +723,14 @@
   "k": "emilia",
   "t": "Die zweite Emilia",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=7N4DEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "emilia",
+  "t": "Die zweite Emilia",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565668472",
   "isbn": "9783565668472"
@@ -446,6 +774,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855509",
   "isbn": "9783565855506"
+ },
+ {
+  "k": "gaertner",
+  "t": "Die Gärtner der Geschichte",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=XRUDEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "gaertner",
@@ -506,6 +842,14 @@
  {
   "k": "sucht",
   "t": "Sucht",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=l94oEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "sucht",
+  "t": "Sucht",
   "f": "Taschenbuch",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/sucht-9783565833375",
@@ -542,6 +886,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1082519141",
   "isbn": "9783565850587"
+ },
+ {
+  "k": "koenige",
+  "t": "Könige der Asche",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=2eAoEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "koenige",
@@ -587,6 +939,14 @@
   "k": "schwarzes-wasser",
   "t": "Schwarzes Wasser",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=phPjEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "schwarzes-wasser",
+  "t": "Schwarzes Wasser",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/schwarzes-wasser-9783565478262",
   "isbn": "9783565478262"
@@ -622,6 +982,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080155205",
   "isbn": "9783565478279"
+ },
+ {
+  "k": "blut-asphalt",
+  "t": "Zwischen Blut und Asphalt",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=g0vmEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "blut-asphalt",
@@ -667,6 +1035,14 @@
   "k": "manuskript",
   "t": "Das Manuskript",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Aa3dEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "manuskript",
+  "t": "Das Manuskript",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/das-manuskript-9783565463954",
   "isbn": "9783565463954"
@@ -702,6 +1078,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1080049430",
   "isbn": "9783565463152"
+ },
+ {
+  "k": "jenseits",
+  "t": "Jenseits des Himmels",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=JSwrEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "jenseits",
@@ -742,6 +1126,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1082593810",
   "isbn": "9783565857227"
+ },
+ {
+  "k": "wns",
+  "t": "Wer nichts sieht …",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Iy0rEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "wns",
@@ -827,6 +1219,14 @@
   "k": "underground",
   "t": "Generation Underground",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=7qPqEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "underground",
+  "t": "Generation Underground",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/generation-underground-9783565496648",
   "isbn": "9783565496648"
@@ -883,6 +1283,14 @@
   "k": "algorithmus",
   "t": "Generation Algorithmus",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=ALn4EQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "algorithmus",
+  "t": "Generation Algorithmus",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/generation-algorithmus-9783565585588",
   "isbn": "9783565585588"
@@ -918,6 +1326,14 @@
   "shop": "Thalia",
   "url": "https://www.thalia.de/shop/home/artikeldetails/A1081072851",
   "isbn": "9783565585540"
+ },
+ {
+  "k": "ki",
+  "t": "Künstliche Intelligenz",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=h7zeEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "ki",
@@ -963,6 +1379,14 @@
   "k": "digitale-erschoepfung",
   "t": "Digitale Erschöpfung",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=8q3dEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "digitale-erschoepfung",
+  "t": "Digitale Erschöpfung",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/digitale-erschoepfung-9783565463312",
   "isbn": "9783565463312"
@@ -982,6 +1406,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565463066",
   "isbn": "9783565463060"
+ },
+ {
+  "k": "spiel",
+  "t": "Das Spiel läuft immer",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=UqTqEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "spiel",
@@ -1027,6 +1459,14 @@
   "k": "liebe",
   "t": "Ist das noch Liebe?",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=_qIBEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "liebe",
+  "t": "Ist das noch Liebe?",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/ist-das-noch-liebe-9783565645817",
   "isbn": "9783565645817"
@@ -1062,6 +1502,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855533",
   "isbn": "9783565855537"
+ },
+ {
+  "k": "erwachsen",
+  "t": "Wir spielen erwachsen",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=02sCEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "erwachsen",
@@ -1107,6 +1555,14 @@
   "k": "zurueck-ins-leben",
   "t": "Wie ich zurück ins Leben gefunden habe",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=f-EoEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "zurueck-ins-leben",
+  "t": "Wie ich zurück ins Leben gefunden habe",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/wie-ich-zurueck-ins-leben-gefunden-habe-9783565473328",
   "isbn": "9783565473328"
@@ -1126,6 +1582,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565476834",
   "isbn": "9783565476831"
+ },
+ {
+  "k": "toleranz",
+  "t": "Im Namen der Toleranz",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Lr3eEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "toleranz",
@@ -1155,6 +1619,14 @@
   "k": "uebermensch",
   "t": "Projekt Übermensch",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=coriEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "uebermensch",
+  "t": "Projekt Übermensch",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/projekt-uebermensch-9783565473410",
   "isbn": "9783565473410"
@@ -1174,6 +1646,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/356547677X",
   "isbn": "9783565476770"
+ },
+ {
+  "k": "powerfrau",
+  "t": "Projekt Powerfrau",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=JoziEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "powerfrau",
@@ -1203,6 +1683,14 @@
   "k": "optimierte",
   "t": "Der optimierte Mensch",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=LRThEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "optimierte",
+  "t": "Der optimierte Mensch",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/der-optimierte-mensch-9783565470846",
   "isbn": "9783565470846"
@@ -1222,6 +1710,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565876662",
   "isbn": "9783565876662"
+ },
+ {
+  "k": "psychologie",
+  "t": "Psychologie im Alltag",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=goriEQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "psychologie",
@@ -1254,6 +1750,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/schamanismus-9783565830510",
   "isbn": "9783565830510"
+ },
+ {
+  "k": "schamanismus",
+  "t": "Schamanismus",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=N-EoEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "schamanismus",
@@ -1298,6 +1802,14 @@
  {
   "k": "bier",
   "t": "Bier",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082518565",
+  "isbn": ""
+ },
+ {
+  "k": "bier",
+  "t": "Bier",
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565830492",
@@ -1326,6 +1838,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855452",
   "isbn": "9783565855452"
+ },
+ {
+  "k": "koerperkult",
+  "t": "Körperkult",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=hysrEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "koerperkult",
@@ -1387,6 +1907,14 @@
   "k": "unsichtbarkeit",
   "t": "Erlernte Unsichtbarkeit",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=VinzEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "unsichtbarkeit",
+  "t": "Erlernte Unsichtbarkeit",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/erlernte-unsichtbarkeit-9783565549474",
   "isbn": "9783565549474"
@@ -1406,6 +1934,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565546808",
   "isbn": "9783565546800"
+ },
+ {
+  "k": "mensch",
+  "t": "Was ist der Mensch?",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Drn4EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "mensch",
@@ -1451,6 +1987,14 @@
   "k": "spiritualitaet",
   "t": "Das große Praxisbuch der Spiritualität",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=DTTkEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "spiritualitaet",
+  "t": "Das große Praxisbuch der Spiritualität",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/das-grosse-praxisbuch-der-spiritualitaet-9783565489398",
   "isbn": "9783565489398"
@@ -1486,6 +2030,22 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565858370",
   "isbn": "9783565858378"
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082848770",
+  "isbn": ""
+ },
+ {
+  "k": "grenzen",
+  "t": "Energetische Grenzen",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082804930",
+  "isbn": "9783565892624"
  },
  {
   "k": "grenzen",
@@ -1531,6 +2091,22 @@
   "k": "notfall",
   "t": "Die spirituelle Notfallapotheke",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=1vEyEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082804882",
+  "isbn": "9783565892532"
+ },
+ {
+  "k": "notfall",
+  "t": "Die spirituelle Notfallapotheke",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892617",
   "isbn": "9783565892617"
@@ -1566,6 +2142,22 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565892587",
   "isbn": "9783565892587"
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=vvIyEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "kompass",
+  "t": "Dein innerer Kompass",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082805322",
+  "isbn": "9783565891733"
  },
  {
   "k": "kompass",
@@ -1627,6 +2219,14 @@
   "k": "kippt",
   "t": "Deutschland kippt",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=kwcwEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "kippt",
+  "t": "Deutschland kippt",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/deutschland-kippt-9783565879953",
   "isbn": "9783565879953"
@@ -1667,6 +2267,14 @@
   "k": "fitness",
   "t": "Das große Fitnessbuch",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=i5ItEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "fitness",
+  "t": "Das große Fitnessbuch",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/das-grosse-fitnessbuch-9783565438822",
   "isbn": "9783565438822"
@@ -1686,6 +2294,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565438673",
   "isbn": "9783565438679"
+ },
+ {
+  "k": "selbstversorger",
+  "t": "Das große Selbstversorgerbuch",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082691537",
+  "isbn": ""
  },
  {
   "k": "selbstversorger",
@@ -1730,6 +2346,14 @@
  {
   "k": "piercing",
   "t": "Die Piercing Akademie",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=LSsrEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "piercing",
+  "t": "Die Piercing Akademie",
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3818756686",
@@ -1742,6 +2366,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-piercing-akademie-9783565858422",
   "isbn": "9783565858422"
+ },
+ {
+  "k": "auswandern",
+  "t": "Auswandern, aber wohin?",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=5OL3EQAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "auswandern",
@@ -1787,6 +2419,14 @@
   "k": "vietnam",
   "t": "Die verborgene Seite von Vietnam",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=5lIBEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "vietnam",
+  "t": "Die verborgene Seite von Vietnam",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-vietnam-9783565636112",
   "isbn": "9783565636112"
@@ -1822,6 +2462,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855614",
   "isbn": "9783565855612"
+ },
+ {
+  "k": "japan",
+  "t": "Die verborgene Seite von Japan",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=_eABEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "japan",
@@ -1867,6 +2515,14 @@
   "k": "china",
   "t": "Die verborgene Seite von China",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=fRMDEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "china",
+  "t": "Die verborgene Seite von China",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-china-9783565662708",
   "isbn": "9783565662708"
@@ -1902,6 +2558,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855517",
   "isbn": "9783565855513"
+ },
+ {
+  "k": "mexiko",
+  "t": "Die verborgene Seite von Mexiko",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=5Y8GEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "mexiko",
@@ -1947,6 +2611,14 @@
   "k": "kolumbien",
   "t": "Die verborgene Seite von Kolumbien",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Gi8KEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "kolumbien",
+  "t": "Die verborgene Seite von Kolumbien",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-kolumbien-9783565725632",
   "isbn": "9783565725632"
@@ -1966,6 +2638,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565725567",
   "isbn": "9783565725564"
+ },
+ {
+  "k": "ecuador",
+  "t": "Die verborgene Seite von Ecuador",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=gYUKEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "ecuador",
@@ -2011,6 +2691,14 @@
   "k": "peru",
   "t": "Die verborgene Seite von Peru",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=NY0KEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "peru",
+  "t": "Die verborgene Seite von Peru",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-verborgene-seite-von-peru-9783565730513",
   "isbn": "9783565730513"
@@ -2046,6 +2734,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565871857",
   "isbn": "9783565871858"
+ },
+ {
+  "k": "k-freizeitpark",
+  "t": "Wir fahren in den Freizeitpark",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=BoYNEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "k-freizeitpark",
@@ -2091,6 +2787,14 @@
   "k": "k-rap",
   "t": "Deutsch-Rap",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=MHrkEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "k-rap",
+  "t": "Deutsch-Rap",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/deutsch-rap-9783565491421",
   "isbn": "9783565491421"
@@ -2126,6 +2830,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855479",
   "isbn": "9783565855476"
+ },
+ {
+  "k": "k-kifft",
+  "t": "Deutschland kifft",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=SoINEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "k-kifft",
@@ -2171,6 +2883,14 @@
   "k": "k-drogen",
   "t": "Drogen – Das umfassende Standardwerk",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=5NTtEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "k-drogen",
+  "t": "Drogen – Das umfassende Standardwerk",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/drogen-das-umfassende-standardwerk-9783565525911",
   "isbn": "9783565525911"
@@ -2206,6 +2926,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/drogen-das-umfassende-standardwerk-9783565526635",
   "isbn": "9783565526635"
+ },
+ {
+  "k": "k-kaffee",
+  "t": "Kaffee",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=xIcNEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "k-kaffee",
@@ -2251,6 +2979,14 @@
   "k": "k-schoenheit",
   "t": "Warum Schönheit Macht ist",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=F2_sEQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "k-schoenheit",
+  "t": "Warum Schönheit Macht ist",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/warum-schoenheit-macht-ist-9783565501397",
   "isbn": "9783565501397"
@@ -2270,6 +3006,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565501367",
   "isbn": "9783565501366"
+ },
+ {
+  "k": "k-astrologie",
+  "t": "Astrologie",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=FL4PEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "k-astrologie",
@@ -2314,6 +3058,14 @@
  {
   "k": "k-thailand",
   "t": "Die verborgene Seite von Thailand",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=Krj4EQAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "k-thailand",
+  "t": "Die verborgene Seite von Thailand",
   "f": "Taschenbuch",
   "shop": "Hugendubel",
   "url": "https://www.hugendubel.de/de/buch_kartoniert/mika_solberg-die_verborgene_seite_von_thailand-54175286-produkt-details.html",
@@ -2354,6 +3106,14 @@
  {
   "k": "fussball",
   "t": "Die dunkle Seite des Fußballs",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082518781",
+  "isbn": ""
+ },
+ {
+  "k": "fussball",
+  "t": "Die dunkle Seite des Fußballs",
   "f": "Taschenbuch",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-dunkle-seite-des-fussballs-9783565850662",
@@ -2366,6 +3126,14 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-dunkle-seite-des-fussballs-9783565850679",
   "isbn": "9783565850679"
+ },
+ {
+  "k": "rituale",
+  "t": "RITUALE",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=YGUvEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "rituale",
@@ -2411,6 +3179,14 @@
   "k": "restzweifel",
   "t": "Restzweifel",
   "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=YWMvEgAAQBAJ",
+  "isbn": ""
+ },
+ {
+  "k": "restzweifel",
+  "t": "Restzweifel",
+  "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/restzweifel-9783565875870",
   "isbn": "9783565875870"
@@ -2446,6 +3222,14 @@
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565875836",
   "isbn": "9783565875832"
+ },
+ {
+  "k": "verborgene",
+  "t": "Das Verborgene in uns",
+  "f": "E-Book",
+  "shop": "Google Play",
+  "url": "https://play.google.com/store/books/details?id=7mYvEgAAQBAJ",
+  "isbn": ""
  },
  {
   "k": "verborgene",

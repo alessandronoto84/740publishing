@@ -450,3 +450,124 @@ RELEASES[:0]=[
  ('2026-11-07','jenseits','E-Book','9783565857227'),
 ]
 NEUE_TITEL|={'grenzen','notfall','kompass','kippt'}
+
+
+# ---- Stand 28.11.2026: neue Titel bei epubli (Bücherliste „Meine Bücher“, 28.11.2026) ----
+# Zeichen (Kramer, Band 4), Brot (Kulinarik Band 3), Im System, Die Tür hinter dem Schrank (Subterra Band 1),
+# Die leisen Jahre, Tarot (Vivian-Dahl-Reihe Band 4). Preise laut epubli.
+_NEU_2811=[
+ ('zeichen','Wenn das Leben dir Zeichen gibt','Leonard Kramer',S,'9783565893195','9783565893140','Taschenbuch','zeichen'),
+ ('brot','Brot','Sandro Noto',S,'9783565896653','9783565896646','Taschenbuch','brot'),
+ ('system','Im System','Markus Wieland',R,'9783565896608','9783565896578','Taschenbuch','system'),
+ ('tuer','Die Tür hinter dem Schrank','Leo Winter',R,'9783565906505','9783565893430','Taschenbuch','tuer'),
+ ('leise','Die leisen Jahre','Clara Winter',R,'9783565906697','9783565906659','Taschenbuch','leise'),
+ ('tarot','Tarot','Vivian Dahl',S,'9783565906949','9783565906857','Taschenbuch','tarot'),
+]
+CAT[0:0]=_NEU_2811; CAT_ALL[0:0]=_NEU_2811; _CATD.update({x[0]:x for x in _NEU_2811})
+NEW_ED.setdefault('zeichen',{})['Hardcover']=('9783565893171','')
+NEW_ED.setdefault('brot',{})['Hardcover']=('9783565906550','')
+NEW_ED.setdefault('system',{})['Hardcover']=('9783565906512','')
+NEW_ED.setdefault('tuer',{})['Hardcover']=('9783565906499','')
+NEW_ED.setdefault('leise',{})['Hardcover']=('9783565906666','')
+NEW_ED.setdefault('tarot',{})['Hardcover']=('9783565906901','')
+SERIES_OF.update({'zeichen':('Spiritualität im wirklichen Leben',4),'brot':('Die verborgene Seite der Kulinarik',3),
+                  'tuer':('Die Chroniken von Subterra',1),'tarot':('Vivian-Dahl-Reihe',4)})
+PRICE.update({'9783565893195':'12,99','9783565893140':'23,99','9783565893171':'32,99',
+              '9783565896653':'8,49','9783565896646':'22,49','9783565906550':'29,99',
+              '9783565896608':'9,99','9783565896578':'19,99','9783565906512':'29,99',
+              '9783565906505':'7,99','9783565893430':'16,99','9783565906499':'26,99',
+              '9783565906697':'5,99','9783565906659':'22,99','9783565906666':'30,99',
+              '9783565906949':'12,99','9783565906857':'25,99','9783565906901':'39,99'})
+BLURB.update({
+ 'zeichen':'Uhrzeiten, Träume, Begegnungen im richtigen Moment: Ist das ein Zeichen oder nur Zufall? Leonard Kramer zeigt, wie du Synchronizität offen begegnest, ohne dich selbst zu täuschen. Mit 38 Übungen und einem 21-Tage-Programm. Band 4 der Reihe „Spiritualität im wirklichen Leben“.',
+ 'brot':'Von den ersten Broten der Steinzeit bis zur industriellen Backrevolution: Sandro Noto erzählt die überraschende Geschichte hinter einem alltäglichen Lebensmittel, voller Mythen, Macht, Politik und Kultur. Band 3 der Reihe „Die verborgene Seite der Kulinarik“.',
+ 'system':'Nordkorea, El Salvador, China, Afghanistan, Eritrea und Turkmenistan: Sechs literarische Erzählungen über Menschen, die in autoritären Systemen leben, mit Überwachung, Angst, Anpassung und moralischen Konflikten. Was bleibt vom Menschen, wenn das System über sein Leben bestimmt?',
+ 'tuer':'Ein geheimnisvoller Schrank, eine verborgene Welt unter der Erde und ein verschwundener Großonkel: Für Felix beginnt hinter einer Tür ein Fantasy-Abenteuer, das alles verändert. Band 1 der Chroniken von Subterra.',
+ 'leise':'Katharina hat Mann, Kinder, ein Zuhause in München – und verliert sich trotzdem leise. Als sie ihre alte Kamera wieder in die Hand nimmt, beginnt sie, genauer hinzusehen. Ein stiller, berührender Roman über die unscheinbaren Jahre, in denen wir uns verlieren, und den Mut, wieder bei uns selbst anzukommen.',
+ 'tarot':'Woher die 78 Karten wirklich stammen, was sie bedeuten und wie du sie selbst deutest: Geschichte des Tarot, alle Großen und Kleinen Arkana aufrecht und umgekehrt, Legesysteme und eigene Deutungen, mit einem klaren Blick auf Psychologie und die Grenzen des Kartenlegens. Band 4 der Vivian-Dahl-Reihe.',
+})
+RELEASES[:0]=[
+ ('2026-11-28','tarot','E-Book','9783565906949'),('2026-11-28','tarot','Taschenbuch','9783565906857'),('2026-11-28','tarot','Hardcover','9783565906901'),
+ ('2026-11-28','leise','E-Book','9783565906697'),('2026-11-28','leise','Taschenbuch','9783565906659'),('2026-11-28','leise','Hardcover','9783565906666'),
+ ('2026-11-28','brot','Hardcover','9783565906550'),('2026-11-28','system','Hardcover','9783565906512'),
+ ('2026-11-28','tuer','E-Book','9783565906505'),('2026-11-28','tuer','Hardcover','9783565906499'),
+ ('2026-11-24','brot','E-Book','9783565896653'),('2026-11-24','brot','Taschenbuch','9783565896646'),
+ ('2026-11-24','system','E-Book','9783565896608'),('2026-11-24','system','Taschenbuch','9783565896578'),
+ ('2026-11-22','zeichen','E-Book','9783565893195'),('2026-11-22','zeichen','Taschenbuch','9783565893140'),('2026-11-22','zeichen','Hardcover','9783565893171'),
+ ('2026-11-22','tuer','Taschenbuch','9783565893430'),
+]
+NEUE_TITEL|={'zeichen','brot','system','tuer','leise','tarot'}
+
+
+# ---- 28.11.2026: Google-Play-E-Book-Links und Thalia-Links aus dem Handeintrag des anderen Chats (97163f8) in die Daten übernommen ----
+_GP_TH_2811=[
+ ('k-astrologie','E-Book','Google Play','https://play.google.com/store/books/details?id=FL4PEgAAQBAJ'),
+ ('auswandern','E-Book','Google Play','https://play.google.com/store/books/details?id=5OL3EQAAQBAJ'),
+ ('bier','E-Book','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082518565'),
+ ('sizilien','E-Book','Google Play','https://play.google.com/store/books/details?id=w2sCEgAAQBAJ'),
+ ('fitness','E-Book','Google Play','https://play.google.com/store/books/details?id=i5ItEgAAQBAJ'),
+ ('spiritualitaet','E-Book','Google Play','https://play.google.com/store/books/details?id=DTTkEQAAQBAJ'),
+ ('selbstversorger','E-Book','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082691537'),
+ ('manuskript','E-Book','Google Play','https://play.google.com/store/books/details?id=Aa3dEQAAQBAJ'),
+ ('spiel','E-Book','Google Play','https://play.google.com/store/books/details?id=UqTqEQAAQBAJ'),
+ ('verborgene','E-Book','Google Play','https://play.google.com/store/books/details?id=7mYvEgAAQBAJ'),
+ ('kompass','E-Book','Google Play','https://play.google.com/store/books/details?id=vvIyEgAAQBAJ'),
+ ('kompass','Taschenbuch','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082805322'),
+ ('optimierte','E-Book','Google Play','https://play.google.com/store/books/details?id=LRThEQAAQBAJ'),
+ ('k-rap','E-Book','Google Play','https://play.google.com/store/books/details?id=MHrkEQAAQBAJ'),
+ ('k-kifft','E-Book','Google Play','https://play.google.com/store/books/details?id=SoINEgAAQBAJ'),
+ ('kippt','E-Book','Google Play','https://play.google.com/store/books/details?id=kwcwEgAAQBAJ'),
+ ('fussball','E-Book','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082518781'),
+ ('katastrophe','E-Book','Google Play','https://play.google.com/store/books/details?id=T7LvEQAAQBAJ'),
+ ('gaertner','E-Book','Google Play','https://play.google.com/store/books/details?id=XRUDEgAAQBAJ'),
+ ('piercing','E-Book','Google Play','https://play.google.com/store/books/details?id=LSsrEgAAQBAJ'),
+ ('notfall','E-Book','Google Play','https://play.google.com/store/books/details?id=1vEyEgAAQBAJ'),
+ ('notfall','Taschenbuch','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082804882'),
+ ('china','E-Book','Google Play','https://play.google.com/store/books/details?id=fRMDEgAAQBAJ'),
+ ('ecuador','E-Book','Google Play','https://play.google.com/store/books/details?id=gYUKEgAAQBAJ'),
+ ('japan','E-Book','Google Play','https://play.google.com/store/books/details?id=_eABEgAAQBAJ'),
+ ('kolumbien','E-Book','Google Play','https://play.google.com/store/books/details?id=Gi8KEgAAQBAJ'),
+ ('mexiko','E-Book','Google Play','https://play.google.com/store/books/details?id=5Y8GEgAAQBAJ'),
+ ('peru','E-Book','Google Play','https://play.google.com/store/books/details?id=NY0KEgAAQBAJ'),
+ ('k-thailand','E-Book','Google Play','https://play.google.com/store/books/details?id=Krj4EQAAQBAJ'),
+ ('vietnam','E-Book','Google Play','https://play.google.com/store/books/details?id=5lIBEgAAQBAJ'),
+ ('emilia','E-Book','Google Play','https://play.google.com/store/books/details?id=7N4DEgAAQBAJ'),
+ ('digitale-erschoepfung','E-Book','Google Play','https://play.google.com/store/books/details?id=8q3dEQAAQBAJ'),
+ ('k-drogen','E-Book','Google Play','https://play.google.com/store/books/details?id=5NTtEQAAQBAJ'),
+ ('grenzen','E-Book','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082848770'),
+ ('grenzen','Taschenbuch','Thalia','https://www.thalia.de/shop/home/artikeldetails/A1082804930'),
+ ('unsichtbarkeit','E-Book','Google Play','https://play.google.com/store/books/details?id=VinzEQAAQBAJ'),
+ ('algorithmus','E-Book','Google Play','https://play.google.com/store/books/details?id=ALn4EQAAQBAJ'),
+ ('underground','E-Book','Google Play','https://play.google.com/store/books/details?id=7qPqEQAAQBAJ'),
+ ('glueck','E-Book','Google Play','https://play.google.com/store/books/details?id=RQj1EQAAQBAJ'),
+ ('toleranz','E-Book','Google Play','https://play.google.com/store/books/details?id=Lr3eEQAAQBAJ'),
+ ('liebe','E-Book','Google Play','https://play.google.com/store/books/details?id=_qIBEgAAQBAJ'),
+ ('jenseits','E-Book','Google Play','https://play.google.com/store/books/details?id=JSwrEgAAQBAJ'),
+ ('k-kaffee','E-Book','Google Play','https://play.google.com/store/books/details?id=xIcNEgAAQBAJ'),
+ ('karma','E-Book','Google Play','https://play.google.com/store/books/details?id=p77xEQAAQBAJ'),
+ ('koenige','E-Book','Google Play','https://play.google.com/store/books/details?id=2eAoEgAAQBAJ'),
+ ('koerperkult','E-Book','Google Play','https://play.google.com/store/books/details?id=hysrEgAAQBAJ'),
+ ('krone','E-Book','Google Play','https://play.google.com/store/books/details?id=WVb3EQAAQBAJ'),
+ ('ki','E-Book','Google Play','https://play.google.com/store/books/details?id=h7zeEQAAQBAJ'),
+ ('ordnung','E-Book','Google Play','https://play.google.com/store/books/details?id=EqL1EQAAQBAJ'),
+ ('pech','E-Book','Google Play','https://play.google.com/store/books/details?id=fir2EQAAQBAJ'),
+ ('aurora','E-Book','Google Play','https://play.google.com/store/books/details?id=G2n7EQAAQBAJ'),
+ ('powerfrau','E-Book','Google Play','https://play.google.com/store/books/details?id=JoziEQAAQBAJ'),
+ ('uebermensch','E-Book','Google Play','https://play.google.com/store/books/details?id=coriEQAAQBAJ'),
+ ('psychologie','E-Book','Google Play','https://play.google.com/store/books/details?id=goriEQAAQBAJ'),
+ ('restzweifel','E-Book','Google Play','https://play.google.com/store/books/details?id=YWMvEgAAQBAJ'),
+ ('rituale','E-Book','Google Play','https://play.google.com/store/books/details?id=YGUvEgAAQBAJ'),
+ ('schamanismus','E-Book','Google Play','https://play.google.com/store/books/details?id=N-EoEgAAQBAJ'),
+ ('schwarzes-wasser','E-Book','Google Play','https://play.google.com/store/books/details?id=phPjEQAAQBAJ'),
+ ('sucht','E-Book','Google Play','https://play.google.com/store/books/details?id=l94oEgAAQBAJ'),
+ ('k-schoenheit','E-Book','Google Play','https://play.google.com/store/books/details?id=F2_sEQAAQBAJ'),
+ ('mensch','E-Book','Google Play','https://play.google.com/store/books/details?id=Drn4EQAAQBAJ'),
+ ('wns','E-Book','Google Play','https://play.google.com/store/books/details?id=Iy0rEgAAQBAJ'),
+ ('zurueck-ins-leben','E-Book','Google Play','https://play.google.com/store/books/details?id=f-EoEgAAQBAJ'),
+ ('k-freizeitpark','E-Book','Google Play','https://play.google.com/store/books/details?id=BoYNEgAAQBAJ'),
+ ('erwachsen','E-Book','Google Play','https://play.google.com/store/books/details?id=02sCEgAAQBAJ'),
+ ('karten','E-Book','Google Play','https://play.google.com/store/books/details?id=grD2EQAAQBAJ'),
+ ('blut-asphalt','E-Book','Google Play','https://play.google.com/store/books/details?id=g0vmEQAAQBAJ'),
+ ('licht-schatten','E-Book','Google Play','https://play.google.com/store/books/details?id=PiPuEQAAQBAJ'),
+]
+for _k,_f,_s,_u in _GP_TH_2811: EXTRA.setdefault(_k,[]).append((_f,_s,_u))

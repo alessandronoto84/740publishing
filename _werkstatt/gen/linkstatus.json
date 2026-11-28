@@ -729,6 +729,36 @@
   "shop": "Amazon",
   "checked": "2026-11-22"
  },
+ "https://www.amazon.de/dp/3565893141": {
+  "ok": true,
+  "code": 200,
+  "shop": "Amazon",
+  "checked": "2026-11-28"
+ },
+ "https://www.amazon.de/dp/3565893176": {
+  "ok": true,
+  "code": 200,
+  "shop": "Amazon",
+  "checked": "2026-11-28"
+ },
+ "https://www.amazon.de/dp/3565893435": {
+  "ok": true,
+  "code": 200,
+  "shop": "Amazon",
+  "checked": "2026-11-28"
+ },
+ "https://www.amazon.de/dp/3565896574": {
+  "ok": true,
+  "code": 200,
+  "shop": "Amazon",
+  "checked": "2026-11-28"
+ },
+ "https://www.amazon.de/dp/3565896647": {
+  "ok": true,
+  "code": 200,
+  "shop": "Amazon",
+  "checked": "2026-11-28"
+ },
  "https://www.amazon.de/dp/3818756686": {
   "ok": true,
   "code": 200,
@@ -837,6 +867,24 @@
   "isbn": "9783565658695",
   "price": "5,99",
   "date": "16.08.2026"
+ },
+ "https://www.epubli.com/shop/brot-9783565896646": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/brot-9783565896653": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/brot-9783565906550": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
  },
  "https://www.epubli.com/shop/das-delegations-system-9783565437696": {
   "ok": true,
@@ -1159,6 +1207,24 @@
   "checked": "2026-11-22",
   "isbn": "9783565858644"
  },
+ "https://www.epubli.com/shop/die-leisen-jahre-9783565906659": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/die-leisen-jahre-9783565906666": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/die-leisen-jahre-9783565906697": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
  "https://www.epubli.com/shop/die-piercing-akademie-9783565858422": {
   "ok": true,
   "code": 200,
@@ -1196,6 +1262,24 @@
   "shop": "epubli",
   "checked": "2026-11-28",
   "isbn": "9783565892617"
+ },
+ "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565893430": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565906499": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/die-tuer-hinter-dem-schrank-9783565906505": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-china-9783565662692": {
   "ok": true,
@@ -1577,6 +1661,24 @@
   "isbn": "9783565465521",
   "price": "24,99",
   "date": "28.05.2026"
+ },
+ "https://www.epubli.com/shop/im-system-9783565896578": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/im-system-9783565896608": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/im-system-9783565906512": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
  },
  "https://www.epubli.com/shop/ist-das-noch-liebe-9783565645787": {
   "ok": true,
@@ -1980,6 +2082,24 @@
   "note": "Shopseite 404, ISBN in epubli-Suche nicht gefunden",
   "isbn": "9783565850587"
  },
+ "https://www.epubli.com/shop/tarot-9783565906857": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/tarot-9783565906901": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/tarot-9783565906949": {
+  "ok": false,
+  "code": 404,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
  "https://www.epubli.com/shop/warum-schoenheit-macht-ist-9783565501366": {
   "ok": true,
   "code": 200,
@@ -2022,6 +2142,24 @@
   "checked": "2026-11-22",
   "isbn": "9783565871926",
   "price": "21,99"
+ },
+ "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893140": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893171": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
+ },
+ "https://www.epubli.com/shop/wenn-das-leben-dir-zeichen-gibt-9783565893195": {
+  "ok": true,
+  "code": 200,
+  "shop": "epubli",
+  "checked": "2026-11-28"
  },
  "https://www.epubli.com/shop/wer-nichts-sieht-9783565858439": {
   "ok": true,
@@ -2463,5 +2601,413 @@
   "shop": "Thalia",
   "checked": "2026-11-22",
   "isbn": "9783565858446"
+ },
+ "https://play.google.com/store/books/details?id=FL4PEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=5OL3EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082518565": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=w2sCEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=i5ItEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=DTTkEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082691537": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Aa3dEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=UqTqEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=7mYvEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=vvIyEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082805322": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=LRThEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=MHrkEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=SoINEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=kwcwEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082518781": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=T7LvEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=XRUDEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=LSsrEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=1vEyEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082804882": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=fRMDEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=gYUKEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=_eABEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Gi8KEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=5Y8GEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=NY0KEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Krj4EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=5lIBEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=7N4DEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=8q3dEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=5NTtEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082848770": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://www.thalia.de/shop/home/artikeldetails/A1082804930": {
+  "ok": true,
+  "code": 200,
+  "shop": "Thalia",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=VinzEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=ALn4EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=7qPqEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=RQj1EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Lr3eEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=_qIBEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=JSwrEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=xIcNEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=p77xEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=2eAoEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=hysrEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=WVb3EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=h7zeEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=EqL1EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=fir2EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=G2n7EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=JoziEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=coriEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=goriEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=YWMvEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=YGUvEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=N-EoEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=phPjEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=l94oEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=F2_sEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Drn4EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=Iy0rEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=f-EoEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=BoYNEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=02sCEgAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=grD2EQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=g0vmEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
+ },
+ "https://play.google.com/store/books/details?id=PiPuEQAAQBAJ": {
+  "ok": true,
+  "code": 200,
+  "shop": "Google Play",
+  "checked": "2026-11-28"
  }
 }

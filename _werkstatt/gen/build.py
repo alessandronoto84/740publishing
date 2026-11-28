@@ -141,11 +141,12 @@ for _i in range(7):
     _cols.append(f'<div class="col c{_i}">{_imgs}</div>')
 WALL=''.join(_cols)
 SERIES=[('Die verborgene Seite der Welt','Reiseführer von Mika Solberg: 30 Orte abseits der Touristenpfade pro Land.',['k-thailand','vietnam','japan','china','mexiko','kolumbien','ecuador','peru']),
- ('Die verborgene Seite der Kulinarik','Die Kulturgeschichte dessen, was wir täglich genießen.',['k-kaffee','bier']),
+ ('Die verborgene Seite der Kulinarik','Die Kulturgeschichte dessen, was wir täglich genießen.',['k-kaffee','bier','brot']),
  ('KARMA · GLÜCK · ORDNUNG · PECH','Die Romanreihe von Konstanze Frey: warmherzige, humorvolle Kleinstadtromane.',['karma','glueck','ordnung','pech']),
  ('Projekt-Reihe von Victor Cross','Körper, Geist und Identität: Praxisbücher für die eigene Transformation.',['uebermensch','powerfrau','optimierte']),
- ('Spiritualität im wirklichen Leben','Praxisbücher von Leonard Kramer: Spiritualität, die im Alltag trägt – mit Übungen und klaren Programmen.',['grenzen','notfall','kompass']),
- ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus, Rituale und spirituelle Traditionen.',['k-astrologie','schamanismus','rituale'])]
+ ('Spiritualität im wirklichen Leben','Praxisbücher von Leonard Kramer: Spiritualität, die im Alltag trägt – mit Übungen und klaren Programmen.',['grenzen','notfall','kompass','zeichen']),
+ ('Vivian Dahl','Sachbücher über Astrologie, Schamanismus, Rituale, Tarot und spirituelle Traditionen.',['k-astrologie','schamanismus','rituale','tarot']),
+ ('Die Chroniken von Subterra','Fantasy von Leo Winter: Eine verborgene Welt unter der Erde, die hinter einer Schranktür beginnt.',['tuer'])]
 _ser=[]
 for _n,_d,_ks in SERIES:
     _it=''.join(f'<a class="sbk" href="buch/{slug(CD[k][1])}.html"><img src="{cv(CD[k][7])}" alt="Cover von „{e(CD[k][1])}“" width="120" height="180" loading="lazy" decoding="async"><span>{e(CD[k][1].replace("Die verborgene Seite von ",""))}</span></a>' for k in _ks)
