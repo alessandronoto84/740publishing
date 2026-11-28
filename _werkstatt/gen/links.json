@@ -24,6 +24,14 @@
   "isbn": "9783565539000"
  },
  {
+  "k": "karma",
+  "t": "KARMA",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080775261",
+  "isbn": "9783565538997"
+ },
+ {
   "k": "glueck",
   "t": "GLÜCK",
   "f": "E-Book",
@@ -45,6 +53,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565560959",
+  "isbn": "9783565560950"
+ },
+ {
+  "k": "glueck",
+  "t": "GLÜCK",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080929995",
+  "isbn": "9783565560974"
+ },
+ {
+  "k": "glueck",
+  "t": "GLÜCK",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080915472",
   "isbn": "9783565560950"
  },
  {
@@ -72,6 +96,22 @@
   "isbn": "9783565568956"
  },
  {
+  "k": "pech",
+  "t": "PECH",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080965656",
+  "isbn": "9783565568963"
+ },
+ {
+  "k": "pech",
+  "t": "PECH",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080948786",
+  "isbn": "9783565568956"
+ },
+ {
   "k": "ordnung",
   "t": "ORDNUNG",
   "f": "E-Book",
@@ -93,6 +133,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565564830",
+  "isbn": "9783565564835"
+ },
+ {
+  "k": "ordnung",
+  "t": "ORDNUNG",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080961785",
+  "isbn": "9783565564859"
+ },
+ {
+  "k": "ordnung",
+  "t": "ORDNUNG",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080947558",
   "isbn": "9783565564835"
  },
  {
@@ -120,6 +176,22 @@
   "isbn": "9783565530700"
  },
  {
+  "k": "katastrophe",
+  "t": "Die freundliche Katastrophe",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080711281",
+  "isbn": "9783565530717"
+ },
+ {
+  "k": "katastrophe",
+  "t": "Die freundliche Katastrophe",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080722154",
+  "isbn": "9783565530700"
+ },
+ {
   "k": "krone",
   "t": "Krone aus Beton",
   "f": "E-Book",
@@ -141,6 +213,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565575719",
+  "isbn": "9783565575718"
+ },
+ {
+  "k": "krone",
+  "t": "Krone aus Beton",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081048698",
+  "isbn": "9783565575763"
+ },
+ {
+  "k": "krone",
+  "t": "Krone aus Beton",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081027301",
   "isbn": "9783565575718"
  },
  {
@@ -168,6 +256,22 @@
   "isbn": "9783565526864"
  },
  {
+  "k": "licht-schatten",
+  "t": "Zwischen Licht und Schatten",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080633386",
+  "isbn": "9783565526857"
+ },
+ {
+  "k": "licht-schatten",
+  "t": "Zwischen Licht und Schatten",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080649198",
+  "isbn": "9783565526864"
+ },
+ {
   "k": "karten",
   "t": "Wo die Karten enden",
   "f": "E-Book",
@@ -189,6 +293,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565571462",
+  "isbn": "9783565571468"
+ },
+ {
+  "k": "karten",
+  "t": "Wo die Karten enden",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081009123",
+  "isbn": "9783565571475"
+ },
+ {
+  "k": "karten",
+  "t": "Wo die Karten enden",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080990548",
   "isbn": "9783565571468"
  },
  {
@@ -216,6 +336,22 @@
   "isbn": "9783565658664"
  },
  {
+  "k": "sizilien",
+  "t": "Bis nach Sizilien",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081357876",
+  "isbn": "9783565658695"
+ },
+ {
+  "k": "sizilien",
+  "t": "Bis nach Sizilien",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081361700",
+  "isbn": "9783565658664"
+ },
+ {
   "k": "aurora",
   "t": "Projekt Aurora",
   "f": "E-Book",
@@ -237,6 +373,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565580224",
+  "isbn": "9783565580224"
+ },
+ {
+  "k": "aurora",
+  "t": "Projekt Aurora",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081130848",
+  "isbn": "9783565599707"
+ },
+ {
+  "k": "aurora",
+  "t": "Projekt Aurora",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081046496",
   "isbn": "9783565580224"
  },
  {
@@ -270,6 +422,22 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/die-zweite-emilia-9783565855506",
   "isbn": "9783565855506"
+ },
+ {
+  "k": "emilia",
+  "t": "Die zweite Emilia",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081395626",
+  "isbn": "9783565668472"
+ },
+ {
+  "k": "emilia",
+  "t": "Die zweite Emilia",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081372839",
+  "isbn": "9783565662739"
  },
  {
   "k": "emilia",
@@ -314,6 +482,22 @@
  {
   "k": "gaertner",
   "t": "Die Gärtner der Geschichte",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081374401",
+  "isbn": "9783565662821"
+ },
+ {
+  "k": "gaertner",
+  "t": "Die Gärtner der Geschichte",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081372948",
+  "isbn": "9783565662807"
+ },
+ {
+  "k": "gaertner",
+  "t": "Die Gärtner der Geschichte",
   "f": "Hardcover",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565858648",
@@ -344,6 +528,22 @@
   "isbn": "9783565850587"
  },
  {
+  "k": "sucht",
+  "t": "Sucht",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082403774",
+  "isbn": "9783565833375"
+ },
+ {
+  "k": "sucht",
+  "t": "Sucht",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082519141",
+  "isbn": "9783565850587"
+ },
+ {
   "k": "koenige",
   "t": "Könige der Asche",
   "f": "Taschenbuch",
@@ -365,6 +565,22 @@
   "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/koenige-der-asche-9783565850648",
+  "isbn": "9783565850648"
+ },
+ {
+  "k": "koenige",
+  "t": "Könige der Asche",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082404330",
+  "isbn": "9783565833382"
+ },
+ {
+  "k": "koenige",
+  "t": "Könige der Asche",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082518899",
   "isbn": "9783565850648"
  },
  {
@@ -392,6 +608,22 @@
   "isbn": "9783565478279"
  },
  {
+  "k": "schwarzes-wasser",
+  "t": "Schwarzes Wasser",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080153281",
+  "isbn": "9783565478262"
+ },
+ {
+  "k": "schwarzes-wasser",
+  "t": "Schwarzes Wasser",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080155205",
+  "isbn": "9783565478279"
+ },
+ {
   "k": "blut-asphalt",
   "t": "Zwischen Blut und Asphalt",
   "f": "E-Book",
@@ -413,6 +645,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565496304",
+  "isbn": "9783565496303"
+ },
+ {
+  "k": "blut-asphalt",
+  "t": "Zwischen Blut und Asphalt",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080283870",
+  "isbn": "9783565495290"
+ },
+ {
+  "k": "blut-asphalt",
+  "t": "Zwischen Blut und Asphalt",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080301711",
   "isbn": "9783565496303"
  },
  {
@@ -440,6 +688,22 @@
   "isbn": "9783565463152"
  },
  {
+  "k": "manuskript",
+  "t": "Das Manuskript",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080018912",
+  "isbn": "9783565463954"
+ },
+ {
+  "k": "manuskript",
+  "t": "Das Manuskript",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080049430",
+  "isbn": "9783565463152"
+ },
+ {
   "k": "jenseits",
   "t": "Jenseits des Himmels",
   "f": "Taschenbuch",
@@ -461,6 +725,22 @@
   "f": "E-Book",
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/jenseits-des-himmels-9783565857227",
+  "isbn": "9783565857227"
+ },
+ {
+  "k": "jenseits",
+  "t": "Jenseits des Himmels",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1079869150",
+  "isbn": "9783565446001"
+ },
+ {
+  "k": "jenseits",
+  "t": "Jenseits des Himmels",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082593810",
   "isbn": "9783565857227"
  },
  {
@@ -494,6 +774,22 @@
   "shop": "epubli",
   "url": "https://www.epubli.com/shop/wer-nichts-sieht-9783565858453",
   "isbn": "9783565858453"
+ },
+ {
+  "k": "wns",
+  "t": "Wer nichts sieht …",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082594119",
+  "isbn": "9783565858446"
+ },
+ {
+  "k": "wns",
+  "t": "Wer nichts sieht …",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1082589395",
+  "isbn": "9783565858439"
  },
  {
   "k": "wns",
@@ -562,6 +858,22 @@
  {
   "k": "underground",
   "t": "Generation Underground",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080292492",
+  "isbn": "9783565496648"
+ },
+ {
+  "k": "underground",
+  "t": "Generation Underground",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1080444825",
+  "isbn": "9783565496655"
+ },
+ {
+  "k": "underground",
+  "t": "Generation Underground",
   "f": "Hardcover",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565855495",
@@ -589,6 +901,22 @@
   "f": "Taschenbuch",
   "shop": "Amazon",
   "url": "https://www.amazon.de/dp/3565585544",
+  "isbn": "9783565585540"
+ },
+ {
+  "k": "algorithmus",
+  "t": "Generation Algorithmus",
+  "f": "E-Book",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081078903",
+  "isbn": "9783565585588"
+ },
+ {
+  "k": "algorithmus",
+  "t": "Generation Algorithmus",
+  "f": "Taschenbuch",
+  "shop": "Thalia",
+  "url": "https://www.thalia.de/shop/home/artikeldetails/A1081072851",
   "isbn": "9783565585540"
  },
  {

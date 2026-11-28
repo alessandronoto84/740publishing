@@ -986,31 +986,31 @@
   "isbn": "9783565877522"
  },
  "https://www.epubli.com/shop/dein-innerer-kompass-9783565891351": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565891351"
  },
  "https://www.epubli.com/shop/dein-innerer-kompass-9783565891733": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565891733"
  },
  "https://www.epubli.com/shop/dein-innerer-kompass-9783565891757": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565891757"
  },
  "https://www.epubli.com/shop/dein-innerer-kompass-9783565891788": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565891788"
  },
  "https://www.epubli.com/shop/der-optimierte-mensch-9783565470846": {
@@ -1177,24 +1177,24 @@
   "date": "30.12.2024"
  },
  "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892532": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892532"
  },
  "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892587": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892587"
  },
  "https://www.epubli.com/shop/die-spirituelle-notfallapotheke-9783565892617": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892617"
  },
  "https://www.epubli.com/shop/die-verborgene-seite-von-china-9783565662692": {
@@ -1463,24 +1463,24 @@
   "date": "24.06.2026"
  },
  "https://www.epubli.com/shop/energetische-grenzen-9783565892624": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892624"
  },
  "https://www.epubli.com/shop/energetische-grenzen-9783565892648": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892648"
  },
  "https://www.epubli.com/shop/energetische-grenzen-9783565892655": {
-  "ok": false,
-  "code": 404,
+  "ok": true,
+  "code": 200,
   "shop": "epubli",
-  "checked": "2026-11-22",
+  "checked": "2026-11-28",
   "isbn": "9783565892655"
  },
  "https://www.epubli.com/shop/erlernte-unsichtbarkeit-9783565546800": {
