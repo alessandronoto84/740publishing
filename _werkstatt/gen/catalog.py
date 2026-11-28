@@ -571,3 +571,4 @@ _GP_TH_2811=[
  ('licht-schatten','E-Book','Google Play','https://play.google.com/store/books/details?id=PiPuEQAAQBAJ'),
 ]
 for _k,_f,_s,_u in _GP_TH_2811: EXTRA.setdefault(_k,[]).append((_f,_s,_u))
+SERIES_OF.update({'k-astrologie':('Vivian-Dahl-Reihe',1),'schamanismus':('Vivian-Dahl-Reihe',2),'rituale':('Vivian-Dahl-Reihe',3)})   # 28.11.2026 bei epubli eingetragen
